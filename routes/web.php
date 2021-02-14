@@ -14,7 +14,7 @@ use \App\Http\Controllers\UsuariosController;
 |
 */
 
-Route::get('listar', [UsuariosController::class]);
+Route::get('/', [UsuariosController::class]);
 
 Route::get('/', function () {
     return view('welcome');

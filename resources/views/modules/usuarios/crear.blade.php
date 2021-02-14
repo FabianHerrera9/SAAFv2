@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="container">
-        <div class="row">
-            <div class="card offset-md-3 col-md-6">
-                <div class="card-body">
+        <div class="row m-1">
+            <div class="col-p1 m-3 bck-tab">
+                <div class="table-responsive">
                     <form action="{{route('usuarios.guardar')}}" method="post">
                         @csrf
                         <select name="IDTIPOID" id="IDTIPOID" class="form-select my-3" aria-label="selecionar tipo de documento" >
