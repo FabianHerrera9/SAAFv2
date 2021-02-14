@@ -20,10 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('TELEFONOUSU');
             $table->string('CORREOUSU');
             $table->binary('CONTASEÑAUSU');
-
-            $table->bigInteger('IDTIPOID')->unsigned();
-
-            $table->foreign('IDTIPOID')->references('IDTIPOID')->on('_tipo_id');
+            $table->enum('IDTIPOID',['C.C.','C.E.','P.P.']);
 
             $table->timestamps();
         });

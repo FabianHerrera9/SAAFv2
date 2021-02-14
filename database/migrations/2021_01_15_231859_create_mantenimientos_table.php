@@ -16,15 +16,14 @@ class CreateMantenimientosTable extends Migration
         Schema::create('mantenimientos', function (Blueprint $table) {
             $table->id('IDMANTENIMIENTO');
             $table->dateTime('FECHAMANTENIMIENTO');
-            $table->string('MOTIVOMANTENIMIENTO');
-            $table->string('PROVEEDOR');
-            $table->string('NOMTECNICO');
-            $table->string('TRABAJOREALIZADO');
-            $table->boolean('SOLUCION');
-            $table->string('ACTASERVICIO');
+            $table->string('MOTIVOMANTENIMIENTO',50);
+            $table->string('PROVEEDOR',75);
+            $table->string('NOMTECNICO',30);
+            $table->string('TRABAJOREALIZADO',200);
+            $table->enum('SOLUCION',['SOLUCIONADO','NO-SOLUCIONADO']);
+            $table->binary('ACTASERVICIO');
 
             $table->bigInteger('IDACTIVO')->unsigned();
-
             $table->foreign('IDACTIVO')->references('IDACTIVO')->on('_activos');
 
             $table->timestamps();

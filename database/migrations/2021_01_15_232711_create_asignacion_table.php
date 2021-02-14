@@ -17,7 +17,7 @@ class CreateAsignacionTable extends Migration
             $table->id('IDASIGNACION');
             $table->dateTime('FECHAASING');
             $table->string('OBSERVACIONES');
-            $table->boolean('ESTADOASIG');
+            $table->enum('ESTADOASIG',['ACTIVO','INACTIVO']);
 
             $table->bigInteger('IDACTIVO')->unsigned();
             $table->bigInteger('IDENTIFICACIONDOC')->unsigned();

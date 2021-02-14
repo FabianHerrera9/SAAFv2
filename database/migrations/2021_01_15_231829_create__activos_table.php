@@ -21,11 +21,9 @@ class CreateActivosTable extends Migration
             $table->string('MODELOACTIVO');
             $table->string('DESCACTIVO');
             $table->dateTime('GARANTIAACTIVO');
+            $table->enum('IDCLASEACTIVO',['TANGIBLE,INTANGIBLE']);
 
-            $table->bigInteger('IDCLASEACTIVO')->unsigned();
             $table->bigInteger('IDENTIFICACIONPROV')->unsigned();
-
-            $table->foreign('IDCLASEACTIVO')->references('IDCLASEACTIVO')->on('_clase_activo');
             $table->foreign('IDENTIFICACIONPROV')->references('IDENTIFICACIONPROV')->on('_proveedores');
 
             $table->timestamps();

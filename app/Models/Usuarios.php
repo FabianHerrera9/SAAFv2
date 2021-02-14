@@ -10,14 +10,12 @@ class Usuarios extends Model
     use HasFactory;
 
     protected $table = 'usuarios';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'IDENTIFICACIONUSU';
     protected $fillable = [
-        'numeroCedula',
-        'primerNombre',
-        'apellidos',
-        'direccion',
-        'telefono',
-        'ciudad',
-        'tipo'
+        'NOMBREUSU',
+        'CARGOUSU',
+        'TELEFONOUSU',
+        'CORREOUSU',
+        'CONTASEÑAUSU',
     ];
 }

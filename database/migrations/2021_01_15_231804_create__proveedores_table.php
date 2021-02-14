@@ -19,12 +19,8 @@ class CreateProveedoresTable extends Migration
             $table->string('TELPROVEEDOR');
             $table->string('CORREOPROVEEDOR');
             $table->string('DIRECCIONPROVEEDOR');
-
-            $table->bigInteger('IDTIPOPROVID')->unsigned();
-            $table->bigInteger('IDTIPOPROVEEDOR')->unsigned();
-
-            $table->foreign('IDTIPOPROVID')->references('IDTIPOPROVID')->on('_tipo_prov_id');
-            $table->foreign('IDTIPOPROVEEDOR')->references('IDTIPOPROVEEDOR')->on('_tipo_proveedor');
+            $table->enum('IDTIPOPROVID',['NIT','CC']);
+            $table->enum('IDTIPOPROVEEDOR',['TANGIBLE','INTANGIBLE']);
 
             $table->timestamps();
         });

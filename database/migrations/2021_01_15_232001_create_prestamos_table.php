@@ -17,7 +17,7 @@ class CreatePrestamosTable extends Migration
             $table->id('IDPRESTAMO');
             $table->dateTime('FECHAPRESTAMO');
             $table->string('OBSERVACIONES');
-            $table->boolean('ESTADOPRESTAMO');
+            $table->enum('ESTADOPRESTAMO',['ACTIVO','INACTIVO']);
 
             $table->bigInteger('IDACTIVO')->unsigned();
             $table->bigInteger('IDENTIFICACIONDOC')->unsigned();
