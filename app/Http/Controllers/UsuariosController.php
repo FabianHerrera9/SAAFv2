@@ -11,4 +11,11 @@ class UsuariosController extends Controller
         $usuarios=Usuarios::all();
         return view('modules.usuarios.listar',compact('usuarios'));
     }
+    public function crear(){
+        return view('modules.usuarios.crear');
+    }
+    public function guardar(Request $request){
+        $usuario=Usuarios::create($request->all());
+        return redirect()->route('usuarios.index');
+    }
 }

@@ -20,5 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index',[UsuariosController::class,'index'])->name('usuarios.index');
+Route::get('usuarios',[UsuariosController::class,'index'])->name('usuarios.index');
+Route::get('usuarios/crear',[UsuariosController::class,'crear'])->name('usuarios.crear');
+Route::post('usuarios',[UsuariosController::class,'guardar'])->name('usuarios.guardar');
 

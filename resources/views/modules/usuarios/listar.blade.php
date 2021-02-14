@@ -13,6 +13,7 @@
                         <table class="table">
                             <thead>
                             <tr>
+                                <th>Tipo Identificacion</th>
                                 <th>Identificacion</th>
                                 <th>Nombres</th>
                                 <th>Cargo</th>
@@ -24,10 +25,11 @@
                             <tbody>
                             @foreach($usuarios as $usu)
                                 <tr>
-
+                                    <td>{{ $usu -> IDTIPOID }}</td>
                                     <td>{{ $usu -> IDENTIFICACIONUSU }}</td>
                                     <td>{{ $usu -> NOMBREUSU }}</td>
                                     <td>{{ $usu -> CARGOUSU }}</td>
+                                    <td>{{ $usu -> ROL }}</td>
                                     <td>{{ $usu -> TELEFONOUSU }}</td>
                                     <td>{{ $usu -> CORREOUSU }}</td>
 
@@ -44,7 +46,7 @@
             </div>
             <div class="col-p2 p-2 m-3 text-center bck-tab">
                 <hr>
-                <a class="btn btn-add btn-lg btn-block" href="">AGREGAR &nbsp; <i
+                <a class="btn btn-add btn-lg btn-block" href="{{route('usuarios.crear')}}">AGREGAR &nbsp; <i
                         class="fas fa-plus-circle"></i></a>
                 <hr>
             </div>

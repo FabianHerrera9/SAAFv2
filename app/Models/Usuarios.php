@@ -17,5 +17,7 @@ class Usuarios extends Model
         'TELEFONOUSU',
         'CORREOUSU',
         'CONTASEÑAUSU',
+        'IDTIPOID',
+        'ROL'
     ];
 }
