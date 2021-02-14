@@ -24,7 +24,7 @@ class CreateMantenimientosTable extends Migration
             $table->binary('ACTASERVICIO');
 
             $table->bigInteger('IDACTIVO')->unsigned();
-            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('_activos');
+            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('activos');
 
             $table->timestamps();
         });

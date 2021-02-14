@@ -13,7 +13,7 @@ class CreateAmbientesTable extends Migration
      */
     public function up()
     {
-        Schema::create('_ambientes', function (Blueprint $table) {
+        Schema::create('ambientes', function (Blueprint $table) {
             $table->id('IDAMBIENTE');
             $table->string('PISOAMBIENTE');
             $table->string('NOMBREAMBIENTE');

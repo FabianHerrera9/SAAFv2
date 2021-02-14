@@ -21,7 +21,7 @@ class CreateDocentesTable extends Migration
             $table->enum('IDTIPOID',['C.C.','C.E.','P.P.']);
 
             $table->bigInteger('IDESPECIALIDAD_DOCENTE')->unsigned();
-            $table->foreign('IDESPECIALIDAD_DOCENTE')->references('IDESPECIALIDAD_DOCENTE')->on('_especialidad_docentes');
+            $table->foreign('IDESPECIALIDAD_DOCENTE')->references('IDESPECIALIDAD_DOCENTE')->on('especialidad_docentes');
 
             $table->timestamps();
         });

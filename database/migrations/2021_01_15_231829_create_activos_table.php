@@ -13,7 +13,7 @@ class CreateActivosTable extends Migration
      */
     public function up()
     {
-        Schema::create('_activos', function (Blueprint $table) {
+        Schema::create('activos', function (Blueprint $table) {
             $table->id('IDACTIVO');
             $table->string('NOMBREACTIVO');
             $table->string('SERIALACTIVO');
@@ -24,7 +24,9 @@ class CreateActivosTable extends Migration
             $table->enum('IDCLASEACTIVO',['TANGIBLE,INTANGIBLE']);
 
             $table->bigInteger('IDENTIFICACIONPROV')->unsigned();
-            $table->foreign('IDENTIFICACIONPROV')->references('IDENTIFICACIONPROV')->on('_proveedores');
+            $table->bigInteger('IDENTIFICACIONUSU')->unsigned();
+            $table->foreign('IDENTIFICACIONUSU')->references('IDENTIFICACIONUSU')->on('usuarios');
+            $table->foreign('IDENTIFICACIONPROV')->references('IDENTIFICACIONPROV')->on('proveedores');
 
             $table->timestamps();
         });

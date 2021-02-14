@@ -23,9 +23,9 @@ class CreateAsignacionTable extends Migration
             $table->bigInteger('IDENTIFICACIONDOC')->unsigned();
             $table->bigInteger('IDAMBIENTE')->unsigned();
 
-            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('_activos');
+            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('activos');
             $table->foreign('IDENTIFICACIONDOC')->references('IDENTIFICACIONDOC')->on('docentes');
-            $table->foreign('IDAMBIENTE')->references('IDAMBIENTE')->on('_ambientes');
+            $table->foreign('IDAMBIENTE')->references('IDAMBIENTE')->on('ambientes');
 
             $table->timestamps();
         });

@@ -20,10 +20,8 @@ class CreatePrestamosTable extends Migration
             $table->enum('ESTADOPRESTAMO',['ACTIVO','INACTIVO']);
 
             $table->bigInteger('IDACTIVO')->unsigned();
-            $table->bigInteger('IDENTIFICACIONDOC')->unsigned();
 
-            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('_activos');
-            $table->foreign('IDENTIFICACIONDOC')->references('IDENTIFICACIONDOC')->on('docentes');
+            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('activos');
 
             $table->timestamps();
         });
