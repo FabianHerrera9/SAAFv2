@@ -1,6 +1,7 @@
 @extends('layouts.admin.app')
 
-@section('usuarios')
+@section('content')
+
     <div class="container">
         <div class="row m-1">
             <div class="col-p1 m-3 bck-tab">
@@ -43,10 +44,11 @@
             </div>
             <div class="col-p2 p-2 m-3 text-center bck-tab">
                 <hr>
-                <a class="btn btn-add btn-lg btn-block" href="{{ route('usuarios.create') }}">AGREGAR &nbsp; <i
+                <a class="btn btn-add btn-lg btn-block" href="">AGREGAR &nbsp; <i
                         class="fas fa-plus-circle"></i></a>
                 <hr>
             </div>
         </div>
     </div>
+
 @endsection

@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 class UsuariosController extends Controller
 {
     public function index(){
-
         $usuarios=Usuarios::all();
-
-
+        return view('modules.usuarios.listar',compact('usuarios'));
     }
 }
