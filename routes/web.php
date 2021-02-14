@@ -19,3 +19,6 @@ Route::get('listar', [UsuariosController::class]);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('index',[UsuariosController::class,'index'])->name('usuarios.index');
+

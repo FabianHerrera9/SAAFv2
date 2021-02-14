@@ -15,7 +15,7 @@
                         <span key="t-dashboards">Usuarios</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="index.html" key="t-default" class="bx bx-search"> Listado</a></li>
+                        <li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
                         <li><a href="dashboard-saas.html" key="t-saas" class="bx bx-user-plus"> Nuevo</a></li>
                         <li><a href="index.html" key="t-default" class="bx bx-user-check"> Actualizar</a></li>
                         <li><a href="index.html" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>

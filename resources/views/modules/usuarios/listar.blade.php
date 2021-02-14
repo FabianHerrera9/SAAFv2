@@ -10,12 +10,13 @@
                     </div>
                     <div class="p-3">
                         <table class="table">
-                            <thead class="thead-dark">
+                            <thead>
                             <tr>
+                                <th>Identificacion</th>
                                 <th>Nombres</th>
-                                <th>Apellidos</th>
-                                <th>Numero de Cedula</th>
-                                <th>Ciudad</th>
+                                <th>Cargo</th>
+                                <th>Telefono</th>
+                                <th>Correo</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -23,13 +24,15 @@
                             @foreach($usuarios as $usu)
                                 <tr>
 
-                                    <td>{{ $usu -> apellidos }}</td>
-                                    <td>{{ $usu -> numeroCedula }}</td>
-                                    <td>{{ $usu -> ciudad }}</td>
+                                    <td>{{ $usu -> IDENTIFICACIONUSU }}</td>
+                                    <td>{{ $usu -> NOMBREUSU }}</td>
+                                    <td>{{ $usu -> CARGOUSU }}</td>
+                                    <td>{{ $usu -> TELEFONOUSU }}</td>
+                                    <td>{{ $usu -> CORREOUSU }}</td>
 
-                                    <button type="submit" class="btn btn-link"><i
-                                            class="fas fa-user-times text-danger"></i></button>
-
+                                    <button type="submit" class="btn btn-link">
+                                        <i class="fas fa-user-times text-danger"></i>
+                                    </button>
                                     </td>
                                 </tr>
                             @endforeach
