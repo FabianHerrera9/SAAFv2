@@ -6,8 +6,8 @@
         <div class="row m-1">
             <div class="col-p1 m-3 bck-tab">
                 <div class="table-responsive">
-                    <form action="{{route('usuarios.guardar')}}" method="post">
-                        @csrf
+                    <form action="" method="post">
+
                         <select name="IDTIPOID" id="IDTIPOID" class="form-select my-3" aria-label="selecionar tipo de documento" >
                             <option>Seleccione tipo de documento</option>
                             <option value="C.C.">C.C.</option>
@@ -46,11 +46,12 @@
                         </div>
                         <hr>
                         <button type="submit" class="btn btn-success">Agregar Aprendiz</button>
-                        <a type="button" class="btn" id="color-font" href="{{route('usuarios.index')}}">Cancelar</a>
+                        <a type="button" class="btn" id="color-font" href="">Cancelar</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 @endsection
 
