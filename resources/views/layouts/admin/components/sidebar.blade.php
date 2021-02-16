@@ -37,6 +37,19 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user"></i>
+                        <span key="t-dashboards">Docentes</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="" key="t-default" class="bx bx-search"> Listado</a></li>
+                        <li><a href="dashboard-saas.html" key="t-saas" class="bx bx-user-plus"> Nuevo</a></li>
+                        <li><a href="index.html" key="t-default" class="bx bx-user-check"> Actualizar</a></li>
+                        <li><a href="index.html" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-mouse"></i>
                         <span key="t-layouts">Prestamos</span>
                     </a>
