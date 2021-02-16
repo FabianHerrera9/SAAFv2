@@ -16,6 +16,7 @@
                                     <th>Identificacion</th>
                                     <th>Nombres</th>
                                     <th>Cargo</th>
+                                    <th>Rol</th>
                                     <th>Telefono</th>
                                     <th>Correo</th>
                                     <th></th>
