@@ -28,7 +28,7 @@
                         <span key="t-layouts">Activos</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="layouts-horizontal.html" key="t-horizontal" class="bx bx-search"> Listado</a></li>
+                        <li><a href="" key="t-horizontal" class="bx bx-search"> Listado</a></li>
                         <li><a href="layouts-vertical.html" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
                         <li><a href="layouts-vertical.html" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>
                         <li><a href="index.html" key="t-default" class="bx bx-power-off"> Desactivar</a></li>
@@ -42,9 +42,9 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="" key="t-default" class="bx bx-search"> Listado</a></li>
-                        <li><a href="dashboard-saas.html" key="t-saas" class="bx bx-user-plus"> Nuevo</a></li>
-                        <li><a href="index.html" key="t-default" class="bx bx-user-check"> Actualizar</a></li>
-                        <li><a href="index.html" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>
+                        <li><a href="" key="t-saas" class="bx bx-user-plus"> Nuevo</a></li>
+                        <li><a href="" key="t-default" class="bx bx-user-check"> Actualizar</a></li>
+                        <li><a href="" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>
                     </ul>
                 </li>
 
