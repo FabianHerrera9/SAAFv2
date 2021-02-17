@@ -18,4 +18,7 @@ class UsuariosController extends Controller
         $usuario=Usuarios::create($request->all());
         return redirect()->route('usuarios.index');
     }
+    public function mostrar(){
+        return view('modules.usuarios.mostrar');
+    }
 }
