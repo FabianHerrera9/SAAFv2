@@ -8,6 +8,11 @@
         <div class="row">
             <div class="card col-12">
                 <div class="table-responsive">
+                    @if(session('message'))
+                        <div class="alert alert-{{session('type')}} mt-3" role="alert">
+                            {{session('message')}}
+                        </div>
+                    @endif
                     <table class="table  table-hover">
                         <thead>
                         <tr>
@@ -18,6 +23,7 @@
                             <th>Rol</th>
                             <th>Telefono</th>
                             <th>Correo</th>
+                            <th></th>
                             <th></th>
                         </tr>
                         </thead>
@@ -31,6 +37,13 @@
                                 <td>{{ $usu -> ROL }}</td>
                                 <td>{{ $usu -> TELEFONOUSU }}</td>
                                 <td>{{ $usu -> CORREOUSU }}</td>
+                                <td>
+                                    <i>
+                                        <a href="{{route('usuarios.editar',$usu->IDENTIFICACIONUSU)}}">
+                                            <i class="bx bx-edit"></i>
+                                        </a>
+                                    </i>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

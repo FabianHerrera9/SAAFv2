@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
+use function GuzzleHttp\Promise\all;
 
 class UsuariosController extends Controller
 {
@@ -16,9 +17,23 @@ class UsuariosController extends Controller
     }
     public function guardar(Request $request){
         $usuario=Usuarios::create($request->all());
-        return redirect()->route('usuarios.index');
+        return redirect()->route('usuarios.index')->with([
+            'message'=>'Usuario Creado Con exito',
+            'type'=>'success'
+        ]);
     }
-    public function mostrar(){
-        return view('modules.usuarios.mostrar');
+    public function editar($IDENTIFICACIONUSU){
+
+        $usuarios=Usuarios::find($IDENTIFICACIONUSU);
+        return view('modules.usuarios.editar',compact('usuarios'));
+    }
+    public function actualizar(Request $request,$id){
+
+        $usuarios=Usuarios::find($id)->update($request->all());
+        return redirect()->route('usuarios.index')->with([
+            'message'=>'La actualizacion se ha generado correctamente',
+            'type'=>'warning'
+        ]);
+
     }
 }
