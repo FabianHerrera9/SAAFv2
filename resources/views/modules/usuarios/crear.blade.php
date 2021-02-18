@@ -7,7 +7,8 @@
     <div class="container">
         <div class="col-p1 m-3 bck-tab">
             <div class="table-responsive">
-                <form action="" method="post">
+                <form action="{{route('usuarios.guardar')}}" method="post">
+                    @csrf
                     <select name="IDTIPOID" id="IDTIPOID" class="form-select my-3 form-control"
                             aria-label="selecionar tipo de documento">
                         <option>Seleccione tipo de documento</option>
@@ -30,9 +31,9 @@
                     </div>
                     <select name="ROL" id="ROL" class="form-select my-3 form-control" aria-label="Seleccione Rol del Sistema">
                         <option>Seleccione Rol del Sistema</option>
-                        <option value="ADMINISTRADOR.">Administrador</option>
-                        <option value="TESORERO">Tesorero.</option>
-                        <option value="CONTADOR">Contador</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Tesorero">Tesorero</option>
+                        <option value="Contador ">Contador</option>
                     </select>
                     <div class="form-floating mb-3">
                         <label for="TELEFONOUSU">Telefono</label>
@@ -51,6 +52,7 @@
                     <button type="submit" class="btn btn-success">Agregar Usuario</button>
                     <a type="button" class="btn" id="color-font" href="{{route('usuarios.index')}}">Cancelar</a>
                 </form>
+
             </div>
         </div>
     </div>

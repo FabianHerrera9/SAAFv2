@@ -17,7 +17,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
                         <li><a href="{{route('usuarios.crear')}}" key="t-default" class="bx bx-user-plus"> Nuevo</a></li>
-                        <li><a href="{{route('usuarios.mostrar')}}" key="t-default" class="bx bx-user-check"> Actualizar</a></li>
+                        {{--<li><a href="{{route('usuarios.editar')}}" key="t-default" class="bx bx-user-check"> Actualizar</a></li>--}}
                         <li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>
                     </ul>
                 </li>
