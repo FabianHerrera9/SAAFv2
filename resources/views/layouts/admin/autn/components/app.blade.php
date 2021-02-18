@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V3</title>
+    <title>SAAF | Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -39,7 +39,7 @@
 					</span>
 
                 <span class="login100-form-title p-b-34 p-t-27">
-						Iniciar secion
+						Iniciar sesion
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter CORREOUSU">
