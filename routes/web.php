@@ -21,8 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('usuarios',[UsuariosController::class,'index'])->name('usuarios.index');
-Route::get('usuarios_crear',[UsuariosController::class,'crear'])->name('usuarios.crear');
+Route::get('usuarios/crear',[UsuariosController::class,'crear'])->name('usuarios.crear');
 Route::post('usuarios',[UsuariosController::class,'guardar'])->name('usuarios.guardar');
-Route::get('usuarioseditar-{id}',[UsuariosController::class,'editar'])->name('usuarios.editar');
-Route::put('usuarios-{id}',[UsuariosController::class,'actualizar'])->name('usuarios.actualizar');
+Route::get('usuarios/editar/{id}',[UsuariosController::class,'editar'])->name('usuarios.editar');
+Route::put('usuarios/{id}',[UsuariosController::class,'actualizar'])->name('usuarios.actualizar');
 
