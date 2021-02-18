@@ -18,7 +18,7 @@ class CreateUsuariosTable extends Migration
             $table->string('NOMBREUSU');
             $table->string('CARGOUSU');
             $table->string('TELEFONOUSU');
-            $table->string('CORREOUSU');
+            $table->string('CORREOUSU')->unique();
             $table->string('CONTASEÑAUSU');
             $table->enum('IDTIPOID',['C.C.','C.E.','P.P.']);
             $table->enum('ROL',['ADMINISTRADOR','TESORERO','CONTADOR']);

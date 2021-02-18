@@ -20,4 +20,8 @@ class Usuarios extends Model
         'IDTIPOID',
         'ROL'
     ];
+    protected $hidden =
+        [
+        'CONTASEÑAUSU'
+        ];
 }
