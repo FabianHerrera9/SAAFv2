@@ -14,9 +14,9 @@ class logincontroller extends Controller
     }
     public function autn(Request $request){
 
-       $user=Usuarios::where('CORREOUSU','=',$request->input('CORREOUSU'))->first();
+       $user=Usuarios::where('Email','=',$request->input('Email'))->first();
        if($user){
-           if ($user->CONTASEÑAUSU==$request->input('CONTASEÑAUSU')){
+           if ($user->Password==$request->input('Password')){
 
                session(['user'=>$user]);
                return redirect()->route('usuarios.index');

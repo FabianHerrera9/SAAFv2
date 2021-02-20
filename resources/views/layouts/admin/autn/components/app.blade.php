@@ -42,13 +42,13 @@
 						Iniciar sesion
 					</span>
 
-                <div class="wrap-input100 validate-input" data-validate = "Enter CORREOUSU">
-                    <input class="input100" type="text" name="CORREOUSU" placeholder="CORREO">
+                <div class="wrap-input100 validate-input" data-validate = "Enter Email">
+                    <input class="input100" type="text" name="Email" placeholder="Email">
                     <span class="focus-input100" data-placeholder="&#xf207;"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Enter CONTASEÑAUSU">
-                    <input class="input100" type="password" name="CONTASEÑAUSU" placeholder="CONTASEÑA">
+                <div class="wrap-input100 validate-input" data-validate="Enter Password">
+                    <input class="input100" type="password" name="Password" placeholder="Contraseña">
                     <span class="focus-input100" data-placeholder="&#xf191;"></span>
                 </div>
 

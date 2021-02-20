@@ -39,7 +39,7 @@
                                 <td>{{ $usu -> Email }}</td>
                                 <td>
                                     <i>
-                                        <a href="{{route('usuarios.editar',$usu->IDENTIFICACIONUSU)}}">
+                                        <a href="{{route('usuarios.editar',$usu->id)}}">
                                             <i class="bx bx-edit"></i>
                                         </a>
                                     </i>
