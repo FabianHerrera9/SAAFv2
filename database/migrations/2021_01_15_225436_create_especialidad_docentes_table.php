@@ -14,8 +14,8 @@ class CreateEspecialidadDocentesTable extends Migration
     public function up()
     {
         Schema::create('especialidad_docentes', function (Blueprint $table) {
-            $table->id('IDESPECIALIDAD_DOCENTE');
-            $table->string('ESPECIALIDAD_DOCENTE');
+            $table->id();
+            $table->string('EspecialidadDoc',25);
 
             $table->timestamps();
         });

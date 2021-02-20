@@ -14,17 +14,18 @@ class CreateMantenimientosTable extends Migration
     public function up()
     {
         Schema::create('mantenimientos', function (Blueprint $table) {
-            $table->id('IDMANTENIMIENTO');
-            $table->dateTime('FECHAMANTENIMIENTO');
-            $table->string('MOTIVOMANTENIMIENTO',50);
-            $table->string('PROVEEDOR',75);
-            $table->string('NOMTECNICO',30);
-            $table->string('TRABAJOREALIZADO',200);
-            $table->enum('SOLUCION',['SOLUCIONADO','NO-SOLUCIONADO']);
-            $table->binary('ACTASERVICIO');
+            $table->id();
+            $table->enum('Tipo', ['Mantenimiento', 'Garantia']);
+            $table->dateTime('Fecha');
+            $table->string('Problema/Fallo', 50);
+            $table->string('PoroveedorServ', 75);
+            $table->string('Reparador', 30);
+            $table->string('TrabajoRealizado', 200);
+            $table->enum('Solucion', ['Solucionado', 'No-Solucionado']);
+            $table->binary('ActaServicio');
 
-            $table->bigInteger('IDACTIVO')->unsigned();
-            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('activos');
+            $table->bigInteger('IdActivo')->unsigned();
+            $table->foreign('IdActivo')->references('id')->on('activos');
 
             $table->timestamps();
         });

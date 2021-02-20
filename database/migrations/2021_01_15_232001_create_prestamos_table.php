@@ -14,14 +14,14 @@ class CreatePrestamosTable extends Migration
     public function up()
     {
         Schema::create('prestamos', function (Blueprint $table) {
-            $table->id('IDPRESTAMO');
-            $table->dateTime('FECHAPRESTAMO');
-            $table->string('OBSERVACIONES');
-            $table->enum('ESTADOPRESTAMO',['ACTIVO','INACTIVO']);
+            $table->id();
+            $table->dateTime('FechaPrestamo');
+            $table->string('Observaciones');
+            $table->enum('Estado',['Activo','Inactivo']);
 
-            $table->bigInteger('IDACTIVO')->unsigned();
+            $table->bigInteger('IdActivo')->unsigned();
 
-            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('activos');
+            $table->foreign('IdActivo')->references('id')->on('activos');
 
             $table->timestamps();
         });

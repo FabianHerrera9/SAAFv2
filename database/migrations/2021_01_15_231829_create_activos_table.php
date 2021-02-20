@@ -14,19 +14,19 @@ class CreateActivosTable extends Migration
     public function up()
     {
         Schema::create('activos', function (Blueprint $table) {
-            $table->id('IDACTIVO');
-            $table->string('NOMBREACTIVO');
-            $table->string('SERIALACTIVO');
-            $table->string('MARCAACTIVO');
-            $table->string('MODELOACTIVO');
-            $table->string('DESCACTIVO');
-            $table->dateTime('GARANTIAACTIVO');
-            $table->enum('IDCLASEACTIVO',['TANGIBLE,INTANGIBLE']);
+            $table->id();
+            $table->string('NombreActivo',15);
+            $table->string('SN',20);
+            $table->string('Marca',15);
+            $table->string('Modelo',15);
+            $table->string('Descripcion',100);
+            $table->dateTime('Garantia');
+            $table->enum('TipoActivo', ['Tangible,Intangible']);
 
-            $table->bigInteger('IDENTIFICACIONPROV')->unsigned();
-            $table->bigInteger('IDENTIFICACIONUSU')->unsigned();
-            $table->foreign('IDENTIFICACIONUSU')->references('IDENTIFICACIONUSU')->on('usuarios');
-            $table->foreign('IDENTIFICACIONPROV')->references('IDENTIFICACIONPROV')->on('proveedores');
+            $table->bigInteger('IdProveedor')->unsigned();
+            $table->bigInteger('IdUsuario')->unsigned();
+            $table->foreign('IdUsuario')->references('id')->on('usuarios');
+            $table->foreign('IdProveedor')->references('id')->on('proveedores');
 
             $table->timestamps();
         });

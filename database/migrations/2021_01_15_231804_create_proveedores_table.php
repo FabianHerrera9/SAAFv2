@@ -14,13 +14,14 @@ class CreateProveedoresTable extends Migration
     public function up()
     {
         Schema::create('proveedores', function (Blueprint $table) {
-            $table->id('IDENTIFICACIONPROV');
-            $table->string('NOMBREPROVEEDOR');
-            $table->string('TELPROVEEDOR');
-            $table->string('CORREOPROVEEDOR');
-            $table->string('DIRECCIONPROVEEDOR');
-            $table->enum('IDTIPOPROVID',['NIT','CC']);
-            $table->enum('IDTIPOPROVEEDOR',['TANGIBLE','INTANGIBLE']);
+            $table->id();
+            $table->string('Provid',15);
+            $table->string('ProvName',30);
+            $table->string('Tel',15);
+            $table->string('Email',50);
+            $table->string('ProvDir',50);
+            $table->enum('Tipoid',['NIT','CC']);
+            $table->enum('Tipoprov',['Tangibles','Intangibles']);
 
             $table->timestamps();
         });

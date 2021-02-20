@@ -14,14 +14,15 @@ class CreateDocentesTable extends Migration
     public function up()
     {
         Schema::create('docentes', function (Blueprint $table) {
-            $table->id('IDENTIFICACIONDOC');
-            $table->string('NOMBREDOCENTE');
-            $table->string('TELDOCENTE');
-            $table->string('CORREODOCENTE');
-            $table->enum('IDTIPOID',['C.C.','C.E.','P.P.']);
+            $table->id();
+            $table->string('Identificacion',15);
+            $table->string('NomDocente',30);
+            $table->string('Telefono',15);
+            $table->string('Email',30);
+            $table->enum('TipoId',['C.C.','C.E.','P.P.']);
 
-            $table->bigInteger('IDESPECIALIDAD_DOCENTE')->unsigned();
-            $table->foreign('IDESPECIALIDAD_DOCENTE')->references('IDESPECIALIDAD_DOCENTE')->on('especialidad_docentes');
+            $table->bigInteger('IdEspecialidad')->unsigned();
+            $table->foreign('IdEspecialidad')->references('id')->on('especialidad_docentes');
 
             $table->timestamps();
         });

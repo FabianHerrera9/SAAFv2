@@ -14,18 +14,18 @@ class CreateAsignacionTable extends Migration
     public function up()
     {
         Schema::create('asignacion', function (Blueprint $table) {
-            $table->id('IDASIGNACION');
-            $table->dateTime('FECHAASING');
-            $table->string('OBSERVACIONES');
-            $table->enum('ESTADOASIG',['ACTIVO','INACTIVO']);
+            $table->id();
+            $table->dateTime('Fecha');
+            $table->string('Observaciones');
+            $table->enum('Estado',['Activo','Inactivo']);
 
-            $table->bigInteger('IDACTIVO')->unsigned();
-            $table->bigInteger('IDENTIFICACIONDOC')->unsigned();
-            $table->bigInteger('IDAMBIENTE')->unsigned();
+            $table->bigInteger('IdActivo')->unsigned();
+            $table->bigInteger('IdDocente')->unsigned();
+            $table->bigInteger('IdAmbiente')->unsigned();
 
-            $table->foreign('IDACTIVO')->references('IDACTIVO')->on('activos');
-            $table->foreign('IDENTIFICACIONDOC')->references('IDENTIFICACIONDOC')->on('docentes');
-            $table->foreign('IDAMBIENTE')->references('IDAMBIENTE')->on('ambientes');
+            $table->foreign('IdActivo')->references('id')->on('activos');
+            $table->foreign('IdDocente')->references('id')->on('docentes');
+            $table->foreign('IdAmbiente')->references('id')->on('ambientes');
 
             $table->timestamps();
         });
