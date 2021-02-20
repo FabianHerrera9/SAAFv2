@@ -30,13 +30,13 @@
                         <tbody>
                         @foreach($usuarios as $usu)
                             <tr>
-                                <td>{{ $usu -> IDTIPOID }}</td>
-                                <td>{{ $usu -> IDENTIFICACIONUSU }}</td>
-                                <td>{{ $usu -> NOMBREUSU }}</td>
-                                <td>{{ $usu -> CARGOUSU }}</td>
-                                <td>{{ $usu -> ROL }}</td>
-                                <td>{{ $usu -> TELEFONOUSU }}</td>
-                                <td>{{ $usu -> CORREOUSU }}</td>
+                                <td>{{ $usu -> Tipoid }}</td>
+                                <td>{{ $usu -> Identificacion }}</td>
+                                <td>{{ $usu -> Name }}</td>
+                                <td>{{ $usu -> Job }}</td>
+                                <td>{{ $usu -> Rol }}</td>
+                                <td>{{ $usu -> Tel }}</td>
+                                <td>{{ $usu -> Email }}</td>
                                 <td>
                                     <i>
                                         <a href="{{route('usuarios.editar',$usu->IDENTIFICACIONUSU)}}">

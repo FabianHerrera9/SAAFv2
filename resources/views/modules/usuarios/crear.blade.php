@@ -9,7 +9,7 @@
             <div class="table-responsive">
                 <form action="{{route('usuarios.guardar')}}" method="post">
                     @csrf
-                    <select name="IDTIPOID" id="IDTIPOID" class="form-select my-3 form-control"
+                    <select name="Tipoid" id="Tipoid" class="form-select my-3 form-control"
                             aria-label="selecionar tipo de documento">
                         <option>Seleccione tipo de documento</option>
                         <option value="C.C.">C.C.</option>
@@ -17,36 +17,36 @@
                         <option value="P.P.">P.P.</option>
                     </select>
                     <div class="form-floating mb-3">
-                        <label for="IDENTIFICACIONUSU">Identificacion</label>
-                        <input type="text" class="form-control" id="IDENTIFICACIONUSU" name="IDENTIFICACIONUSU">
+                        <label for="Identificacion">Identificacion</label>
+                        <input type="text" class="form-control" id="Identificacion" name="Identificacion">
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="NOMBREUSU">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id="NOMBREUSU" name="NOMBREUSU">
+                        <label for="Name">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="Name" name="Name">
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="CARGOUSU">Cargo</label>
-                        <input type="text" class="form-control" id="CARGOUSU" name="CARGOUSU"
-                               placeholder="Rector/Tesorero/Secretari">
+                        <label for="Job">Cargo</label>
+                        <input type="text" class="form-control" id="Job" name="Job"
+                               placeholder="Rector/ra|Tesorer@|Secretari@">
                     </div>
-                    <select name="ROL" id="ROL" class="form-select my-3 form-control" aria-label="Seleccione Rol del Sistema">
+                    <select name="Rol" id="Rol" class="form-select my-3 form-control" aria-label="Seleccione Rol del Sistema">
                         <option>Seleccione Rol del Sistema</option>
                         <option value="Administrador">Administrador</option>
                         <option value="Tesorero">Tesorero</option>
                         <option value="Contador ">Contador</option>
                     </select>
                     <div class="form-floating mb-3">
-                        <label for="TELEFONOUSU">Telefono</label>
-                        <input type="number" class="form-control" id="TELEFONOUSU" name="TELEFONOUSU">
+                        <label for="Tel">Telefono</label>
+                        <input type="number" class="form-control" id="Tel" name="Tel">
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="CORREOUSU">Correo</label>
-                        <input type="email" class="form-control" id="CORREOUSU" name="CORREOUSU"
+                        <label for="Email">Correo</label>
+                        <input type="email" class="form-control" id="Email" name="Email"
                                placeholder="Ejemplo@saaf.com">
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="CONTASEÑAUSU">Contraseña</label>
-                        <input type="text" class="form-control" id="CONTASEÑAUSU" name="CONTASEÑAUSU">
+                        <label for="Password">Contraseña</label>
+                        <input type="text" class="form-control" id="Password" name="Password">
                     </div>
                     <hr>
                     <button type="submit" class="btn btn-success">Agregar Usuario</button>
