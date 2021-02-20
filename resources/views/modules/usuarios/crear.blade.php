@@ -48,6 +48,10 @@
                         <label for="Password">Contraseña</label>
                         <input type="text" class="form-control" id="Password" name="Password">
                     </div>
+                    <select name="Estado" id="Estado" class="form-select my-3 form-control" aria-label="Seleccione Estado">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
                     <hr>
                     <button type="submit" class="btn btn-success">Agregar Usuario</button>
                     <a type="button" class="btn" id="color-font" href="{{route('usuarios.index')}}">Cancelar</a>

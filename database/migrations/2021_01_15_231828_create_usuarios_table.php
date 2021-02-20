@@ -21,6 +21,7 @@ class CreateUsuariosTable extends Migration
             $table->string('Tel',15);
             $table->string('Email',30)->unique();
             $table->string('Password');
+            $table->enum('Estado',['Activo','Inactivo']);
             $table->enum('Tipoid',['C.C.','C.E.','P.P.']);
             $table->enum('Rol',['Administrador','Tesorero','Contador']);
 

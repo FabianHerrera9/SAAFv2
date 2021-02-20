@@ -19,7 +19,8 @@ class Usuarios extends Model
         'Email',
         'Password',
         'Tipoid',
-        'Rol'
+        'Rol',
+        'Estado'
     ];
     protected $hidden =
         [

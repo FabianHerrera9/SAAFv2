@@ -23,6 +23,7 @@
                             <th>Rol</th>
                             <th>Telefono</th>
                             <th>Correo</th>
+                            <th>Estado</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -37,6 +38,7 @@
                                 <td>{{ $usu -> Rol }}</td>
                                 <td>{{ $usu -> Tel }}</td>
                                 <td>{{ $usu -> Email }}</td>
+                                <td>{{ $usu -> Estado }}</td>
                                 <td>
                                     <i>
                                         <a href="{{route('usuarios.editar',$usu->id)}}">
