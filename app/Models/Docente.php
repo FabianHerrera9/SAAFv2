@@ -16,5 +16,6 @@ class Docente extends Model
         'Telefono',
         'Email',
         'TipoId',
+        'IdEspecialidad'
     ];
 }

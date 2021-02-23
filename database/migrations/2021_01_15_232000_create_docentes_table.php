@@ -20,9 +20,8 @@ class CreateDocentesTable extends Migration
             $table->string('Telefono',15);
             $table->string('Email',30);
             $table->enum('TipoId',['C.C.','C.E.','P.P.']);
+            $table->string('IdEspecialidad');
 
-            $table->bigInteger('IdEspecialidad')->unsigned();
-            $table->foreign('IdEspecialidad')->references('id')->on('especialidad_docentes');
 
             $table->timestamps();
         });

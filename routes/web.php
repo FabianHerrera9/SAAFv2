@@ -37,12 +37,10 @@ Route::put('proveedores/{id}',[ProveedorController::class,'actualizar'])->name('
 //Docentes
 Route::get('docentes',[DocenteController::class,'index'])->name('docentes.index');
 Route::get('docentes/crear',[DocenteController::class,'crear'])->name('docentes.crear');
-Route::post('docentes',[DocenteController::class,'store'])->name('docentes.store');
-Route::get('docentes/{id}',[DocenteController::class,'show'])->name('docentes.show');
-Route::delete('docentes/{id}',[DocenteController::class,'desactivar'])->name('docentes.desactivar');
-Route::get('docentes/edit/{id}',[DocenteController::class,'edit'])->name('docentes.edit');
-Route::put('docentes/{id}',[DocenteController::class,'update'])->name('docentes.updadate');
 Route::post('docentes',[DocenteController::class,'guardar'])->name('docentes.guardar');
+Route::get('docentes/edit/{id}',[DocenteController::class,'editar'])->name('docentes.edit');
+Route::put('docentes/{id}',[DocenteController::class,'actualizar'])->name('docentes.updadate');
+
 
 //Activos
 Route::get('activos',[ActivoController::class,'index'])->name('activos.index');

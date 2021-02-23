@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Docentes;
+use App\Models\Docente;
 
 class DocenteController extends Controller
 {
     public function index()
     {
-        $docentes = Docentes::all();
+        $docentes = Docente::all();
         return view('modules.docentes.listar', compact('docentes'));
     }
 
@@ -20,28 +20,28 @@ class DocenteController extends Controller
 
     public function guardar(Request $request)
     {
-        $docente = Docentes::create($request->all());
-        return redirect()->route('modules.docentes.index');
+        $docente = Docente::create($request->all());
+        return redirect()->route('docentes.index')->with([
+            'message' => 'Docente Creado Satisfactoriamenbte',
+            'type' => 'success'
+        ]);
     }
-    public function show($id){
-        $docente=Docentes::find($id);
-        return view('modules.docentes.show',compact('docente'));
-    }
-    public function  desactivar ($id){
-        $docente=Docentes::find($id)->delete();
-        return redirect()->route('modules.docentes.index');
-    }
-    public function edit($id){
-        $docente=Docentes::find($id);
-        return view('modules.docentes.edit',compact('docente'));
-    }
-    public function update (Request $request,$id){
-        $docente=formacion::find($id)->update($request->all());
-        return redirect()->route('modules.docentes.show',$id);
-    }
-    public function store(Request $request){
-        $docente=Docentes::create($request->all());
-        return redirect()->route('modules.docentes.index');
 
+    public function editar($id)
+    {
+        $docente = Docente::find($id);
+        return view('modules.docentes.edit', compact('docente'));
+    }
+
+    public function actualizar(Request $request, $id)
+    {
+        $docente = Docente::find($id)->update($request->all());
+        return redirect()->route('modules.docentes.show', $id);
+    }
+
+    public function desactivar($id)
+    {
+        $docente = Docente::find($id)->delete();
+        return redirect()->route('modules.docentes.index');
     }
 }
