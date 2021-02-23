@@ -38,13 +38,13 @@ Route::put('proveedores/{id}',[ProveedorController::class,'actualizar'])->name('
 Route::get('docentes',[DocenteController::class,'index'])->name('docentes.index');
 Route::get('docentes/crear',[DocenteController::class,'crear'])->name('docentes.crear');
 Route::post('docentes',[DocenteController::class,'guardar'])->name('docentes.guardar');
-Route::get('docentes/edit/{id}',[DocenteController::class,'editar'])->name('docentes.edit');
-Route::put('docentes/{id}',[DocenteController::class,'actualizar'])->name('docentes.updadate');
+Route::get('docentes/editar/{id}',[DocenteController::class,'editar'])->name('docentes.edit');
+Route::put('docentes/{id}',[DocenteController::class,'actualizar'])->name('docentes.actualizar');
 
 
-//Activos
+//activos
 Route::get('activos',[ActivoController::class,'index'])->name('activos.index');
 Route::get('activos/crear',[ActivoController::class,'crear'])->name('activos.crear');
-Route::get('activos',[ActivoController::class,'guardar'])->name('activos.guardar');
+Route::post('activos',[ActivoController::class,'guardar'])->name('activos.guardar');
 Route::get('activos/editar',[ActivoController::class,'editar'])->name('activos.editar');
 

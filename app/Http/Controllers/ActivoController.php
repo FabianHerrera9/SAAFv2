@@ -18,7 +18,7 @@ class ActivoController extends Controller
     public function crear()
     {
         $activo = Activo::all();
-        $usuario = Usuarios::all()->where('estado', '=', 'Activo');
+        $usuario = Usuarios::all();/*->where('estado', '==', 'Activo');*/
         $prov = Proveedor::all();
         return view('modules.activos.crear', compact('activo', 'usuario', 'prov'));
 

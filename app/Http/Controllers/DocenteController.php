@@ -29,14 +29,14 @@ class DocenteController extends Controller
 
     public function editar($id)
     {
-        $docente = Docente::find($id);
-        return view('modules.docentes.edit', compact('docente'));
+        $docentes = Docente::find($id);
+        return view('modules.docentes.editar', compact('docentes'));
     }
 
     public function actualizar(Request $request, $id)
     {
         $docente = Docente::find($id)->update($request->all());
-        return redirect()->route('modules.docentes.show', $id);
+        return redirect()->route('docentes.index');
     }
 
     public function desactivar($id)

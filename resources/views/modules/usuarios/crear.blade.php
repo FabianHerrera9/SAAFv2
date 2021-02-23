@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Password">Contraseña</label>
-                        <input type="text" class="form-control" id="Password" name="Password">
+                        <input type="password" class="form-control" id="Password" name="Password">
                     </div>
                     <select name="Estado" id="Estado" class="form-select my-3 form-control" aria-label="Seleccione Estado">
                         <option value="Activo">Activo</option>

@@ -1,43 +1,54 @@
 @extends('layouts.admin.app')
-
+@section('title')
+    | Edicion de Docentes
+@endsection
 @section('content')
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3"></div>
-            <form action="{{route('docentes.update',$docentes->id)}}" method="post">
+        <div class="col-p1 m-3 bck-tab">
+            <div class="table-responsive"></div>
+            <form action="{{route('docentes.actualizar',$docentes->id)}}" method="post">
                 @csrf
                 @method('PUT')
                 <table class="table">
-                    <tr>
+                    <div class="my-3">
+                        <label for="">Tipo de documento</label>
+                        <select name="TipoId" id="TipoId" class="form-select form-control"
+                                aria-label="selecionar tipo de documento">
+                            <option value="{{$docentes->TipoId}}">{{$docentes->TipoId}}</option>
+                            <option>selecionar tipo de documento</option>
+                            <option value="NIT">NIT</option>
+                            <option value="CC">C.C.</option>
+                        </select>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label>Identificacion del docente</label>
+                        <input type="text" name="Identificacion" class="form-control"
+                               value="{{$docentes->Identificacion}}">
+                    </div>
 
-                        <th>Identificacion  del docente</th>
-                        <td><input type="text" name="Identificacion" class="form-control" value="{{$docentes->Identificacion}}"></td>
-                    </tr>
-                    <tr>
+                    <div class="form-floating mb-3">
+                        <label for="NomDocente">Nombre del docente</label>
+                        <input type="text" name="NomDocente" id="NomDocente" class="form-control" value="{{$docentes->NomDocente}}">
+                    </div>
 
-                        <th>Nombre del docente</th>
-                        <td><input type="text" name="NomDocente" class="form-control" value="{{$docentes->NonmDocente}}"></td>
-                    </tr>
-                    <tr>
+                    <div class="form-floating mb-3">
+                        <label for="Telefono">Telefono del docente</label>
+                        <input type="text" name="Telefono" id="Telefono" class="form-control" value="{{$docentes->Telefono}}">
+                    </div>
 
-                        <th>Telefono del docente</th>
-                        <td><input type="text" name="Telefono" class="form-control" value="{{$docentes->telefono}}"></td>
-                    </tr>
-                    <tr>
+                    <div class="form-floating mb-3">
+                        <label for="IdEspecialidad">Especialidad</label>
+                        <input type="text" name="IdEspecialidad" id="IdEspecialidad" class="form-control" value="{{$docentes->IdEspecialidad}}">
+                    </div>
 
-                        <th>Correo electronico</th>
-                        <td><input type="text" name="Email" class="form-control" value="{{$docentes->Email}}"></td>
-                    </tr>
-
-                    <tr>
-
-                        <th>tipo de identificacion</th>
-                        <td><input type="text" name="directordegrupo" class="form-control" value="{{$docentes->TipoId}}"></td>
-                    </tr>
+                    <div class="form-floating mb-3">
+                        <label for="Email">Correo electronico</label>
+                        <input type="text" name="Email" id="Email" class="form-control" value="{{$docentes->Email}}">
+                    </div>
                 </table>
-                <button type="submit"class="btn btn-dark">GUARDAR CAMBIOS</button>
-                <a href="{{route('docentes.index')}}" class="btn btn-danger">CANCELAR</a>
+                <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                <a type="button" class="btn" id="color-font" href="{{route('docentes.index')}}">Cancelar</a>
             </form>
         </div>
     </div>

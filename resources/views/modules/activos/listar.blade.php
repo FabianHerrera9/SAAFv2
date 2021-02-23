@@ -13,10 +13,10 @@
                             {{session('message')}}
                         </div>
                     @endif
-                    <table class="table  table-hover">
+                    <table class="table" >
                         <thead>
                         <tr>
-                            <th># registro</th>
+                            <th># Registro</th>
                             <th>NombreActivo</th>
                             <th>Marca</th>
                             <th>Tipo de Activo</th>

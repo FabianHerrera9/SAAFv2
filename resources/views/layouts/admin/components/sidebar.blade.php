@@ -28,8 +28,8 @@
                         <span key="t-layouts">Activos</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        {{--<li><a href="{{route('activos.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></li>--}}
-                        {{--<li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>--}}
+                        <li><a href="{{route('activos.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
+                        <li><a href="{{route('activos.crear')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>--}}
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-power-off"> Desactivar</a></li>--}}
                     </ul>
@@ -37,7 +37,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-user"></i>
+                        <i class="bx bx-store-alt"></i>
                         <span key="t-dashboards">Proveedores</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -50,7 +50,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-user"></i>
+                        <i class="bx bx-group"></i>
                         <span key="t-dashboards">Docentes</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
