@@ -35,4 +35,7 @@ Route::put('proveedores/{id}',[ProveedorController::class,'actualizar'])->name('
 
 //Activos
 Route::get('activos',[ActivoController::class,'index'])->name('activos.index');
+Route::get('activos/crear',[ActivoController::class,'crear'])->name('activos.crear');
+Route::get('activos',[ActivoController::class,'guardar'])->name('activos.guardar');
+Route::get('activos/editar',[ActivoController::class,'editar'])->name('activos.editar');
 

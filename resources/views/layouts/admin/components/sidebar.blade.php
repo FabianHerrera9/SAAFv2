@@ -29,9 +29,9 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('activos.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-power-off"> Desactivar</a></li>
+                        {{--<li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>--}}
+                        {{--<li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>--}}
+                        {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-power-off"> Desactivar</a></li>--}}
                     </ul>
                 </li>
 

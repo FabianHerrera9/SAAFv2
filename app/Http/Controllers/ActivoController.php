@@ -23,4 +23,12 @@ class ActivoController extends Controller
         return view('modules.activos.crear', compact('activo', 'usuario', 'prov'));
 
     }
+    public function guardar(Request $request){
+        $activo=Activo::create($request->all());
+        return redirect()->route('activos.index');
+    }
+    public function editar($id){
+        $activo=Activo::all();
+        return view('modules.activos.editar',compact('activo'));
+    }
 }
