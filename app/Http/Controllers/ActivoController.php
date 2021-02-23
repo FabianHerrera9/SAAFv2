@@ -12,13 +12,15 @@ class ActivoController extends Controller
     public function index()
     {
         $activo = Activo::all();
-        return view('modules.activos.listar', compact('activo'));
+        $prov=Proveedor::all();
+        $usuarios=Usuarios::all();
+        return view('modules.activos.listar', compact('activo','usuarios','prov'));
     }
 
     public function crear()
     {
         $activo = Activo::all();
-        $usuario = Usuarios::all();/*->where('estado', '==', 'Activo');*/
+        $usuario = Usuarios::all();//->where('estado', '==', 'Activo');
         $prov = Proveedor::all();
         return view('modules.activos.crear', compact('activo', 'usuario', 'prov'));
 

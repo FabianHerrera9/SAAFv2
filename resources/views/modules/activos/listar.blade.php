@@ -13,7 +13,7 @@
                             {{session('message')}}
                         </div>
                     @endif
-                    <table class="table" >
+                    <table class="table">
                         <thead>
                         <tr>
                             <th># Registro</th>
@@ -28,21 +28,29 @@
                         </thead>
                         <tbody>
                         @foreach($activo as $activos)
-                            <tr>
-                                <td>{{ $activos -> id }}</td>
-                                <td>{{ $activos -> NombreActivo }}</td>
-                                <td>{{ $activos -> Marca }}</td>
-                                <td>{{ $activos -> TipoActivo }}</td>
-                                <td>{{ $activos -> IdProveedor }}</td>
-                                <td>{{ $activos -> IdUsuario }}</td>
-                                <td>
-                                    <i>
-                                        <a href="{{route('activos.editar',$activos->id)}}">
-                                            <i class="bx bx-edit"></i>
-                                        </a>
-                                    </i>
-                                </td>
-                            </tr>
+                            @foreach($prov as $provs)
+                                @foreach($usuarios as $usu)
+                                    <tr>
+                                        <td>{{ $activos -> id }}</td>
+                                        <td>{{ $activos -> NombreActivo }}</td>
+                                        <td>{{ $activos -> Marca }}</td>
+                                        <td>{{ $activos -> TipoActivo }}</td>
+                                        @if($provs->id == $activos->IdProveedor)
+                                            <td>{{ $provs -> ProvName }}</td>
+                                        @endif
+                                        @if($usu->id == $activos->IdUsuario)
+                                            <td>{{ $usu -> Name }}</td>
+                                        @endif
+                                        <td>
+                                            <i>
+                                                <a href="{{route('activos.editar',$activos->id)}}">
+                                                    <i class="bx bx-edit"></i>
+                                                </a>
+                                            </i>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endforeach
                         @endforeach
                         </tbody>
                     </table>
