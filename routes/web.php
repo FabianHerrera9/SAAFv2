@@ -5,6 +5,7 @@ use \App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\autn\logincontroller;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ActivoController;
+use App\Http\Controllers\DocenteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,16 @@ Route::get('proveedores/crear',[ProveedorController::class,'crear'])->name('prov
 Route::post('proveedores',[ProveedorController::class,'guardar'])->name('proveedores.guardar');
 Route::get('proveedores/editar/{id}',[ProveedorController::class,'editar'])->name('proveedores.editar');
 Route::put('proveedores/{id}',[ProveedorController::class,'actualizar'])->name('proveedores.actualizar');
+
+//Docentes
+Route::get('docentes',[DocenteController::class,'index'])->name('docentes.index');
+Route::get('docentes/crear',[DocenteController::class,'crear'])->name('docentes.crear');
+Route::post('docentes',[DocenteController::class,'store'])->name('docentes.store');
+Route::get('docentes/{id}',[DocenteController::class,'show'])->name('docentes.show');
+Route::delete('docentes/{id}',[DocenteController::class,'desactivar'])->name('docentes.desactivar');
+Route::get('docentes/edit/{id}',[DocenteController::class,'edit'])->name('docentes.edit');
+Route::put('docentes/{id}',[DocenteController::class,'update'])->name('docentes.updadate');
+Route::post('docentes',[DocenteController::class,'guardar'])->name('docentes.guardar');
 
 //Activos
 Route::get('activos',[ActivoController::class,'index'])->name('activos.index');
