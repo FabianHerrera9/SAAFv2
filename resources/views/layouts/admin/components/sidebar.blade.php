@@ -38,6 +38,19 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-user"></i>
+                        <span key="t-dashboards">Proveedores</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('proveedores.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
+                        <li><a href="{{route('proveedores.crear')}}" key="t-saas" class="bx bx-user-plus"> Nuevo</a></li>
+                        {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-check"> Actualizar</a></li>--}}
+                        {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>--}}
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user"></i>
                         <span key="t-dashboards">Docentes</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -70,18 +83,6 @@
                         <li><a href="{{route('usuarios.index')}}" key="t-horizontal" class="bx bx-search" > Listado</a></li>
                         <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
                         <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>
-
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-check-shield"></i>
-                        <span key="t-layouts">Garantias</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('usuarios.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus" > Nueva Garantia</a></li>
 
                     </ul>
                 </li>

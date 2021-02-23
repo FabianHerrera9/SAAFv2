@@ -25,6 +25,7 @@ class CreateActivosTable extends Migration
 
             $table->bigInteger('IdProveedor')->unsigned();
             $table->bigInteger('IdUsuario')->unsigned();
+
             $table->foreign('IdUsuario')->references('id')->on('usuarios');
             $table->foreign('IdProveedor')->references('id')->on('proveedores');
 

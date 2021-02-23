@@ -22,9 +22,9 @@ class UsuariosController extends Controller
             'type'=>'success'
         ]);
     }
-    public function editar($IDENTIFICACIONUSU){
+    public function editar($id){
 
-        $usuarios=Usuarios::find($IDENTIFICACIONUSU);
+        $usuarios=Usuarios::find($id);
         return view('modules.usuarios.editar',compact('usuarios'));
     }
     public function actualizar(Request $request,$id){
