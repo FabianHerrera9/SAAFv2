@@ -37,7 +37,7 @@
                                 <td>{{ $doc -> Email }}</td>
                                 <td>
                                     <i>
-                                        <a href="{{route('docentes.edit',$doc -> id)}}">
+                                        <a href="">
                                             <i class="bx bx-edit"></i>
                                         </a>
                                     </i>
