@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\autn\logincontroller;
 use App\Http\Controllers\ProveedorController;
-use App\Http\Controllers\ActivoController
+use App\Http\Controllers\ActivoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
