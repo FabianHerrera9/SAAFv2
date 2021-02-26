@@ -46,5 +46,5 @@ Route::put('docentes/{id}',[DocenteController::class,'actualizar'])->name('docen
 Route::get('activos',[ActivoController::class,'index'])->name('activos.index');
 Route::get('activos/crear',[ActivoController::class,'crear'])->name('activos.crear');
 Route::post('activos',[ActivoController::class,'guardar'])->name('activos.guardar');
-Route::get('activos/editar',[ActivoController::class,'editar'])->name('activos.editar');
+Route::get('activos/editar/{id}',[ActivoController::class,'editar'])->name('activos.editar');
 
