@@ -13,9 +13,21 @@ class UsuariosController extends Controller
         return view('modules.usuarios.listar',compact('usuarios'));
     }
     public function crear(){
+
         return view('modules.usuarios.crear');
     }
     public function guardar(Request $request){
+        $validar=$request->validate([
+            'Identificacion'=>'required|max:15',
+            'Name'=>'required|max:30',
+            'Job'=>'required|max:10',
+            'Tel'=>'required|max:15',
+            'Email'=>'required|max:30',
+            'Password'=>'required',
+            'Estado'=>'required',
+            'Tipoid'=>'required',
+            'Rol'=>'required',
+            ]);
         $usuario=Usuarios::create($request->all());
         return redirect()->route('usuarios.index')->with([
             'message'=>'Usuario Creado Con exito',
