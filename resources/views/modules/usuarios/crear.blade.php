@@ -9,8 +9,9 @@
             <div class="table-responsive">
                 <form action="{{route('usuarios.guardar')}}" method="post">
                     @csrf
-                    <div>
-                        <select name="Tipoid" id="Tipoid" class="form-select my-3 form-control"
+                    <div class="form-floating mb-3">
+                        <label for="Tipoid">Tipo de documento</label>
+                        <select name="Tipoid" id="Tipoid" class="form-select my-1 form-control"
                                 aria-label="selecionar tipo de documento">
                             <option>Seleccione tipo de documento</option>
                             <option value="C.C.">C.C.</option>
@@ -48,8 +49,9 @@
                             <br>
                         @endif
                     </div>
-                    <div>
-                        <select name="Rol" id="Rol" class="form-select my-3 form-control" aria-label="Seleccione Rol del Sistema">
+                    <div class="form-floating mb-3">
+                        <label for="Rol">Rol</label>
+                        <select name="Rol" id="Rol" class="form-select my-1 form-control" aria-label="Seleccione Rol del Sistema">
                             <option>Seleccione Rol del Sistema</option>
                             <option value="Administrador">Administrador</option>
                             <option value="Tesorero">Tesorero</option>
@@ -86,8 +88,9 @@
                             <br>
                         @endif
                     </div>
-                    <div>
-                        <select name="Estado" id="Estado" class="form-select my-3 form-control" aria-label="Seleccione Estado">
+                    <div class="form-floating mb-3" >
+                        <label for="Estado">Estado</label>
+                        <select name="Estado" id="Estado" class="form-select my-1 form-control" aria-label="Seleccione Estado">
                             <option value="Activo">Activo</option>
                             <option value="Inactivo">Inactivo</option>
                         </select>

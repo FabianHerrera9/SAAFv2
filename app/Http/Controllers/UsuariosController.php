@@ -18,7 +18,7 @@ class UsuariosController extends Controller
     }
     public function guardar(Request $request){
         $validar=$request->validate([
-            'Identificacion'=>'required|max:15',
+            'Identificacion'=>'required|number|max:15',
             'Name'=>'required|max:30',
             'Job'=>'required|max:10',
             'Tel'=>'required|max:15',
@@ -40,7 +40,17 @@ class UsuariosController extends Controller
         return view('modules.usuarios.editar',compact('usuarios'));
     }
     public function actualizar(Request $request,$id){
-
+        $validar=$request->validate([
+            'Identificacion'=>'required|max:15',
+            'Name'=>'required|max:30',
+            'Job'=>'required|max:10',
+            'Tel'=>'required|max:15',
+            'Email'=>'required|max:30',
+            'Password'=>'required',
+            'Estado'=>'required',
+            'Tipoid'=>'required',
+            'Rol'=>'required',
+        ]);
         $usuarios=Usuarios::find($id)->update($request->all());
         return redirect()->route('usuarios.index')->with([
             'message'=>'La actualizacion se ha generado correctamente',
