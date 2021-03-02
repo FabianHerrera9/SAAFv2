@@ -13,7 +13,7 @@ class CreateAsignacionTable extends Migration
      */
     public function up()
     {
-        Schema::create('asignacion', function (Blueprint $table) {
+        Schema::create('asignaciones', function (Blueprint $table) {
             $table->id();
             $table->dateTime('Fecha');
             $table->string('Observaciones');
