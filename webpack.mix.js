@@ -18,12 +18,12 @@ mix.styles(
         'resources/skote/css/app.min.css'
     ]
     ,'public/css/app.css').scripts(
-        [
-            'resources/skote/js/jquery.min.js',
-            'resources/skote/js/bootstrap.bundle.min.js',
-            'resources/skote/js/metisMenu.min.js',
-            'resources/skote/js/simplebar.min.js',
-            'resources/skote/js/waves.min.js',
-            'resources/skote/js/app.js',
-        ]
+    [
+        'resources/skote/js/jquery.min.js',
+        'resources/skote/js/bootstrap.bundle.min.js',
+        'resources/skote/js/metisMenu.min.js',
+        'resources/skote/js/simplebar.min.js',
+        'resources/skote/js/waves.min.js',
+        'resources/skote/js/app.js',
+    ]
     ,'public/js/app.js')
