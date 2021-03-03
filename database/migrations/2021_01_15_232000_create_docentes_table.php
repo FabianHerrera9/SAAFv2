@@ -20,7 +20,7 @@ class CreateDocentesTable extends Migration
             $table->string('Telefono',15);
             $table->string('Email',30);
             $table->enum('TipoId',['C.C.','C.E.','P.P.']);
-            $table->string('IdEspecialidad');
+            $table->string('IdEspecialidad',30);
 
 
             $table->timestamps();

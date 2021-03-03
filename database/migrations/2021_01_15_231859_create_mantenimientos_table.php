@@ -13,7 +13,7 @@ class CreateMantenimientosTable extends Migration
      */
     public function up()
     {
-        Schema::create('mantenimientos', function (Blueprint $table) {
+        Schema::create('mantenimientos/garantias', function (Blueprint $table) {
             $table->id();
             $table->enum('Tipo', ['Mantenimiento', 'Garantia']);
             $table->dateTime('Fecha');
