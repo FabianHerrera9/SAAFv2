@@ -18,7 +18,7 @@
                         <tr class="table">
                             <th>TipoId</th>
                             <th>Identificacion</th>
-                            <th>NomDocente</th>
+                            <th>Nombre del Docente</th>
                             <th>Especialidad</th>
                             <th>Telefono</th>
                             <th>Email</th>
@@ -37,7 +37,7 @@
                                 <td>{{ $doc -> Email }}</td>
                                 <td>
                                     <i>
-                                        <a href="">
+                                        <a href="{{route('docentes.editar', $doc->id)}}">
                                             <i class="bx bx-edit"></i>
                                         </a>
                                     </i>

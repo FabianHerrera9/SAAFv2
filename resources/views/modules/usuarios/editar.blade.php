@@ -105,7 +105,7 @@
                         @endif
                     </div>
                     <hr>
-                    <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                    <button type="submit" class="btn btn-success">Actualizar Usuario</button>
                     <a type="button" class="btn" id="color-font" href="{{route('usuarios.index')}}">Cancelar</a>
                 </form>
 
