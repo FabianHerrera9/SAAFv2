@@ -6,6 +6,7 @@ use App\Http\Controllers\autn\logincontroller;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ActivoController;
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\PrestamoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +50,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('activos', [ActivoController::class, 'index'])->name('activos.index');
     Route::get('activos/crear', [ActivoController::class, 'crear'])->name('activos.crear');
     Route::post('activos', [ActivoController::class, 'guardar'])->name('activos.guardar');
-    Route::get('activos/editar', [ActivoController::class, 'editar'])->name('activos.editar');
+    Route::get('activos/editar/{id}', [ActivoController::class, 'editar'])->name('activos.editar');
+    Route::put('Activos/{id}',[ActivoController::class,'actualizar'])->name('activos.actualizar');
+
+//Prestamos
+    Route::get('prestamos',[PrestamoController::class,'index'])->name('prestamos.index');
+    Route::get('prestamos/crear',[PrestamoController::class,'crear'])->name('prestamos.crear');
+    Route::post('prestamos',[PrestamoController::class,'guardar'])->name('prestamos.guardar');
+    Route::get('prestamos/editar/{id}',[PrestamoController::class,'editar'])->name('prestamos.editar');
+    Route::put('prestamos/{id}',[PrestamoController::class,'actualizar'])->name('prestamos.actualizar');
+
 
 });
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

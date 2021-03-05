@@ -12,9 +12,12 @@ class Prestamo extends Model
     protected $primaryKey='id';
     protected $fillable=[
         'FechaPrestamo',
+        'FechaDevolucion',
         'Observaciones',
         'Estado',
-        'IdActivo'
+        'IdActivo',
+        'IdDocente',
+        'IdUsuario'
 
     ];
 

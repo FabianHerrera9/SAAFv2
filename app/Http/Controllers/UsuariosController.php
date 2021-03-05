@@ -18,7 +18,7 @@ class UsuariosController extends Controller
     }
     public function guardar(Request $request){
         $validar=$request->validate([
-            'Identificacion'=>'required|number|max:15',
+            'Identificacion'=>'required|max:15',
             'Name'=>'required|max:30',
             'Job'=>'required|max:10',
             'Tel'=>'required|max:15',

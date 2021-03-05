@@ -32,6 +32,29 @@
                         <li><a href="{{route('activos.crear')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>--}}
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-power-off"> Desactivar</a></li>--}}
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect bx bx-mouse"> Prestamos</a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <i><a href="{{route('prestamos.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></i>
+                                <i><a href="{{route('prestamos.crear')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></i>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect bx bx-laptop"> Asignaciones</a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <i><a href="{{route('activos.crear')}}" key="t-horizontal" class="bx bx-search" > Listado</a></i>
+                                <i><a href="{{route('activos.crear')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></i>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect bx bx-wrench"> Mantenimiento/Garantia</a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <i><a href="{{route('activos.crear')}}" key="t-horizontal" class="bx bx-search"> Listado</a></i>
+                                <i><a href="{{route('activos.crear')}}" key="t-vertical" class="bx bx-plus" > Nuevo Mantenimiento/Garantia</a></i>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
 
@@ -61,43 +84,7 @@
                     </ul>
                 </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-mouse"></i>
-                        <span key="t-layouts">Prestamos</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('usuarios.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>
 
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-laptop"></i>
-                        <span key="t-layouts">Asignaciones</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('usuarios.index')}}" key="t-horizontal" class="bx bx-search" > Listado</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>
-
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-wrench"></i>
-                        <span key="t-layouts">Mantenimiento / Garantias</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('usuarios.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-plus" >Nueva Mantenimiento</a></li>
-
-                    </ul>
-                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

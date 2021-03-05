@@ -26,11 +26,23 @@ class ActivoController extends Controller
 
     }
     public function guardar(Request $request){
+
+        //validate
+
+
         $activo=Activo::create($request->all());
         return redirect()->route('activos.index');
     }
     public function editar($id){
-        $activo=Activo::all();
-        return view('modules.activos.editar',compact('activo'));
+        $activo=Activo::find($id);
+        $prov=Proveedor::all();
+        $usu=Usuarios::all();
+        return view('modules.activos.editar',compact('activo','prov','usu'));
+    }
+    public function actualizar(Request $request,$id){
+        //validate
+
+        $activo=Activo::find($id)->update($request->all());
+        return redirect()->route('activos.index');
     }
 }

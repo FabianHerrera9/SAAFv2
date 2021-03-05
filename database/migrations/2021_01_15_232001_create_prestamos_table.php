@@ -16,12 +16,17 @@ class CreatePrestamosTable extends Migration
         Schema::create('prestamos', function (Blueprint $table) {
             $table->id();
             $table->dateTime('FechaPrestamo');
-            $table->string('Observaciones');
+            $table->dateTime('FechaDevolucion');
+            $table->string('Observaciones',100);
             $table->enum('Estado',['Activo','Inactivo']);
 
             $table->bigInteger('IdActivo')->unsigned();
+            $table->bigInteger('IdDocente')->unsigned();
+            $table->bigInteger('IdUsuario')->unsigned();
 
             $table->foreign('IdActivo')->references('id')->on('activos');
+            $table->foreign('IdDocente')->references('id')->on('docentes');
+            $table->foreign('IdUsuario')->references('id')->on('usuarios');
 
             $table->timestamps();
         });

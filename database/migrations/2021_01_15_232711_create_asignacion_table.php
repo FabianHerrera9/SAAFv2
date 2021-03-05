@@ -13,7 +13,7 @@ class CreateAsignacionTable extends Migration
      */
     public function up()
     {
-        Schema::create('asignaciones', function (Blueprint $table) {
+        Schema::create('asignacion', function (Blueprint $table) {
             $table->id();
             $table->dateTime('Fecha');
             $table->string('Observaciones');
@@ -22,10 +22,13 @@ class CreateAsignacionTable extends Migration
             $table->bigInteger('IdActivo')->unsigned();
             $table->bigInteger('IdDocente')->unsigned();
             $table->bigInteger('IdAmbiente')->unsigned();
+            $table->bigInteger('IdUsuario')->unsigned();
 
             $table->foreign('IdActivo')->references('id')->on('activos');
             $table->foreign('IdDocente')->references('id')->on('docentes');
             $table->foreign('IdAmbiente')->references('id')->on('ambientes');
+            $table->foreign('IdUsuario')->references('id')->on('usuarios');
+
 
             $table->timestamps();
         });
