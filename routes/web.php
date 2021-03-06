@@ -42,7 +42,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('docentes', [DocenteController::class, 'index'])->name('docentes.index');
     Route::get('docentes/crear', [DocenteController::class, 'crear'])->name('docentes.crear');
     Route::post('docentes', [DocenteController::class, 'guardar'])->name('docentes.guardar');
-    Route::get('docentes/editar/{id}', [DocenteController::class, 'editar'])->name('docentes.edit');
+    Route::get('docentes/editar/{id}', [DocenteController::class, 'editar'])->name('docentes.editar');
     Route::put('docentes/{id}', [DocenteController::class, 'actualizar'])->name('docentes.actualizar');
 
 

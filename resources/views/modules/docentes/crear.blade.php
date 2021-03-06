@@ -12,7 +12,7 @@
                     <div>
                         <select name="TipoId" id="TipoId" class="form-select my-3 form-control"
                                 aria-label="Seleccione el tipo de documento">
-                            <option>Seleccione tipo de documento</option>
+                            <option value=" ">Seleccione tipo de documento</option>
                             <option value="C.C.">C.C.</option>
                             <option value="C.E.">C.E.</option>
                             <option value="P.P.">P.P.</option>
@@ -25,7 +25,7 @@
 
                     <div class="form-floating mb-3">
                         <label for="Identificacion">Identificacion</label>
-                        <input type="text" class="form-control" id="Identificacion" name="Identificacion">
+                        <input type="text   " class="form-control" id="Identificacion" name="Identificacion">
                         @if($errors->has('Identificacion'))
                             <label for="" style="color:red;">{{ $errors->first('Identificacion') }}</label>
                             <br>

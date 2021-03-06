@@ -20,13 +20,14 @@ class DocenteController extends Controller
 
     public function guardar(Request $request)
     {
-        $validar=$request->validate([
-            'Identificacion'=>'required|max:15',
-            'NomDocente'=>'required|max:30',
-            'Telefono'=>'required|max:15',
-            'Email'=>'required|max:30',
-            'Tipoid'=>'required',
-            'IdEspecialidad'=>'required|max:30',
+        //dd($request->all());
+        $validar = $request->validate([
+            'Identificacion' => 'required|max:15',
+            'NomDocente' => 'required|max:30',
+            'Telefono' => 'required|max:15',
+            'Email' => 'required|max:30',
+            'Tipoid' => 'required',
+            'IdEspecialidad' => 'required|max:30',
         ]);
         $docente = Docente::create($request->all());
         return redirect()->route('docentes.index')->with([
@@ -43,13 +44,13 @@ class DocenteController extends Controller
 
     public function actualizar(Request $request, $id)
     {
-        $validar=$request->validate([
-            'Identificacion'=>'required|max:15',
-            'NomDocente'=>'required|max:30',
-            'Telefono'=>'required|max:15',
-            'Email'=>'required|max:30',
-            'Tipoid'=>'required',
-            'IdEspecialidad'=>'required|max:30',
+        $validar = $request->validate([
+            'Identificacion' => 'required|max:15',
+            'NomDocente' => 'required|max:30',
+            'Telefono' => 'required|max:15',
+            'Email' => 'required|max:30',
+            'Tipoid' => 'required',
+            'IdEspecialidad' => 'required|max:30',
         ]);
         $docente = Docente::find($id)->update($request->all());
         return redirect()->route('docentes.index')->with([
