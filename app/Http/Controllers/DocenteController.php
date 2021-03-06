@@ -29,8 +29,8 @@ class DocenteController extends Controller
             'Tipoid' => 'required',
             'IdEspecialidad' => 'required|max:30',
         ]);
-        $docente = Docente::create($request->all());
-        return redirect()->route('docentes.index')->with([
+        $docentes = Docente::create($request->all());
+        return redirect()->route('usuarios.index')->with([
             'message' => 'Docente Creado Satisfactoriamenbte',
             'type' => 'success'
         ]);
@@ -52,16 +52,16 @@ class DocenteController extends Controller
             'Tipoid' => 'required',
             'IdEspecialidad' => 'required|max:30',
         ]);
-        $docente = Docente::find($id)->update($request->all());
+        $docentes = Docente::find($id)->update($request->all());
         return redirect()->route('docentes.index')->with([
             'message' => 'Docente Editado Satisfactoriamenbte',
             'type' => 'warning'
-        ]);;
+        ]);
     }
 
     public function desactivar($id)
     {
-        $docente = Docente::find($id)->delete();
+        $docentes = Docente::find($id)->delete();
         return redirect()->route('modules.docentes.index');
     }
 }
