@@ -17,7 +17,7 @@ class CreateAmbientesTable extends Migration
             $table->id();
             $table->string('PisoAmbiente',3);
             $table->string('NombreAMbiente',20);
-            $table->string('Responsable')->nullable();
+            $table->string('Responsable',30)->nullable();
 
             $table->timestamps();
         });

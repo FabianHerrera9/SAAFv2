@@ -43,13 +43,13 @@
                                                 <td>{{ $usuarios -> Name }}</td>
                                             @endif
                                             <td>{{ $prestamo -> FechaDevolucion }}</td>
-                                            <td>
-                                                <i>
-                                                    <a href="{{route('prestamos.editar',$prestamo->id)}}">
-                                                        <i class="bx bx-edit"></i>
-                                                    </a>
-                                                </i>
-                                            </td>
+                                            {{--<td>
+                                                 <i>
+                                                     <a href="{{route('prestamos.editar',$prestamo->id)}}">
+                                                         <i class="bx bx-edit"></i>
+                                                     </a>
+                                                 </i>
+                                             </td>--}}
                                         </tr>
                                     @endforeach
                                 @endforeach

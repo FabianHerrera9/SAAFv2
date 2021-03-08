@@ -7,6 +7,8 @@ use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ActivoController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\PrestamoController;
+use App\Http\Controllers\AmbienteController;
+use App\Http\Controllers\AsignacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +47,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('docentes/editar/{id}', [DocenteController::class, 'editar'])->name('docentes.editar');
     Route::put('docentes/{id}', [DocenteController::class, 'actualizar'])->name('docentes.actualizar');
 
+//Ambientes
+    Route::get('ambientes',[AmbienteController::class,'listar'])->name('ambientes.index');
+    Route::get('ambientes/crear',[AmbienteController::class,'crear'])->name('ambientes.crear');
+    Route::post('ambientes',[AmbienteController::class,'guardar'])->name('ambientes.guardar');
+    Route::get('ambientes/editar/{id}',[AmbienteController::class,'editar'])->name('ambientes.editar');
+    Route::put('ambientes/{id}',[AmbienteController::class,'actualizar'])->name('ambientes.actualizar');
 
 //activos
     Route::get('activos', [ActivoController::class, 'index'])->name('activos.index');
@@ -60,6 +68,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('prestamos/editar/{id}',[PrestamoController::class,'editar'])->name('prestamos.editar');
     Route::put('prestamos/{id}',[PrestamoController::class,'actualizar'])->name('prestamos.actualizar');
 
+//Asignaciones
+    Route::get('asignaciones',[AsignacionController::class,'listar'])->name('asignaciones.index');
+    Route::get('asignaciones/crear',[AsignacionController::class,'crear'])->name('asignaciones.crear');
+    Route::post('asignaciones',[AsignacionController::class,'guardar'])->name('asignaciones.guardar');
 
 });
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
