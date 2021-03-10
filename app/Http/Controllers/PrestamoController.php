@@ -41,7 +41,7 @@ class PrestamoController extends Controller
         return redirect()->route('prestamos.index');
     }
 
-    public function editar($id){
+    /*public function editar($id){
 
         $prestamo=Prestamo::all();
         $activos = Activo::all();
@@ -62,5 +62,5 @@ class PrestamoController extends Controller
         ]);
         $prestamos=Prestamo::find($id)->update($request->all());
         return redirect()->route('prestamos.index');
-    }
+    }*/
 }
