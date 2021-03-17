@@ -18,7 +18,8 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <select name="IdActivo" id="IdActivo" class="form-select my-3 form-control"
+                        <label for="IdActivo">Activo</label>
+                        <select name="IdActivo" id="IdActivo" class="form-select form-control"
                                 aria-label="Seleccione el Activo">
                             <option value="">Seleccione el Activo</option>
                             @foreach($activo as $activos)
@@ -31,7 +32,8 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <select name="IdDocente" id="IdDocente" class="form-select my-3 form-control"
+                        <label for="IdDocente">Docente</label>
+                        <select name="IdDocente" id="IdDocente" class="form-select form-control"
                                 aria-label="Seleccione el Docente">
                             <option value="">Seleccione el Docente</option>
                             @foreach($docente as $docentes)
@@ -44,7 +46,8 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <select name="IdAmbiente" id="IdAmbiente" class="form-select my-3 form-control"
+                        <label for="IdAmbiente">Ambiente</label>
+                        <select name="IdAmbiente" id="IdAmbiente" class="form-select form-control"
                                 aria-label="Seleccione el Ambiente">
                             <option value="">Seleccione el Ambiente</option>
                             @foreach($ambiente as $ambientes)
@@ -58,7 +61,8 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <select name="Estado" id="Estado" class="form-select my-3 form-control"
+                        <label for="Estado">Estado</label>
+                        <select name="Estado" id="Estado" class="form-select form-control"
                                 aria-label="Seleccione el Estado">
                             <option value="Activo">Activo</option>
                             <option value="Inactivo">Inactivo</option>
@@ -69,11 +73,12 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <select name="IdUsuario" id="IdUsuario" class="form-select my-3 form-control"
+                        <label for="IdUsuario">Registra</label>
+                        <select name="IdUsuario" id="IdUsuario" class="form-select form-control"
                                 aria-label="Usuario que registra">
                             <option value="">Usuario que registra</option>
                             @foreach($usuario as $usuarios)
-                                <option value="{{$usuarios->id}}">{{ $usuarios -> Name }}</option>
+                                <option value="{{$usuarios->id}}">{{ $usuarios -> Nombre }}</option>
                             @endforeach
                         </select>
                         @if($errors->has('IdUsuario'))
@@ -91,7 +96,7 @@
                         @endif
                     </div>
                     <hr>
-                    <button type="submit" class="btn btn-success">Regisrar Ambiente</button>
+                    <button type="submit" class="btn btn-success">Registrar Asignacion</button>
                     <a type="button" class="btn" id="color-font" href="{{route('ambientes.index')}}">Cancelar</a>
                 </form>
             </div>

@@ -14,7 +14,7 @@
                         <select name="Tipoid" id="Tipoid" class="form-select my-3 form-control"
                                 aria-label="selecionar tipo de documento">
                             <option value="{{$usuarios->Tipoid}}">{{$usuarios->Tipoid}}</option>
-                            <option>Seleccione tipo de documento</option>
+                            <option value=" ">Seleccione tipo de documento</option>
                             <option value="C.C.">C.C.</option>
                             <option value="C.E.">C.E.</option>
                             <option value="P.P.">P.P.</option>
@@ -35,20 +35,20 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Name">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id="Name" name="Name"
-                               value="{{$usuarios->Name}}">
-                        @if($errors->has('Name'))
-                            <label for="" style="color:red;">{{ $errors->first('Name') }}</label>
+                        <label for="Nombre">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre"
+                               value="{{$usuarios->Nombre}}">
+                        @if($errors->has('Nombre'))
+                            <label for="" style="color:red;">{{ $errors->first('Nombre') }}</label>
                             <br>
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Job">Cargo</label>
-                        <input type="text" class="form-control" id="Job" name="Job"
-                               placeholder="Rector/Tesorero/Secretari" value="{{$usuarios->Job}}">
-                        @if($errors->has('Job'))
-                            <label for="" style="color:red;">{{ $errors->first('Job') }}</label>
+                        <label for="Cargo">Cargo</label>
+                        <input type="text" class="form-control" id="Cargo" name="Cargo"
+                               placeholder="Rector/Tesorero/Secretari" value="{{$usuarios->Cargo}}">
+                        @if($errors->has('Cargo'))
+                            <label for="" style="color:red;">{{ $errors->first('Cargo') }}</label>
                             <br>
                         @endif
                     </div>
@@ -56,7 +56,7 @@
                         <select name="Rol" id="Rol" class="form-select my-3 form-control"
                                 aria-label="Seleccione Rol del Sistema">
                             <option value="{{$usuarios->Rol}}">{{$usuarios->Rol}}</option>
-                            <option>Seleccione Rol del Sistema</option>
+                            <option value=" ">Seleccione Rol del Sistema</option>
                             <option value="Administrador">Administrador</option>
                             <option value="Tesorero">Tesorero.</option>
                             <option value="Contador">Contador</option>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Password">Contraseña</label>
-                        <input type="text" class="form-control" id="Password" name="Password">
+                        <input type="password" class="form-control" id="Password" name="Password">
                         @if($errors->has('Password'))
                             <label for="" style="color:red;">{{ $errors->first('Password') }}</label>
                             <br>

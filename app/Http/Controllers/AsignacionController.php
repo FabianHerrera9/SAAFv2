@@ -30,6 +30,15 @@ class AsignacionController extends Controller
         return view('modules.asignaciones.crear',compact('ambiente','activo','docente','usuario'));
     }
     public function guardar(Request $request){
+        $validar=$request->validate([
+           'Fecha'=>'required',
+           'Observaciones'=>'required|max:100',
+           'Estado'=>'required',
+           'IdActivo'=>'required',
+           'IdDocente'=>'required',
+           'IdAmbiente'=>'required',
+           'IdUsuario'=>'required',
+        ]);
         $asignaciones=Asignacion::create($request->all());
         return redirect()->route('asignaciones.index');
     }

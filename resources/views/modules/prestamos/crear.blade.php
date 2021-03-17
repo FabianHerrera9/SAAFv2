@@ -19,10 +19,11 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <select name="IdActivo" id="IdActivo" class="form-select my-3 form-control"
+                        <label for="IdActivo">Activo</label>
+                        <select name="IdActivo" id="IdActivo" class="form-select  form-control"
                                 aria-label="Seleccione el Activo">
+                            <option value=" ">Seleccione el Activo</option>
                             @foreach($activos as $activo)
-                                <option value="">Seleccione el Activo</option>
                                 <option value="{{$activo->id}}">{{$activo->NombreActivo}}</option>
                             @endforeach
                         </select>
@@ -33,10 +34,11 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <select name="IdDocente" id="IdDocente" class="form-select my-3 form-control"
+                        <label for="IdDocente">Doncete</label>
+                        <select name="IdDocente" id="IdDocente" class="form-select form-control"
                                 aria-label="Asignar A.....">
+                            <option value=" ">Seleccione ....</option>
                             @foreach($docentes as $docente)
-                                <option value="">Seleccione ....</option>
                                 <option value="{{$docente->id}}">{{$docente->NomDocente}}</option>
                             @endforeach
                         </select>
@@ -47,11 +49,12 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <select name="IdUsuario" id="IdUsuario" class="form-select my-3 form-control"
+                        <label for="IdUsuario">Usuario Que registra</label>
+                        <select name="IdUsuario" id="IdUsuario" class="form-select form-control"
                                 aria-label="Asignar Por.....">
+                            <option value="">Seleccione ....</option>
                             @foreach($usuarios as $usuario)
-                                <option value="">Seleccione ....</option>
-                                <option value="{{$usuario->id}}">{{$usuario->Name}}</option>
+                                <option value="{{$usuario->id}}">{{$usuario->Nombre}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('IdUsuario'))
@@ -61,8 +64,8 @@
                     </div>
                     <div>
                         <label for="Estado">Estado</label>
-                        <select name="Estado" id="Estado" class="form-select my-1 form-control"
-                                aria-label="Seleccione Estado">
+                        <select name="Estado" id="Estado" class="form-select my-1 form-control "
+                                aria-label="Seleccione Estado" >
                             <option value="Activo">Activo</option>
                             <option value="Inactivo">Inactivo</option>
                         </select>
@@ -72,7 +75,7 @@
                         @endif
                     </div>
 
-                    <div class="form-floating mb-3">
+                    <div class="form-floating my-3">
                         <label for="FechaDevolucion">Fecha Fin de Prestamo</label>
                         <input type="date" class="form-control" id="FechaDevolucion" name="FechaDevolucion">
                         @if($errors->has('FechaDevolucion'))

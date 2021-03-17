@@ -32,7 +32,7 @@
                     </div>
 
                     <hr>
-                    <button type="submit" class="btn btn-success">Regisrar Ambiente</button>
+                    <button type="submit" class="btn btn-success">Regisrar Ambiente / Salon</button>
                     <a type="button" class="btn" id="color-font" href="{{route('ambientes.index')}}">Cancelar</a>
                 </form>
 

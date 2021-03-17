@@ -27,8 +27,17 @@ class ActivoController extends Controller
     }
     public function guardar(Request $request){
 
-        //validate
-
+        $validar=$request->validate([
+            'NombreActivo'=>'required|max:15',
+            'SN'=>'required|max:20',
+            'Marca'=>'required|max:15',
+            'Modelo'=>'required|max:15',
+            'Descripcion'=>'required|max:100',
+            'Garantia'=>'required',
+            'TipoActivo'=>'required',
+            'IdProveedor'=>'required',
+            'IdUsuario'=>'required',
+        ]);
 
         $activo=Activo::create($request->all());
         return redirect()->route('activos.index');
@@ -40,7 +49,18 @@ class ActivoController extends Controller
         return view('modules.activos.editar',compact('activo','prov','usu'));
     }
     public function actualizar(Request $request,$id){
-        //validate
+
+        $validar=$request->validate([
+            'NombreActivo'=>'required|max:15',
+            'SN'=>'required|max:20',
+            'Marca'=>'required|max:15',
+            'Modelo'=>'required|max:15',
+            'Descripcion'=>'required|max:100',
+            'Garantia'=>'required',
+            'TipoActivo'=>'required',
+            'IdProveedor'=>'required',
+            'IdUsuario'=>'required',
+        ]);
 
         $activo=Activo::find($id)->update($request->all());
         return redirect()->route('activos.index');

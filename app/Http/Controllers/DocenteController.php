@@ -26,11 +26,11 @@ class DocenteController extends Controller
             'NomDocente' => 'required|max:30',
             'Telefono' => 'required|max:15',
             'Email' => 'required|max:30',
-            'Tipoid' => 'required',
+            'TipoId' => 'required',
             'IdEspecialidad' => 'required|max:30',
         ]);
         $docentes = Docente::create($request->all());
-        return redirect()->route('usuarios.index')->with([
+        return redirect()->route('docentes.index')->with([
             'message' => 'Docente Creado Satisfactoriamenbte',
             'type' => 'success'
         ]);
@@ -49,7 +49,7 @@ class DocenteController extends Controller
             'NomDocente' => 'required|max:30',
             'Telefono' => 'required|max:15',
             'Email' => 'required|max:30',
-            'Tipoid' => 'required',
+            'TipoId' => 'required',
             'IdEspecialidad' => 'required|max:30',
         ]);
         $docentes = Docente::find($id)->update($request->all());

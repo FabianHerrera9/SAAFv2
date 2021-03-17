@@ -52,7 +52,7 @@
 
                                 @foreach($usuario as $usuarios)
                                     @if($usuarios->id == $asignaciones -> IdUsuario)
-                                        <td>{{ $usuarios -> Name }}</td>
+                                        <td>{{ $usuarios -> Nombre }}</td>
                                     @endif
                                 @endforeach
 

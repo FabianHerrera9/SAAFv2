@@ -33,8 +33,8 @@
                             <tr>
                                 <td>{{ $usu -> Tipoid }}</td>
                                 <td>{{ $usu -> Identificacion }}</td>
-                                <td>{{ $usu -> Name }}</td>
-                                <td>{{ $usu -> Job }}</td>
+                                <td>{{ $usu -> Nombre }}</td>
+                                <td>{{ $usu -> Cargo }}</td>
                                 <td>{{ $usu -> Rol }}</td>
                                 <td>{{ $usu -> Tel }}</td>
                                 <td>{{ $usu -> Email }}</td>

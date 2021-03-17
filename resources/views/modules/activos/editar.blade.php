@@ -11,10 +11,11 @@
                     @csrf
                     @method('PUT')
                     <div>
+                        <label for="TipoActivo">Tipo Activo</label>
                         <select name="TipoActivo" id="TipoActivo" class="form-select my-3 form-control"
                                 aria-label="Seleccione el tipo Activo">
                             <option value="{{$activo->TipoActivo}}">{{$activo->TipoActivo}}</option>
-                            <option>Seleccione el tipo Activo</option>
+                            <option value=" " >Seleccione el tipo Activo</option>
                             <option value="Tangible">Tangible</option>
                             <option value="Intangible">Intangible</option>
                         </select>
@@ -83,12 +84,12 @@
                                 aria-label="Seleccione el proveedor">
                             @foreach($prov as $provs)
                                 @if($activo->IdProveedor == $provs->id)
-                                    <option value="{{$activo->IdProveedor}}">{{$provs->ProvName}}</option>
+                                    <option value="{{$provs->id}}">{{$provs->ProvName}}</option>
                                 @endif
                             @endforeach
+                                <option value=" ">---------------------</option>
                             @foreach($prov as $provs)
-                                <option value="">---------------------</option>
-                                <option value="{{$provs->IdProveedor}}">{{$provs->IdProveedor}}</option>
+                                <option value="{{$provs->id}}">{{$provs->ProvName}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('IdProveedor'))
@@ -101,12 +102,12 @@
                                 aria-label="Seleccione el Usuario que registra">
                             @foreach($usu as $usus)
                                 @if($activo->IdUsuario == $usus->id)
-                                    <option value="{{$activo->IdUsuario}}">{{$usus->Name}} | {{$usus->Job}}</option>
+                                    <option value="{{$usus->id}}">{{$usus->Nombre}} | {{$usus->Cargo}}</option>
                                 @endif
                             @endforeach
+                                <option value=" ">---------------------</option>
                             @foreach($usu as $usus)
-                                <option value="">---------------------</option>
-                                <option value="{{$usus->id}}">{{$usus->Name}} | {{$usus->Job}}</option>
+                                <option value="{{$usus->id}}">{{$usus->Nombre}} | {{$usus->Cargo}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('IdUsuario'))

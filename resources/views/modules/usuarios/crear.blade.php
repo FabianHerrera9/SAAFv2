@@ -11,9 +11,9 @@
                     @csrf
                     <div class="form-floating mb-3">
                         <label for="Tipoid">Tipo de documento</label>
-                        <select name="Tipoid" id="Tipoid" class="form-select my-1 form-control"
+                        <select name="Tipoid" id="Tipoid" class="form-select form-control"
                                 aria-label="selecionar tipo de documento">
-                            <option>Seleccione tipo de documento</option>
+                            <option value=" ">Seleccione tipo de documento</option>
                             <option value="C.C.">C.C.</option>
                             <option value="C.E.">C.E.</option>
                             <option value="P.P.">P.P.</option>
@@ -33,26 +33,26 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Name">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id="Name" name="Name">
-                        @if($errors->has('Name'))
-                            <label for="" style="color:red;">{{ $errors->first('Name') }}</label>
+                        <label for="Nombre">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre">
+                        @if($errors->has('Nombre'))
+                            <label for="" style="color:red;">{{ $errors->first('Nombre') }}</label>
                             <br>
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Job">Cargo</label>
-                        <input type="text" class="form-control" id="Job" name="Job"
+                        <label for="Cargo">Cargo</label>
+                        <input type="text" class="form-control" id="Cargo" name="Cargo"
                                placeholder="Rector/ra|Tesorer@|Secretari@">
-                        @if($errors->has('Job'))
-                            <label for="" style="color:red;">{{ $errors->first('Job') }}</label>
+                        @if($errors->has('Cargo'))
+                            <label for="" style="color:red;">{{ $errors->first('Cargo') }}</label>
                             <br>
                         @endif
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Rol">Rol</label>
-                        <select name="Rol" id="Rol" class="form-select my-1 form-control" aria-label="Seleccione Rol del Sistema">
-                            <option>Seleccione Rol del Sistema</option>
+                        <select name="Rol" id="Rol" class="form-select form-control" aria-label="Seleccione Rol del Sistema">
+                            <option value=" ">Seleccione Rol del Sistema</option>
                             <option value="Administrador">Administrador</option>
                             <option value="Tesorero">Tesorero</option>
                             <option value="Contador ">Contador</option>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="form-floating mb-3" >
                         <label for="Estado">Estado</label>
-                        <select name="Estado" id="Estado" class="form-select my-1 form-control" aria-label="Seleccione Estado">
+                        <select name="Estado" id="Estado" class="form-select form-control" aria-label="Seleccione Estado">
                             <option value="Activo">Activo</option>
                             <option value="Inactivo">Inactivo</option>
                         </select>

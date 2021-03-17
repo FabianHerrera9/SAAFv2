@@ -39,7 +39,7 @@
                                             <td>{{ $provs -> ProvName }}</td>
                                         @endif
                                         @if($usu->id == $activos->IdUsuario)
-                                            <td>{{ $usu -> Name }}</td>
+                                            <td>{{ $usu -> Nombre }}</td>
                                         @endif
                                         <td>
                                             <i>

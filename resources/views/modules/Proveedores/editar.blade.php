@@ -53,7 +53,7 @@
                     </div>
 
                     <hr>
-                    <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                    <button type="submit" class="btn btn-success">Actualizar Proveedor</button>
                     <a type="button" class="btn" id="color-font" href="{{route('proveedores.index')}}">Cancelar</a>
                 </form>
 
