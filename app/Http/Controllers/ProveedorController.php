@@ -9,7 +9,7 @@ class ProveedorController extends Controller
 {
     public function listar(){
         $prov=Proveedor::all();
-        return view('modules.proveedores.listar',compact('prov'));
+        return view('modules.proveedores.index',compact('prov'));
     }
     public function crear(){
         return view('modules.proveedores.crear');
