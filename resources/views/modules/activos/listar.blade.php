@@ -27,30 +27,34 @@
                         </tr>
                         </thead>
                         <tbody>
+
+
                         @foreach($activo as $activos)
-                            @foreach($prov as $provs)
-                                @foreach($usuarios as $usu)
-                                    <tr>
-                                        <td>{{ $activos -> id }}</td>
-                                        <td>{{ $activos -> NombreActivo }}</td>
-                                        <td>{{ $activos -> Marca }}</td>
-                                        <td>{{ $activos -> TipoActivo }}</td>
-                                        @if($provs->id == $activos->IdProveedor)
-                                            <td>{{ $provs -> ProvName }}</td>
-                                        @endif
-                                        @if($usu->id == $activos->IdUsuario)
-                                            <td>{{ $usu -> Nombre }}</td>
-                                        @endif
-                                        <td>
-                                            <i>
-                                                <a href="{{route('activos.editar',$activos->id)}}">
-                                                    <i class="bx bx-edit"></i>
-                                                </a>
-                                            </i>
-                                        </td>
-                                    </tr>
+                            <tr>
+                                <td>{{ $activos -> id }}</td>
+                                <td>{{ $activos -> NombreActivo }}</td>
+                                <td>{{ $activos -> Marca }}</td>
+                                <td>{{ $activos -> TipoActivo }}</td>
+
+                                @foreach($prov as $provs)
+                                    @if($provs->id == $activos->IdProveedor)
+                                        <td>{{ $provs -> ProvName }}</td>
+                                    @endif
                                 @endforeach
-                            @endforeach
+
+                                @foreach($usuarios as $usu)
+                                    @if($usu->id == $activos->IdUsuario)
+                                        <td>{{ $usu -> Nombre }}</td>
+                                    @endif
+                                @endforeach
+                                <td>
+                                    <i>
+                                        <a href="{{route('activos.editar',$activos->id)}}">
+                                            <i class="bx bx-edit"></i>
+                                        </a>
+                                    </i>
+                                </td>
+                            </tr>
                         @endforeach
                         </tbody>
                     </table>
