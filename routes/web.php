@@ -33,7 +33,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('usuarios/editar/{id}', [UsuariosController::class, 'editar'])->name('usuarios.editar');
     Route::put('usuarios/{id}', [UsuariosController::class, 'actualizar'])->name('usuarios.actualizar');
 
-//Proveedores
+//proveedores
     Route::get('proveedores', [ProveedorController::class, 'listar'])->name('proveedores.index');
     Route::get('proveedores/crear', [ProveedorController::class, 'crear'])->name('proveedores.crear');
     Route::post('proveedores', [ProveedorController::class, 'guardar'])->name('proveedores.guardar');
