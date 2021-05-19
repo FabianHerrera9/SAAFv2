@@ -15,7 +15,7 @@ class Mantenimiento extends Model
         'Tipo',
         'Fecha',
         'Problema/Fallo',
-        'PoroveedorServ',
+        'ProveedorServ',
         'Reparador',
         'TrabajoRealizado',
         'Solucion',

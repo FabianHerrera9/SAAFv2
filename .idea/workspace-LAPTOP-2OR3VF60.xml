@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad5e67ab-9c07-4530-ab28-69027377a0f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocenteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocenteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuariosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modules/usuarios/crear.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/usuarios/crear.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modules/usuarios/editar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/usuarios/editar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modules/usuarios/listar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/usuarios/listar.blade.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1lOCbQlqxUMeLQdEoiDkXIug9xs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad5e67ab-9c07-4530-ab28-69027377a0f7" name="Default Changelist" comment="" />
+      <created>1607458821940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607458821940</updated>
+      <workItem from="1607458823559" duration="14406000" />
+      <workItem from="1607486038795" duration="90000" />
+      <workItem from="1609968881140" duration="795000" />
+      <workItem from="1609969900520" duration="31000" />
+      <workItem from="1610749466122" duration="133000" />
+      <workItem from="1610749711184" duration="341000" />
+      <workItem from="1610750686652" duration="1771000" />
+      <workItem from="1610752504754" duration="1765000" />
+      <workItem from="1610754336355" duration="1949000" />
+      <workItem from="1610756394674" duration="1763000" />
+      <workItem from="1610758254517" duration="1562000" />
+      <workItem from="1610922929651" duration="213000" />
+      <workItem from="1610923319090" duration="789000" />
+      <workItem from="1610940219668" duration="446000" />
+      <workItem from="1611013805106" duration="883000" />
+      <workItem from="1611791821381" duration="135000" />
+      <workItem from="1611792235448" duration="1653000" />
+      <workItem from="1611967920133" duration="306000" />
+      <workItem from="1612129912732" duration="646000" />
+      <workItem from="1612538558585" duration="1018000" />
+      <workItem from="1612576404007" duration="509000" />
+      <workItem from="1612578457922" duration="756000" />
+      <workItem from="1612829713307" duration="1686000" />
+      <workItem from="1612832506368" duration="733000" />
+      <workItem from="1613180523743" duration="73000" />
+      <workItem from="1613185944542" duration="479000" />
+      <workItem from="1613312819304" duration="512000" />
+      <workItem from="1613327357171" duration="9847000" />
+      <workItem from="1613438027940" duration="3266000" />
+      <workItem from="1613525598206" duration="5813000" />
+      <workItem from="1613570519969" duration="8865000" />
+      <workItem from="1613607946314" duration="5295000" />
+      <workItem from="1613701826207" duration="41000" />
+      <workItem from="1613781328021" duration="1112000" />
+      <workItem from="1613855109130" duration="8078000" />
+      <workItem from="1614024758124" duration="7002000" />
+      <workItem from="1614039195379" duration="8400000" />
+      <workItem from="1614093743394" duration="9968000" />
+      <workItem from="1614175530039" duration="3071000" />
+      <workItem from="1614216195088" duration="3428000" />
+      <workItem from="1614304286406" duration="2577000" />
+      <workItem from="1614346646055" duration="2496000" />
+      <workItem from="1614384675382" duration="3133000" />
+      <workItem from="1614389665691" duration="1562000" />
+      <workItem from="1614647597297" duration="2637000" />
+      <workItem from="1614694294862" duration="7582000" />
+      <workItem from="1614740643539" duration="1901000" />
+      <workItem from="1614785558755" duration="3842000" />
+      <workItem from="1614801487809" duration="10580000" />
+      <workItem from="1614864203042" duration="7235000" />
+      <workItem from="1614903123055" duration="3561000" />
+      <workItem from="1614961680138" duration="3342000" />
+      <workItem from="1615160551865" duration="9666000" />
+      <workItem from="1615248281783" duration="3306000" />
+      <workItem from="1615337969964" duration="4006000" />
+      <workItem from="1615380707847" duration="593000" />
+      <workItem from="1615421994689" duration="2618000" />
+      <workItem from="1615819008904" duration="10000" />
+      <workItem from="1615827209236" duration="595000" />
+      <workItem from="1615986907236" duration="1578000" />
+    </task>
+    <task id="LOCAL-00001" summary="asd">
+      <created>1613186021439</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613186021439</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1613327405335</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613327405335</updated>
+    </task>
+    <task id="LOCAL-00003" summary="heroku">
+      <created>1613327635948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613327635948</updated>
+    </task>
+    <task id="LOCAL-00004" summary="optimizacion tablas">
+      <created>1613329135833</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613329135833</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ajustes de migraciones y nombres de tablas">
+      <created>1613331017038</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613331017038</updated>
+    </task>
+    <task id="LOCAL-00006" summary="creacion vista listar usuarios">
+      <created>1613331535091</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613331535091</updated>
+    </task>
+    <task id="LOCAL-00007" summary="vista usuarios">
+      <created>1613332257540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613332257540</updated>
+    </task>
+    <task id="LOCAL-00008" summary="crear usuario">
+      <created>1613334185783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613334185783</updated>
+    </task>
+    <task id="LOCAL-00009" summary="crear usuario">
+      <created>1613337434711</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613337434711</updated>
+    </task>
+    <task id="LOCAL-00010" summary="correcion tipo dato - contraseña">
+      <created>1613438549911</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613438549912</updated>
+    </task>
+    <task id="LOCAL-00011" summary="añadir docentes vista sidebar">
+      <created>1613439179916</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613439179916</updated>
+    </task>
+    <task id="LOCAL-00012" summary="añadir docentes vista sidebar">
+      <created>1613439598497</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613439598497</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ajuste sidebar">
+      <created>1613440099694</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613440099694</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ajuste sidebar">
+      <created>1613440289005</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1613440289005</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ajuste sidebar">
+      <created>1613440957052</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613440957052</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ajuste vistas front -- Fabian">
+      <created>1613531532858</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1613531532866</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ajustes en migracion para correcion de campos tipo enum, funcionalidad en crear y editar con un mensaje sobre la creacion y actualizacion de los datos de la entidad">
+      <created>1613599601254</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1613599601254</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ajuste rutas e y vistas">
+      <created>1613610950843</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1613610950843</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ajuste rutas e y vistas">
+      <created>1613612704268</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1613612704268</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Añadir carpeta docentes y vista crear - Fabian">
+      <created>1613781838971</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1613781838971</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Ajuste Base de datos, correcion de campos, eliminarcion de tabla garantias - Fabian">
+      <created>1613858877449</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1613858877449</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Ajuste Vistas entidad Usuarios - Fabian">
+      <created>1613859940450</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1613859940450</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Ajuste inicio de sesion - Fabian">
+      <created>1613860955065</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1613860955065</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Añadir estado a usuarios - Fabian">
+      <created>1613863022053</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1613863022053</updated>
+    </task>
+    <task id="LOCAL-00025" summary="entidad proveedores y activos - Fabian">
+      <created>1614039607790</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1614039607790</updated>
+    </task>
+    <task id="LOCAL-00026" summary="entidad proveedores y activos - Fabian">
+      <created>1614041190192</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1614041190192</updated>
+    </task>
+    <task id="LOCAL-00027" summary="entidad proveedores y activos - Fabian">
+      <created>1614041206022</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614041206022</updated>
+    </task>
+    <task id="LOCAL-00028" summary="entidad proveedores y activos - Fabian">
+      <created>1614044408912</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1614044408912</updated>
+    </task>
+    <task id="LOCAL-00029" summary="creacion controller y Model Docente - Fabian">
+      <created>1614044686862</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1614044686862</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Ajustes vistas/controllador/migracion - Fabian">
+      <created>1614047452892</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1614047452892</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Entidad de docentes ajustada, terminacion de entidad proveedores e inicio de Activos - Fabian">
+      <created>1614118531730</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1614118531730</updated>
+    </task>
+    <task id="LOCAL-00032" summary="inicio de Activos - Fabian">
+      <created>1614119756365</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1614119756365</updated>
+    </task>
+    <task id="LOCAL-00033" summary="cambio vista -fabian">
+      <created>1614218591346</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1614218591346</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Ajustes archivo web, ruta editar - Fabian">
+      <created>1614304548600</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1614304548600</updated>
+    </task>
+    <task id="LOCAL-00035" summary="-Fabian">
+      <created>1614647616309</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1614647616309</updated>
+    </task>
+    <task id="LOCAL-00036" summary="creacion de MVC Prestamos, ajustes entidad docentes y archivo rutas - Fabian">
+      <created>1614741141341</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1614741141341</updated>
+    </task>
+    <task id="LOCAL-00037" summary="creacion de vista index, crear entidad Prestamos - Fabian">
+      <created>1614903583996</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1614903583996</updated>
+    </task>
+    <task id="LOCAL-00038" summary="ajuste docentes y archivo web - fabian">
+      <created>1614994985892</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1614994985892</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Ajuste y creacion de Entidades Ambientes y Asignaciones - Fabian Herrera">
+      <created>1615177966610</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1615177966610</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Creacion MVC Mantenimiento , ajustes migraciones- Fabian">
+      <created>1615344404563</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1615344404563</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="correcion tipo dato - contraseña" />
+    <MESSAGE value="añadir docentes vista sidebar" />
+    <MESSAGE value="ajuste sidebar" />
+    <MESSAGE value="ajuste vistas front -- Fabian" />
+    <MESSAGE value="ajustes en migracion para correcion de campos tipo enum, funcionalidad en crear y editar con un mensaje sobre la creacion y actualizacion de los datos de la entidad" />
+    <MESSAGE value="ajuste rutas e y vistas" />
+    <MESSAGE value="Añadir carpeta docentes y vista crear - Fabian" />
+    <MESSAGE value="Ajuste Base de datos, correcion de campos, eliminarcion de tabla garantias - Fabian" />
+    <MESSAGE value="Ajuste Vistas entidad Usuarios - Fabian" />
+    <MESSAGE value="Ajuste inicio de sesion - Fabian" />
+    <MESSAGE value="Añadir estado a usuarios - Fabian" />
+    <MESSAGE value="entidad proveedores y activos - Fabian" />
+    <MESSAGE value="creacion controller y Model Docente - Fabian" />
+    <MESSAGE value="Ajustes vistas/controllador/migracion - Fabian" />
+    <MESSAGE value="Entidad de docentes ajustada, terminacion de entidad proveedores e inicio de Activos - Fabian" />
+    <MESSAGE value="inicio de Activos - Fabian" />
+    <MESSAGE value="cambio vista -fabian" />
+    <MESSAGE value="Ajustes archivo web, ruta editar - Fabian" />
+    <MESSAGE value="-Fabian" />
+    <MESSAGE value="creacion de MVC Prestamos, ajustes entidad docentes y archivo rutas - Fabian" />
+    <MESSAGE value="ajuste archivo web - fabian" />
+    <MESSAGE value="creacion de vista index, crear entidad Prestamos - Fabian" />
+    <MESSAGE value="ajuste docentes y archivo web - fabian" />
+    <MESSAGE value="Ajuste y creacion de Entidades Ambientes y Asignaciones - Fabian Herrera" />
+    <MESSAGE value="Creacion MVC Mantenimiento , ajustes migraciones- Fabian" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion MVC Mantenimiento , ajustes migraciones- Fabian" />
+  </component>
+</project>

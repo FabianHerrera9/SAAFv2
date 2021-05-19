@@ -9,6 +9,7 @@ use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\AmbienteController;
 use App\Http\Controllers\AsignacionController;
+use App\Http\Controllers\MantenimientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +73,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('asignaciones',[AsignacionController::class,'listar'])->name('asignaciones.index');
     Route::get('asignaciones/crear',[AsignacionController::class,'crear'])->name('asignaciones.crear');
     Route::post('asignaciones',[AsignacionController::class,'guardar'])->name('asignaciones.guardar');
+
+//Mantenimiento
+    Route::get('mantenimientos',[MantenimientoController::class,'index'])->name('Mttogarant.index');
+    Route::get('mantenimientos/crear',[MantenimientoController::class,'crear'])->name('Mttogarant.crear');
+    Route::post('mantenimientos',[MantenimientoController::class,'guardar'])->name('Mttogarant.guardar');
 
 });
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

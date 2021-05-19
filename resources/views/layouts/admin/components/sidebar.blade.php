@@ -16,7 +16,8 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('usuarios.crear')}}" key="t-default" class="bx bx-user-plus"> Nuevo</a></li>
+                        <li><a href="{{route('usuarios.crear')}}" key="t-default" class="bx bx-user-plus"> Nuevo</a>
+                        </li>
                         {{--<li><a href="{{route('usuarios.editar')}}" key="t-default" class="bx bx-user-check"> Actualizar</a></li>--}}
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>--}}
                     </ul>
@@ -33,26 +34,42 @@
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-vertical" class="bx bx-edit"> Actualizar</a></li>--}}
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-power-off"> Desactivar</a></li>--}}
                         <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect bx bx-mouse"> Prestamos</a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <i><a href="{{route('prestamos.index')}}" key="t-horizontal" class="bx bx-search"> Listado</a></i>
-                                <i><a href="{{route('prestamos.crear')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></i>
+                            {{--<span key="t-layouts">Activos</span>--}}
+                            <a href="javascript: void(0);" class="has-arrow waves-effect ">
+                                <i class="bx bx-mouse"></i>
+                                <span key="t-layouts">Prestamos</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{route('prestamos.index')}}" key="t-horizontal" class="bx bx-search">
+                                        Listado</a></li>
+                                <li><a href="{{route('prestamos.crear')}}" key="t-vertical" class="bx bx-plus">
+                                        Registrar</a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect bx bx-laptop"> Asignaciones</a>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-laptop"></i>
+                                <span key="t-layouts">Asignaciones</span>
+                            </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <i><a href="{{route('asignaciones.index')}}" key="t-horizontal" class="bx bx-search" > Listado</a></i>
-                                <i><a href="{{route('asignaciones.crear')}}" key="t-vertical" class="bx bx-plus"> Registrar</a></i>
+                                <li><a href="{{route('asignaciones.index')}}" key="t-horizontal" class="bx bx-search">
+                                        Listado</a></li>
+                                <li><a href="{{route('asignaciones.crear')}}" key="t-vertical" class="bx bx-plus">
+                                        Registrar</a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect bx bx-wrench"> Mantenimiento/Garantia</a>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-wrench"></i>
+                                <span key="t-layouts">Mtto/Garantia</span>
+                            </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <i><a href="{{route('activos.crear')}}" key="t-horizontal" class="bx bx-search"> Listado</a></i>
-                                <i><a href="{{route('activos.crear')}}" key="t-vertical" class="bx bx-plus" > Nuevo Mantenimiento/Garantia</a></i>
+                                <li><a href="{{route('Mttogarant.index')}}" key="t-horizontal" class="bx bx-search">
+                                        Listado</a></li>
+                                <li><a href="{{route('Mttogarant.index')}}" key="t-vertical" class="bx bx-plus">
+                                        Registrar</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -64,8 +81,10 @@
                         <span key="t-dashboards">Proveedores</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('proveedores.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('proveedores.crear')}}" key="t-saas" class="bx bx-user-plus"> Nuevo</a></li>
+                        <li><a href="{{route('proveedores.index')}}" key="t-default" class="bx bx-search"> Listado</a>
+                        </li>
+                        <li><a href="{{route('proveedores.crear')}}" key="t-saas" class="bx bx-user-plus"> Nuevo</a>
+                        </li>
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-check"> Actualizar</a></li>--}}
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>--}}
                     </ul>
@@ -90,8 +109,10 @@
                         <span key="t-dashboards">Ambientes</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('ambientes.index')}}" key="t-default" class="bx bx-search"> Listado</a></li>
-                        <li><a href="{{route('ambientes.crear')}}" key="t-default" class="bx bx-user-plus"> Nuevo</a></li>
+                        <li><a href="{{route('ambientes.index')}}" key="t-default" class="bx bx-search"> Listado</a>
+                        </li>
+                        <li><a href="{{route('ambientes.crear')}}" key="t-default" class="bx bx-user-plus"> Nuevo</a>
+                        </li>
                         {{--<li><a href="{{route('usuarios.editar')}}" key="t-default" class="bx bx-user-check"> Actualizar</a></li>--}}
                         {{--<li><a href="{{route('usuarios.index')}}" key="t-default" class="bx bx-user-minus"> Desactivar</a></li>--}}
                     </ul>
