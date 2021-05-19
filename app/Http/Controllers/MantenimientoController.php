@@ -23,7 +23,8 @@ class MantenimientoController extends Controller
         return redirect()->route('Mttogarant.index');
     }
     public function mostrar($id){
-        $mtto=Mantenimiento::find($id)->first();
-        return view('modules.Mtto.detalles',compact('mtto'));
+        $mtto=Mantenimiento::find($id);
+        $activo=Activo::all();
+        return view('modules.Mtto.detalles',compact('mtto','activo'));
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('title')
-    | Registrar Mtto o Garantia
+    | Registrar Mtto / Garantia
 @endsection
 @section('content')
 
@@ -22,6 +22,24 @@
                             <br>
                         @endif
                     </div>
+                    <div class="form-floating mb-3">
+
+                        <label for="IdActivo">Seleccione Activo</label>
+                        <select name="IdActivo" id="IdActivo" class="form-select form-control"
+                                aria-label="selecionar tipo de documento">
+                            <option value=" ">Seleccione ...</option>
+                            @foreach($activo as $activ)
+                                <option value="{{$activ->id}}">{{$activ->id}}|{{$activ->NombreActivo}}
+                                    |{{$activ->TipoActivo}}</option>
+                            @endforeach
+                        </select>
+
+                        @if($errors->has('Tipo'))
+                            <label for="" style="color:red;">{{ $errors->first('Tipo') }}</label>
+                            <br>
+                        @endif
+                    </div>
+
 
                     <div class="form-floating my-3">
                         <label for="Fecha">Fecha </label>
@@ -34,9 +52,8 @@
 
                     <div class="form-floating mb-3">
                         <label for="Problema/Fallo">Problema/Fallo</label>
-                        <textarea name="Problema/Fallo" id="Problema/Fallo" cols="30" rows="10"
-                        placeholder="Descripcion del Problema/Fallo">
-                        </textarea>
+                        <textarea type="text" class="form-control" name="Problema/Fallo" id="Problema/Fallo"
+                                  placeholder="Descripcion del Problema/Fallo"></textarea>
                         @if($errors->has('Problema/Fallo'))
                             <label for="" style="color:red;">{{ $errors->first('Problema/Fallo') }}</label>
                             <br>
@@ -51,8 +68,9 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Reparador">Nombre de Tecnico/Realizador del Trabajo</label>
-                        <input type="text" class="form-control" id="Reparador" name="Reparador">
+                        <label for="Reparador">Nombre de Tecnico / Realizador del Trabajo</label>
+                        <input type="text" class="form-control" id="Reparador" name="Reparador"
+                               placeholder="Nombre de la persona que atiende el servicio">
                         @if($errors->has('Reparador'))
                             <label for="" style="color:red;">{{ $errors->first('Reparador') }}</label>
                             <br>
@@ -60,10 +78,9 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <label for="TrabajoRealizado">TrabajoRealizado</label>
-                        <textarea name="TrabajoRealizado" id="TrabajoRealizado" cols="30" rows="10"
-                                  placeholder="Descripcion del TrabajoRealizado">
-                        </textarea>
+                        <label for="TrabajoRealizado">Trabajo Realizado</label>
+                        <textarea type="text" class="form-control" name="TrabajoRealizado" id="TrabajoRealizado"
+                        placeholder="Descripcion del trabajo realizado"></textarea>
                         @if($errors->has('TrabajoRealizado'))
                             <label for="" style="color:red;">{{ $errors->first('TrabajoRealizado') }}</label>
                             <br>
@@ -71,7 +88,7 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <label for="Solucion">Rol</label>
+                        <label for="Solucion">Solicionado</label>
                         <select name="Solucion" id="Solucion" class="form-select form-control">
                             <option value=" ">Seleccione ...</option>
                             <option value="Solucionado">Si</option>

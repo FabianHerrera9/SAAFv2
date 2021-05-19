@@ -18,7 +18,7 @@ class CreateMantenimientosTable extends Migration
             $table->enum('Tipo', ['Mantenimiento', 'Garantia']);
             $table->dateTime('Fecha');
             $table->string('Problema/Fallo', 50);
-            $table->string('PoroveedorServ', 75);
+            $table->string('ProveedorServ', 75);
             $table->string('Reparador', 30);
             $table->string('TrabajoRealizado', 200);
             $table->enum('Solucion', ['Solucionado', 'No-Solucionado']);

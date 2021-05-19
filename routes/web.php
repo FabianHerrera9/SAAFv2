@@ -78,6 +78,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('mantenimientos',[MantenimientoController::class,'index'])->name('Mttogarant.index');
     Route::get('mantenimientos/crear',[MantenimientoController::class,'crear'])->name('Mttogarant.crear');
     Route::post('mantenimientos',[MantenimientoController::class,'guardar'])->name('Mttogarant.guardar');
+    Route::get('mantenimientos/{id}',[MantenimientoController::class,'mostrar'])->name('Mttogarant.mostrar');
 
 });
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

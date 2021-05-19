@@ -30,13 +30,13 @@
                             <tr>
                                 <td>{{ $mtto -> Tipo }}</td>
                                 <td>{{ $mtto -> Fecha }}</td>
-                                <td>{{ $mtto -> PoroveedorServ }}</td>
+                                <td>{{ $mtto -> ProveedorServ }}</td>
                                 <td>{{ $mtto -> Solucion }}</td>
                                 <td>{{ $mtto -> IdActivo }}</td>
                                 <td>
                                     <i>
-                                        <a href="">
-                                            <i class="bx bx-edit"></i>
+                                        <a href="{{route('Mttogarant.mostrar',$mtto->id)}}">
+                                            <i class="bx bx-show"></i>
                                         </a>
                                     </i>
                                 </td>
