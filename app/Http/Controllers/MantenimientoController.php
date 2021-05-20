@@ -15,11 +15,13 @@ class MantenimientoController extends Controller
     public function crear(){
         $activo=Activo::all();
         return view('modules.Mtto.crear',compact('activo'));
+
     }
     public function guardar(Request $request){
         //$validate->;
 
         $mtto=Mantenimiento::create($request->all());
+        //dd($request)->all();
         return redirect()->route('Mttogarant.index');
     }
     public function mostrar($id){

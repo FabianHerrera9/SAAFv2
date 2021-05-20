@@ -51,11 +51,11 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <label for="Problema/Fallo">Problema/Fallo</label>
-                        <textarea type="text" class="form-control" name="Problema/Fallo" id="Problema/Fallo"
+                        <label for="ProblemaFallo">Problema/Fallo</label>
+                        <textarea type="text" class="form-control" name="ProblemaFallo" id="ProblemaFallo"
                                   placeholder="Descripcion del Problema/Fallo"></textarea>
-                        @if($errors->has('Problema/Fallo'))
-                            <label for="" style="color:red;">{{ $errors->first('Problema/Fallo') }}</label>
+                        @if($errors->has('ProblemaFallo'))
+                            <label for="" style="color:red;">{{ $errors->first('ProblemaFallo') }}</label>
                             <br>
                         @endif
                     </div>

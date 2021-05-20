@@ -14,7 +14,7 @@ class Mantenimiento extends Model
     protected $fillable=[
         'Tipo',
         'Fecha',
-        'Problema/Fallo',
+        'ProblemaFallo',
         'ProveedorServ',
         'Reparador',
         'TrabajoRealizado',

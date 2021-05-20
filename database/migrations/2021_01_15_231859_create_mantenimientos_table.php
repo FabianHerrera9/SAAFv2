@@ -16,8 +16,8 @@ class CreateMantenimientosTable extends Migration
         Schema::create('mantenimientos', function (Blueprint $table) {
             $table->id();
             $table->enum('Tipo', ['Mantenimiento', 'Garantia']);
-            $table->dateTime('Fecha');
-            $table->string('Problema/Fallo', 50);
+            $table->date('Fecha');
+            $table->string('ProblemaFallo', 50);
             $table->string('ProveedorServ', 75);
             $table->string('Reparador', 30);
             $table->string('TrabajoRealizado', 200);
