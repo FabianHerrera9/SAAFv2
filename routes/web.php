@@ -22,9 +22,6 @@ use App\Http\Controllers\MantenimientoController;
 |
 */
 Route::redirect('/', 'login');
-//Route::get('login',[logincontroller::class,'from_login'])->name('autn.from_login');
-//Route::post('autn',[logincontroller::class,'autn'])->name('autn.autn');
-
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 //Usuarios
