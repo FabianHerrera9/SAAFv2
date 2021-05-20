@@ -20,7 +20,7 @@ class CreateActivosTable extends Migration
             $table->string('Marca',15);
             $table->string('Modelo',15);
             $table->string('Descripcion',100);
-            $table->dateTime('Garantia');
+            $table->date('Garantia');
             $table->enum('TipoActivo', ['Tangible','Intangible']);
 
             $table->bigInteger('IdProveedor')->unsigned();

@@ -33,10 +33,10 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Nombre">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id="Nombre" name="Nombre">
-                        @if($errors->has('Nombre'))
-                            <label for="" style="color:red;">{{ $errors->first('Nombre') }}</label>
+                        <label for="name">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                        @if($errors->has('name'))
+                            <label for="" style="color:red;">{{ $errors->first('name') }}</label>
                             <br>
                         @endif
                     </div>
@@ -72,19 +72,19 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Email">Correo</label>
-                        <input type="email" class="form-control" id="Email" name="Email"
+                        <label for="email">Correo</label>
+                        <input type="email" class="form-control" id="email" name="email"
                                placeholder="Ejemplo@saaf.com">
-                        @if($errors->has('Email'))
-                            <label for="" style="color:red;">{{ $errors->first('Email') }}</label>
+                        @if($errors->has('email'))
+                            <label for="" style="color:red;">{{ $errors->first('email') }}</label>
                             <br>
                         @endif
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="Password">Contraseña</label>
-                        <input type="password" class="form-control" id="Password" name="Password">
-                        @if($errors->has('Password'))
-                            <label for="" style="color:red;">{{ $errors->first('Password') }}</label>
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                        @if($errors->has('password'))
+                            <label for="" style="color:red;">{{ $errors->first('password') }}</label>
                             <br>
                         @endif
                     </div>

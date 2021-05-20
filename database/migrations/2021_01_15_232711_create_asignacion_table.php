@@ -15,7 +15,7 @@ class CreateAsignacionTable extends Migration
     {
         Schema::create('asignacion', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('Fecha');
+            $table->date('Fecha');
             $table->string('Observaciones',100);
             $table->enum('Estado',['Activo','Inactivo']);
 

@@ -13,11 +13,8 @@ class Usuarios extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'Identificacion',
-        'Nombre',
         'Cargo',
         'Tel',
-        'Email',
-        'Password',
         'Tipoid',
         'Rol',
         'Estado'

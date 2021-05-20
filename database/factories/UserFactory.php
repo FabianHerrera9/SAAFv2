@@ -25,6 +25,12 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name,
             'email' => 'juan@sena.edu.co',
+            'Identificacion'=>'1019120764',
+            'Cargo'=>'Rector',
+            'Tel'=>'3123192585',
+            'Estado'=>'Activo',
+            'Tipoid'=>'C.C.',
+            'Rol'=>'Administrador',
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),

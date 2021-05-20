@@ -15,8 +15,8 @@ class CreatePrestamosTable extends Migration
     {
         Schema::create('prestamos', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('FechaPrestamo');
-            $table->dateTime('FechaDevolucion');
+            $table->date('FechaPrestamo');
+            $table->date('FechaDevolucion');
             $table->string('Observaciones',100);
             $table->enum('Estado',['Activo','Inactivo']);
 
