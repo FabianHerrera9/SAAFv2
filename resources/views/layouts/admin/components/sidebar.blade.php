@@ -69,7 +69,7 @@
                                 <li><a href="{{route('Mttogarant.index')}}" key="t-horizontal" class="bx bx-search">
                                         Listado</a></li>
                                 <li><a href="{{route('Mttogarant.crear')}}" key="t-vertical" class="bx bx-plus">
-                                        Registrar</a></li>
+                                        Registrar </a></li>
                             </ul>
                         </li>
                     </ul>
