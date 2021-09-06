@@ -34,8 +34,9 @@
                     <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i>
                         <span key="t-lock-screen">Lock screen</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="{{route('login')}}"><i
-                            class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> <span
+                    <a class="dropdown-item text-danger" action="login" methods="post">@method('put')
+                        @csrf
+                        <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> <span
                             key="t-logout">cerrar sesion</span>
                     </a>
                 </div>
