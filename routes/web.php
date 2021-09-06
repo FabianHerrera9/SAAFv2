@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\UsuariosController;
@@ -81,4 +81,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::group(['middleware'=>['jwt.auth'],'prefix'=>'v1'], function (){
+    Route::post('/auth/login','TokensController@login');
+    Route::post('');
+});
+
 

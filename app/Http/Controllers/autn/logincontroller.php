@@ -5,8 +5,9 @@ namespace App\Http\Controllers\autn;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Usuarios;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class logincontroller extends Controller
+class logincontroller extends Controller implements JWTSubject
 {
     public function from_login()
     {
@@ -27,5 +28,15 @@ class logincontroller extends Controller
         } else {
             return redirect()->route('autn.form_login');
         }
+    }
+    public function getJWTIdentifier()
+    {
+        // TODO: Implement getJWTIdentifier() method.
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        // TODO: Implement getJWTCustomClaims() method.
+        return[];
     }
 }
