@@ -8,12 +8,14 @@ use App\Models\Usuarios;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class logincontroller extends Controller implements JWTSubject
-{
+    {
+
     public function from_login()
     {
         return view('modules.autn.from_login');
     }
-    public function autn(Request $request)
+
+    public function login(Request $request)
     {
         $user = Usuarios::where('Email', '=', $request->input('Email'))->first();
         if ($user) {
@@ -38,5 +40,8 @@ class logincontroller extends Controller implements JWTSubject
     {
         // TODO: Implement getJWTCustomClaims() method.
         return[];
+    }
+    public function logout(){
+        Auth::logout();
     }
 }

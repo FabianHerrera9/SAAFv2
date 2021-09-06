@@ -1,1 +1,1 @@
-@extends('layouts.admin.autn.components.app')
+@extends('login')

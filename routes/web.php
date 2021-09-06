@@ -22,6 +22,8 @@ use App\Http\Controllers\MantenimientoController;
 |
 */
 Route::redirect('/', 'login');
+Route::post('/login', [logincontroller::class,'login']);
+Route::put('/login', [logincontroller::class,'logout']);
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 //Usuarios
@@ -78,12 +80,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('mantenimientos/{id}',[MantenimientoController::class,'mostrar'])->name('Mttogarant.mostrar');
 
 });
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-Route::group(['middleware'=>['jwt.auth'],'prefix'=>'v1'], function (){
-    Route::post('/auth/login','TokensController@login');
-    Route::post('');
-});
 
+ Route::middleware(['auth', 'verified'])->get('/login', function () {
+     return view('login');
+ })->name('login');
 
