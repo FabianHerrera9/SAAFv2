@@ -10,11 +10,6 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 class logincontroller extends Controller implements JWTSubject
     {
 
-    public function from_login()
-    {
-        return view('modules.autn.from_login');
-    }
-
     public function login(Request $request)
     {
         $user = Usuarios::where('Email', '=', $request->input('Email'))->first();

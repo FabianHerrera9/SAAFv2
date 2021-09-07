@@ -81,7 +81,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 });
 
- Route::middleware(['auth', 'verified'])->get('/login', function () {
-     return view('login');
- })->name('login');
+
 
