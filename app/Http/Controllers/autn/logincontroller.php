@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\autn;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Usuarios;
+use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class logincontroller extends Controller implements JWTSubject
@@ -12,19 +13,13 @@ class logincontroller extends Controller implements JWTSubject
 
     public function login(Request $request)
     {
-        $user = Usuarios::where('Email', '=', $request->input('Email'))->first();
-        if ($user) {
-            if ($user->Password == $request->input('Password')) {
-                session(['user' => $user]);
-                return redirect()->route('usuarios.index');
-            } else {
-
-                return redirect()->route('autn.form_login');
-
-            }
-        } else {
-            return redirect()->route('autn.form_login');
+        $credencials = $request->only('email','password');
+        if(Auth::attempt($credencials)){
+            $request->session()->regenerate();
+            return redirect()->intended('/usuarios.index');
         }
+        return redirect('/login');
+
     }
     public function getJWTIdentifier()
     {
@@ -36,7 +31,10 @@ class logincontroller extends Controller implements JWTSubject
         // TODO: Implement getJWTCustomClaims() method.
         return[];
     }
-    public function logout(){
+    public function logout(Request $request){
         Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
     }
 }
