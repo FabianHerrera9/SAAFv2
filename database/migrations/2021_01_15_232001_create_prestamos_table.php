@@ -26,7 +26,7 @@ class CreatePrestamosTable extends Migration
 
             $table->foreign('IdActivo')->references('id')->on('activos');
             $table->foreign('IdDocente')->references('id')->on('docentes');
-            $table->foreign('IdUsuario')->references('id')->on('usuarios');
+            $table->foreign('IdUsuario')->references('id')->on('users');
 
             $table->timestamps();
         });

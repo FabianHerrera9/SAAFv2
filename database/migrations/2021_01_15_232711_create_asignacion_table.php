@@ -27,7 +27,7 @@ class CreateAsignacionTable extends Migration
             $table->foreign('IdActivo')->references('id')->on('activos');
             $table->foreign('IdDocente')->references('id')->on('docentes');
             $table->foreign('IdAmbiente')->references('id')->on('ambientes');
-            $table->foreign('IdUsuario')->references('id')->on('usuarios');
+            $table->foreign('IdUsuario')->references('id')->on('users');
 
 
             $table->timestamps();
