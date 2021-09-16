@@ -16,7 +16,7 @@ class logincontroller extends Controller implements JWTSubject
         $credencials = $request->only('email','password');
         if(Auth::attempt($credencials)){
             $request->session()->regenerate();
-            return redirect()->intended('/usuarios.index');
+            return redirect()->intended('/usuarios');
         }
         return redirect('/login');
 

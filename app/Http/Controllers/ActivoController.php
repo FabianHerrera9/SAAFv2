@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Activo;
 use App\Models\Proveedor;
-use App\Models\Usuarios;
+use App\Models\user;
 use Illuminate\Http\Request;
 
 class ActivoController extends Controller
@@ -13,14 +13,14 @@ class ActivoController extends Controller
     {
         $activo = Activo::all();
         $prov=Proveedor::all();
-        $usuarios=Usuarios::all();
+        $usuarios=user::all();
         return view('modules.activos.listar', compact('activo','usuarios','prov'));
     }
 
     public function crear()
     {
         $activo = Activo::all();
-        $usuario = Usuarios::all();//->where('estado', '==', 'Activo');
+        $usuario = user::all();//->where('estado', '==', 'Activo');
         $prov = Proveedor::all();
         return view('modules.activos.crear', compact('activo', 'usuario', 'prov'));
 
@@ -45,7 +45,7 @@ class ActivoController extends Controller
     public function editar($id){
         $activo=Activo::find($id);
         $prov=Proveedor::all();
-        $usu=Usuarios::all();
+        $usu=user::all();
         return view('modules.activos.editar',compact('activo','prov','usu'));
     }
     public function actualizar(Request $request,$id){
