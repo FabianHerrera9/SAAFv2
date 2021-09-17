@@ -96,20 +96,20 @@
                             <div class="col-xl-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Mantenimientos Garantias</h4>
+                                        <h4 class="card-title">Mantenimientos/Garantias</h4>
                                         <div class="table-responsive">
                                             <table class="table mb-0">
                                                 <thead class="table-light">
                                                 <tr>
-                                                    <th>#</th>
+                                                    <th>Tipo</th>
                                                     <th>Fecha</th>
-                                                    <th>Solucionado</th>
+                                                    <th>Estado</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
                                                 @foreach($mantenimiento as $mant)
                                                     <tr>
-                                                        <th scope="row" id="{{$mant->id}}" >{{$mant->id}}</th>
+                                                        <th>{{$mant->Tipo}}</th>
                                                         <th>{{$mant->Fecha}}</th>
                                                         <th>{{$mant->Solucion}}</th>
                                                     </tr>
@@ -130,7 +130,7 @@
                                                 <thead class="table-light">
 
                                                 <tr>
-                                                    <th>#</th>
+                                                    <th>Tipo</th>
                                                     <th>Fecha Inicio</th>
                                                     <th>Estado</th>
                                                     <th>Fecha Fin</th>
@@ -139,7 +139,7 @@
                                                 <tbody>
                                                 @foreach($prestamo as $pres)
                                                     <tr>
-                                                        <th scope="row" id="{{$pres->id}}" ></th>
+                                                        <th>{{$pres->Tipo}}</th>
                                                         <th>{{$pres->FechaPrestamo}}</th>
                                                         <th>{{$pres->Estado}}</th>
                                                         <th>{{$pres->FechaDevolucion}}</th>
