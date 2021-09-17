@@ -23,10 +23,12 @@ class CreatePrestamosTable extends Migration
             $table->bigInteger('IdActivo')->unsigned();
             $table->bigInteger('IdDocente')->unsigned();
             $table->bigInteger('IdUsuario')->unsigned();
+            $table->bigInteger('IdAmbiente')->unsigned();
 
             $table->foreign('IdActivo')->references('id')->on('activos');
             $table->foreign('IdDocente')->references('id')->on('docentes');
             $table->foreign('IdUsuario')->references('id')->on('users');
+            $table->foreign('IdAmbiente')->references('id')->on('ambientes');
 
             $table->timestamps();
         });

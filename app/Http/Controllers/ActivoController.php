@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activo;
+use App\Models\Mantenimiento;
+use App\Models\Prestamo;
 use App\Models\Proveedor;
 use App\Models\user;
 use Illuminate\Http\Request;
@@ -71,6 +73,8 @@ class ActivoController extends Controller
         $activo= Activo::find($id);
         $prov= Proveedor::all();
         $usuario=User::all();
-        return view('modules.activos.hv', compact('activo','prov','usuario'));
+        $mantenimiento= Mantenimiento::where("IdActivo","=",$id)->get();
+        $prestamo= Prestamo::where("IdActivo","=",$id)->get();
+        return view('modules.activos.hv', compact('activo','prov','usuario', 'mantenimiento','prestamo'));
     }
 }
