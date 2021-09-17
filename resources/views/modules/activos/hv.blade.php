@@ -16,8 +16,9 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <label for="TipoActivo">Tipo Activo</label>
-                                <input type="text" class="form-control" id="formrow-email-input" name="TipoActivo"
-                                       value="{{$activo->TipoActivo}}" disabled="disabled">
+                                    <input type="text" class="form-control" id="SN" name="SN"
+                                           value={{$activo->TipoActivo}} disabled="disabled">
+                                    
                                 <div class="form-floating mb-3">
                                     <label for="NombreActivo">Nombre de Activo</label>
                                     <input type="text" class="form-control" id="SN" name="SN"
@@ -90,10 +91,13 @@
                                 @endif
                             @endforeach
                         </div>
+
+
+
                     </form>
                 </div>
             <hr>
-            <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Volver</a>
+            <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Cancelar</a>
             </div>
         </div>
     </div>

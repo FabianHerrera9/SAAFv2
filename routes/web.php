@@ -56,8 +56,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 //activos
     Route::get('activos', [ActivoController::class, 'index'])->name('activos.index');
-    Route::get('activos/{id}', [ActivoController::class, 'hojaDeVida'])->name('activos.hv');
     Route::get('activos/crear', [ActivoController::class, 'crear'])->name('activos.crear');
+    Route::get('activos/{id}', [ActivoController::class, 'hojaDeVida'])->name('activos.hv');
     Route::post('activos', [ActivoController::class, 'guardar'])->name('activos.guardar');
     Route::get('activos/editar/{id}', [ActivoController::class, 'editar'])->name('activos.editar');
     Route::put('Activos/{id}',[ActivoController::class,'actualizar'])->name('activos.actualizar');
