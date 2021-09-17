@@ -102,12 +102,12 @@
                                 aria-label="Seleccione el Usuario que registra">
                             @foreach($usu as $usus)
                                 @if($activo->IdUsuario == $usus->id)
-                                    <option value="{{$usus->id}}">{{$usus->Nombre}} | {{$usus->Cargo}}</option>
+                                    <option value="{{$usus->id}}">{{$usus->name}} | {{$usus->Cargo}}</option>
                                 @endif
                             @endforeach
                                 <option value=" ">---------------------</option>
                             @foreach($usu as $usus)
-                                <option value="{{$usus->id}}">{{$usus->Nombre}} | {{$usus->Cargo}}</option>
+                                <option value="{{$usus->id}}">{{$usus->name}} | {{$usus->Cargo}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('IdUsuario'))

@@ -18,7 +18,8 @@ class Prestamo extends Model
         'IdActivo',
         'IdDocente',
         'IdAmbiente',
-        'IdUsuario'
+        'IdUsuario',
+        'Tipo'
 
     ];
 

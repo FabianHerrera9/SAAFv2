@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambiente;
 use Illuminate\Http\Request;
 use App\Models\Prestamo;
-use App\Models\Usuarios;
+use App\Models\User;
 use App\Models\Docente;
 use App\Models\Activo;
 
@@ -13,18 +14,20 @@ class PrestamoController extends Controller
     public function index()
     {
         $prestamos = Prestamo::all();
+        $ambiente=Ambiente::all();
         $activo=Activo::all();
         $docente=Docente::all();
-        $usuario=Usuarios::all();
-        return view('modules.prestamos.index', compact('prestamos','activo','docente','usuario'));
+        $usuario=User::all();
+        return view('modules.prestamos.index', compact('prestamos','activo','docente','usuario','ambiente'));
     }
 
     public function crear()
     {
         $activos = Activo::all();
-        $usuarios = Usuarios::all();
+        $usuarios = User::all();
         $docentes = Docente::all();
-        return view('modules.prestamos.crear', compact('activos', 'docentes', 'usuarios'));
+        $ambiente=Ambiente::all();
+        return view('modules.prestamos.crear', compact('activos', 'docentes', 'usuarios','ambiente'));
     }
 
     public function guardar(Request $request){
@@ -35,32 +38,10 @@ class PrestamoController extends Controller
             'Estado'=>'required',
             'IdActivo'=>'required',
             'IdDocente'=>'required',
+            'IdAmbiente'=>'required',
             'IdUsuario'=>'required',
         ]);
         $prestamos=Prestamo::create($request->all());
         return redirect()->route('prestamos.index');
     }
-
-    /*public function editar($id){
-
-        $prestamo=Prestamo::all();
-        $activos = Activo::all();
-        $usuarios = Usuarios::all();
-        $docenetes = Docente::all();
-        return view('modules.prestamos.editar',compact('prestamo','activos','usuarios','docenetes'));
-    }
-
-    public function actualizar(Request $request,$id){
-        $validar= $request->validate([
-            'FechaPrestamo'=>'required',
-            'FechaDevolucion'=>'required',
-            'Observaciones'=>'required|max:100',
-            'Estado'=>'required',
-            'IdActivo'=>'required',
-            'IdDocente'=>'required',
-            'IdUsuario'=>'required',
-        ]);
-        $prestamos=Prestamo::find($id)->update($request->all());
-        return redirect()->route('prestamos.index');
-    }*/
 }

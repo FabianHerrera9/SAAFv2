@@ -23,7 +23,7 @@ class CreateMantenimientosTable extends Migration
             $table->string('TrabajoRealizado', 200);
             $table->enum('Solucion', ['Solucionado', 'No-Solucionado']);
             $table->binary('ActaServicio');
-            $table->bigInteger('IdActivo')->unsigned();
+            $table->bigInteger('IdActivo')->unsigned()->unique();
 
             $table->foreign('IdActivo')->references('id')->on('activos');
 

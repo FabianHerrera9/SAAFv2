@@ -44,7 +44,7 @@
 
                                 @foreach($usuarios as $usu)
                                     @if($usu->id == $activos->IdUsuario)
-                                        <td>{{ $usu -> Nombre }}</td>
+                                        <td>{{ $usu -> name }}</td>
                                     @endif
                                 @endforeach
                                 <td>

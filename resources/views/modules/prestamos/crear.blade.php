@@ -9,6 +9,18 @@
             <div class="table-responsive">
                 <form action="{{route('prestamos.guardar')}}" method="post">
                     @csrf
+                    <div>
+                        <label for="Tipo">Tipo</label>
+                        <select name="Tipo" id="Tipo" class="form-select my-1 form-control ">
+                            <option value="" selected="selected">Seleccione...</option>
+                            <option value="Prestamo">Prestamo</option>
+                            <option value="Asignacion">Asignacion</option>
+                        </select>
+                        @if($errors->has('Tipo'))
+                            <label for="" style="color:red;">{{ $errors->first('Tipo') }}</label>
+                            <br>
+                        @endif
+                    </div>
                     <div class="form-floating mb-3">
                         <label for="FechaPrestamo">Fecha inicio de Prestamo</label>
                         <input type="date" class="form-control" id="FechaPrestamo" name="FechaPrestamo">
@@ -34,6 +46,22 @@
                     </div>
 
                     <div class="form-floating mb-3">
+                        <label for="IdAmbiente">Ambiente</label>
+                        <select name="IdAmbiente" id="IdAmbiente" class="form-select form-control"
+                                aria-label="Seleccione el Ambiente">
+                            <option value="">Seleccione el Ambiente</option>
+                            @foreach($ambiente as $ambientes)
+                                <option value="{{$ambientes->id}}">{{ $ambientes -> NombreAMbiente }}
+                                    | {{ $ambientes -> PisoAmbiente }}</option>
+                            @endforeach
+                        </select>
+                        @if($errors->has('IdAmbiente'))
+                            <label for="" style="color:red;">{{ $errors->first('IdAmbiente') }}</label>
+                            <br>
+                        @endif
+                    </div>
+
+                    <div class="form-floating mb-3">
                         <label for="IdDocente">Doncete</label>
                         <select name="IdDocente" id="IdDocente" class="form-select form-control"
                                 aria-label="Asignar A.....">
@@ -54,7 +82,7 @@
                                 aria-label="Asignar Por.....">
                             <option value="">Seleccione ....</option>
                             @foreach($usuarios as $usuario)
-                                <option value="{{$usuario->id}}">{{$usuario->Nombre}}</option>
+                                <option value="{{$usuario->id}}">{{$usuario->name}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('IdUsuario'))
@@ -88,6 +116,15 @@
                         <label for="Observaciones">Observaciones</label>
                         <textarea type="text" class="form-control" id="Observaciones" name="Observaciones"
                                   placeholder="Observaciones"></textarea>
+                        @if($errors->has('Observaciones'))
+                            <label for="" style="color:red;">{{ $errors->first('Observaciones') }}</label>
+                            <br>
+                        @endif
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="Observaciones">Observaciones</label>
+                        <textarea type="text" class="form-control" id="Observaciones" name="Observaciones"
+                                  placeholder="Detalles fisicos/funcionales "></textarea>
                         @if($errors->has('Observaciones'))
                             <label for="" style="color:red;">{{ $errors->first('Observaciones') }}</label>
                             <br>

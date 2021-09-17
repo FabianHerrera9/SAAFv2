@@ -75,7 +75,7 @@
                                     @foreach($usuario as $usus)
                                         @if($activo->IdUsuario == $usus->id)
                                             <input type="text" class="form-control" id="formrow-inputCity" name="IdUsuario"
-                                                   value="{{$usus->Nombre}} | {{$usus->Cargo}}" disabled="disabled">
+                                                   value="{{$usus->name}} | {{$usus->Cargo}}" disabled="disabled">
                                         @endif
                                     @endforeach
                                 </div>
