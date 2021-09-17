@@ -17,6 +17,7 @@ class Prestamo extends Model
         'Estado',
         'IdActivo',
         'IdDocente',
+        'IdAmbiente',
         'IdUsuario'
 
     ];

@@ -18,7 +18,7 @@
                                 <label for="TipoActivo">Tipo Activo</label>
                                     <input type="text" class="form-control" id="SN" name="SN"
                                            value={{$activo->TipoActivo}} disabled="disabled">
-                                    
+
                                 <div class="form-floating mb-3">
                                     <label for="NombreActivo">Nombre de Activo</label>
                                     <input type="text" class="form-control" id="SN" name="SN"
@@ -92,12 +92,70 @@
                             @endforeach
                         </div>
 
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Mantenimientos Garantias</h4>
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead class="table-light">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Fecha</th>
+                                                    <th>Solucionado</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($mantenimiento as $mant)
+                                                    <tr>
+                                                        <th scope="row" id="{{$mant->id}}" >{{$mant->id}}</th>
+                                                        <th>{{$mant->Fecha}}</th>
+                                                        <th>{{$mant->Solucion}}</th>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Prestamos y Asignaciones</h4>
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead class="table-light">
 
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Fecha Inicio</th>
+                                                    <th>Estado</th>
+                                                    <th>Fecha Fin</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($prestamo as $pres)
+                                                    <tr>
+                                                        <th scope="row" id="{{$pres->id}}" ></th>
+                                                        <th>{{$pres->FechaPrestamo}}</th>
+                                                        <th>{{$pres->Estado}}</th>
+                                                        <th>{{$pres->FechaDevolucion}}</th>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             <hr>
-            <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Cancelar</a>
+            <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Volver</a>
             </div>
         </div>
     </div>
