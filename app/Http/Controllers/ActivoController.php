@@ -65,4 +65,12 @@ class ActivoController extends Controller
         $activo=Activo::find($id)->update($request->all());
         return redirect()->route('activos.index');
     }
+
+    public function hojaDeVida($id)
+    {
+        $activo= Activo::find($id);
+        $prov= Proveedor::all();
+        $usuario=User::all();
+        return view('modules.activos.hv', compact('activo','prov','usuario'));
+    }
 }

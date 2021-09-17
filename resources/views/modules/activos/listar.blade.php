@@ -49,6 +49,12 @@
                                 @endforeach
                                 <td>
                                     <i>
+                                        <a href="{{route('activos.hv',$activos->id)}}">
+                                            <i class="bx bx-show"></i>
+                                        </a>
+                                    </i>
+
+                                    <i>
                                         <a href="{{route('activos.editar',$activos->id)}}">
                                             <i class="bx bx-edit"></i>
                                         </a>
