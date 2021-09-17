@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use function GuzzleHttp\Promise\all;
 
 class UsuariosController extends Controller
@@ -28,7 +29,19 @@ class UsuariosController extends Controller
             'Tipoid'=>'required',
             'Rol'=>'required',
             ]);
-        $usuario=User::create($request->all());
+
+        $usuario=User::create(
+        [    'Identificacion'=> $request->Identificacion,
+            'name'=>$request->name,
+            'Cargo'=>$request->Cargo,
+            'Tel'=>$request->Tel,
+            'email'=>$request->email,
+            'password'=> Hash::make($request->password),
+            'Estado'=>$request->Estado,
+            'Tipoid'=>$request->Tipoid,
+            'Rol'=>$request->Rol]
+        );
+
         return redirect()->route('usuarios.index')->with([
             'message'=>'Usuario Creado Con exito',
             'type'=>'success'

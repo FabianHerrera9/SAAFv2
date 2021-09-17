@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5b31520a9734ff3d2ea7b2f432e04af2e11d6f6e',
+    'reference' => '1f7766b391c0990be813acc9a2c9ce881078e13e',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -114,6 +114,15 @@
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
+    ),
+    'elgibor-solution/laravel-database-encryption' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e74082885ecab8dd126c40e9acd844d43bc5a25a',
     ),
     'facade/flare-client-php' => 
     array (
@@ -499,7 +508,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5b31520a9734ff3d2ea7b2f432e04af2e11d6f6e',
+      'reference' => '1f7766b391c0990be813acc9a2c9ce881078e13e',
     ),
     'laravel/sail' => 
     array (
@@ -1128,6 +1137,15 @@
       array (
       ),
       'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
+    ),
+    'spatie/laravel-permission' => 
+    array (
+      'pretty_version' => '5.1.1',
+      'version' => '5.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '58d5eb6c7b0eafa8bdf0a93d1ca5c214a05344cb',
     ),
     'swiftmailer/swiftmailer' => 
     array (
