@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use function GuzzleHttp\Promise\all;
+use Spatie\Permission\Models\Role;
 
 class UsuariosController extends Controller
 {
@@ -48,6 +49,8 @@ class UsuariosController extends Controller
         ]);
     }
     public function editar($id){
+
+        $roles = Role::all();
 
         $usuarios=User::find($id);
         return view('modules.usuarios.editar',compact('usuarios'));
