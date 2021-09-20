@@ -14,30 +14,82 @@
     <title>REPORTES</title>
 </head>
 <body>
-<h1> ACA ENCONTRARAS TODOS LOS REPORTES </h1>
 
-<p>
-Clic
-    <a href="/reportes/activos">
+<center><h1 style="color:blue"> ACA ENCONTRARAS TODOS LOS REPORTES </h1></center>
+<br>
 
-        Aqui
-    </a>
-    Reportes de Activos
-</p>
+<h2>Podras descargarlos dandole clic en el icono azul</h2>
+<br>
 
-<p>
-CLic <br>
-    <a href="/reportes/ambientes">
+<td>
+    <i>
+        <p>
+            1. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS ACTIVOS
+            <a href="/reportes/activos">
+                <i class="bx bxs-user"></i>
+            </a>
+        </p>
+    </i>
+</td>
 
-        Aqui
-    </a>
-    <br>
-    Reporte de Ambientes
-</p>
+<td>
+    <i>
+        <p>
+            2. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS AMBIENTES
+        <a href="/reportes/ambientes">
+            <i class="bx bxs-file"></i>
+        </a>
+        </p>
+    </i>
+</td>
 
 
+<td>
+    <i>
+        <p>
+           3. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS DOCENTES
+            <a href="/reportes/docentes">
+                <i class="bx bxs-map"></i>
+            </a>
+        </p>
+    </i>
+</td>
 
 
+<td>
+    <i>
+        <p>
+            4. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS MANTENIMIENTO
+            <a href="/reportes/mantenimiento">
+                <i class="bx bxs-building-house"></i>
+            </a>
+        </p>
+    </i>
+</td>
+
+
+<td>
+    <i>
+        <p>
+            5. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS PRESTAMOS
+            <a href="/reportes/prestamos">
+                <i class="bx bxs-megaphone"></i>
+            </a>
+        </p>
+    </i>
+</td>
+
+
+<td>
+    <i>
+        <p>
+            6. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS PROVEEDORES
+            <a href="/reportes/proveedores">
+                <i class="bx bxs-x-circle"></i>
+            </a>
+        </p>
+    </i>
+</td>
 </body>
 </html>
 
