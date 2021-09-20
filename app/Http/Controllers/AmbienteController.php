@@ -35,4 +35,6 @@ class AmbienteController extends Controller
         $Ambientes=Ambiente::find($id)->update($request->all());
         return redirect()->route('ambientes.index');
     }
+
+
 }

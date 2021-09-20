@@ -59,6 +59,7 @@
                                             <i class="bx bx-edit"></i>
                                         </a>
                                     </i>
+
                                 </td>
                             </tr>
                         @endforeach

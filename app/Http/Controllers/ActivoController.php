@@ -8,6 +8,8 @@ use App\Models\Prestamo;
 use App\Models\Proveedor;
 use App\Models\user;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
+
 
 class ActivoController extends Controller
 {
@@ -77,4 +79,6 @@ class ActivoController extends Controller
         $prestamo= Prestamo::where("IdActivo","=",$id)->get();
         return view('modules.activos.hv', compact('activo','prov','usuario', 'mantenimiento','prestamo'));
     }
+
+
 }

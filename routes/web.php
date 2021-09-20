@@ -10,6 +10,8 @@ use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\AmbienteController;
 use App\Http\Controllers\AsignacionController;
 use App\Http\Controllers\MantenimientoController;
+use App\Http\Controllers\ReportesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +56,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('ambientes/editar/{id}',[AmbienteController::class,'editar'])->name('ambientes.editar');
     Route::put('ambientes/{id}',[AmbienteController::class,'actualizar'])->name('ambientes.actualizar');
 
+
 //activos
     Route::get('activos', [ActivoController::class, 'index'])->name('activos.index');
     Route::get('activos/crear', [ActivoController::class, 'crear'])->name('activos.crear');
@@ -62,6 +65,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('activos/editar/{id}', [ActivoController::class, 'editar'])->name('activos.editar');
     Route::put('Activos/{id}',[ActivoController::class,'actualizar'])->name('activos.actualizar');
 
+
 //Prestamos
     Route::get('prestamos',[PrestamoController::class,'index'])->name('prestamos.index');
     Route::get('prestamos/crear',[PrestamoController::class,'crear'])->name('prestamos.crear');
@@ -69,16 +73,21 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('prestamos/editar/{id}',[PrestamoController::class,'editar'])->name('prestamos.editar');
     Route::put('prestamos/{id}',[PrestamoController::class,'actualizar'])->name('prestamos.actualizar');
 
-//Asignaciones
-    Route::get('asignaciones',[AsignacionController::class,'listar'])->name('asignaciones.index');
-    Route::get('asignaciones/crear',[AsignacionController::class,'crear'])->name('asignaciones.crear');
-    Route::post('asignaciones',[AsignacionController::class,'guardar'])->name('asignaciones.guardar');
-
 //Mantenimiento
     Route::get('mantenimientos',[MantenimientoController::class,'index'])->name('Mttogarant.index');
     Route::get('mantenimientos/crear',[MantenimientoController::class,'crear'])->name('Mttogarant.crear');
     Route::post('mantenimientos',[MantenimientoController::class,'guardar'])->name('Mttogarant.guardar');
     Route::get('mantenimientos/{id}',[MantenimientoController::class,'mostrar'])->name('Mttogarant.mostrar');
+
+
+//REPORTES
+    Route::get('reportes',[ReportesController::class,'index'])->name('reportes.index');
+    Route::get('reportes/proveedores', [ReportesController::class, 'modulo'])->name('reportes.reportes_proveedores');
+    Route::get('reportes/docentes', [ReportesController::class, 'descar'])->name('reporte.reportes_docentes');
+    Route::get('reportes/ambientes', [ReportesController::class, 'descargar'])->name('reportes.reportes_ambientes');
+    Route::get('reportes/activos', [ReportesController::class, 'download'])->name('reportes.reportes_activos');
+    Route::get('reportes/prestamos', [ReportesController::class, 'acomodar'])->name('reportes.reportes_prestamos');
+    Route::get('reportes/mantenimientos', [ReportesController::class, 'pdf'])->name('reportes.reportes_mantenimiento');
 
 });
 

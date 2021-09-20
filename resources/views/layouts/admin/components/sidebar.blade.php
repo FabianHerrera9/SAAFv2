@@ -110,7 +110,7 @@
                         <span key="t-layouts">Reportes</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('usuarios.index')}}" key="t-horizontal">Genererar Reporte</a></li>
+                        <li><a href="{{route('reportes.index')}}" key="t-horizontal">Genererar Reporte</a></li>
 
                     </ul>
                 </li>

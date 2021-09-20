@@ -29,4 +29,5 @@ class MantenimientoController extends Controller
         $activo=Activo::all();
         return view('modules.Mtto.detalles',compact('mtto','activo'));
     }
+
 }
