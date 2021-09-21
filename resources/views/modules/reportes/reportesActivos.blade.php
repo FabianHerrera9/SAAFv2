@@ -9,11 +9,6 @@
         <div class="row">
             <div class="card col-12">
                 <div class="table-responsive">
-                    @if(session('message'))
-                        <div class="alert alert-{{session('type')}} mt-3" role="alert">
-                            {{session('message')}}
-                        </div>
-                    @endif
                     <table class="table">
                         <thead>
                         <tr>
@@ -32,7 +27,6 @@
                         </tr>
                         </thead>
                         <tbody>
-
 
                         @foreach($activo as $activos)
                             <tr>
@@ -56,7 +50,6 @@
                                         <td>{{ $usu -> name }}</td>
                                     @endif
                                 @endforeach
-
                             </tr>
                         @endforeach
                         </tbody>

@@ -82,12 +82,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 //REPORTES
     Route::get('reportes',[ReportesController::class,'index'])->name('reportes.index');
-    Route::get('reportes/proveedores', [ReportesController::class, 'modulo'])->name('reportes.reportes_proveedores');
-    Route::get('reportes/docentes', [ReportesController::class, 'descar'])->name('reporte.reportes_docentes');
-    Route::get('reportes/ambientes', [ReportesController::class, 'descargar'])->name('reportes.reportes_ambientes');
-    Route::get('reportes/activos', [ReportesController::class, 'download'])->name('reportes.reportes_activos');
-    Route::get('reportes/prestamos', [ReportesController::class, 'acomodar'])->name('reportes.reportes_prestamos');
-    Route::get('reportes/mantenimientos', [ReportesController::class, 'pdf'])->name('reportes.reportes_mantenimiento');
+    Route::get('reportes/proveedores', [ReportesController::class, 'modulo'])->name('reportes.reportesProveedores');
+    Route::get('reportes/docentes', [ReportesController::class, 'descar'])->name('reporte.reportesDocentes');
+    Route::get('reportes/ambientes', [ReportesController::class, 'descargar'])->name('reportes.reportesAmbientes');
+    Route::get('reportes/activos', [ReportesController::class, 'download'])->name('reportes.reportesActivos');
+    Route::get('reportes/prestamos', [ReportesController::class, 'acomodar'])->name('reportes.reportesPrestamos');
+    Route::get('reportes/mantenimientos', [ReportesController::class, 'pdf'])->name('reportes.reportesMantenimiento');
 
 });
 

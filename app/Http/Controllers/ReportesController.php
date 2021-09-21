@@ -7,10 +7,8 @@ use App\Models\Ambiente;
 use App\Models\Mantenimiento;
 use App\Models\Prestamo;
 use App\Models\Proveedor;
-use App\Models\user;
 use App\models\Docente;
-use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade as PDF;
+use App\Models\User;
 
 
 
@@ -21,8 +19,13 @@ class ReportesController extends Controller
     }
     public function download()
     {
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Activo::all());
+        //$pdf = app('dompdf.wrapper');
+        //$pdf->loadhtml(Activo::all());
+        $activo = Activo::all();
+        $prov = Proveedor::all();
+        $usuarios = User::all();
+        view()->share('activo', $activo);
+        $pdf = PDF::loadView('modules.reportes.reportesActivos',compact('activo','prov','usuarios'));
         return $pdf->download('Activos.pdf');
     }
 
@@ -34,7 +37,7 @@ class ReportesController extends Controller
     }
 
 
-        public function descar(){
+    public function descar(){
         $pdf = app('dompdf.wrapper');
         $pdf->loadhtml(Docente::all());
         return $pdf->download('Docentes.pdf');
@@ -53,8 +56,9 @@ class ReportesController extends Controller
     }
 
     public function modulo(){
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Proveedor::all());
+        $prov = Proveedor::all();
+        view()->share('prov', $prov);
+        $pdf = PDF::loadView();
         return $pdf->download('Proveedor.pdf');
     }
 
