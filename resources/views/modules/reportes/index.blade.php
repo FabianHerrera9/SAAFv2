@@ -18,9 +18,6 @@
 <center><h1 style="color:blue"> ACA ENCONTRARAS TODOS LOS REPORTES </h1></center>
 <br>
 
-<h2>Podras descargarlos dandole clic en el icono azul</h2>
-<br>
-
 <td>
     <i>
         <p>
@@ -92,7 +89,6 @@
 </td>
 </body>
 </html>
-
 
 @endsection
 

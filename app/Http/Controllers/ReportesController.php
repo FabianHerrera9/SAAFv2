@@ -9,8 +9,8 @@ use App\Models\Prestamo;
 use App\Models\Proveedor;
 use App\Models\user;
 use App\models\Docente;
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
+
 
 
 
@@ -21,41 +21,47 @@ class ReportesController extends Controller
     }
     public function download()
     {
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Activo::all());
+        $activo = Activo::all();
+        $prov=Proveedor::all();
+        $usuarios=user::all();
+        $pdf = PDF::loadview('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
         return $pdf->download('Activos.pdf');
     }
 
     public function descargar()
     {
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(ambiente::all());
+        $Ambiente=Ambiente::all();
+        $pdf= PDF::loadview('modules.reportes.reportes_ambientes',compact('Ambiente'));
         return $pdf->download('Ambientes.pdf');
     }
 
 
         public function descar(){
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Docente::all());
+        $docentes = Docente::all();
+        $pdf= PDF::loadview('modules.reportes.reportes_docentes',compact('docentes'));
         return $pdf->download('Docentes.pdf');
     }
 
     public function pdf(){
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Mantenimiento::all());
+        $mttogrt = Mantenimiento::all();
+        $pdf= PDF::loadview('modules.reportes.reportes_mantenimiento',compact('mttogrt'));
         return $pdf->download('Mantenimiento.pdf');
     }
 
     public function acomodar(){
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Prestamo::all());
-        return $pdf->download('Prestamo.pdf');
+        $prestamos = Prestamo::all();
+        $ambiente=Ambiente::all();
+        $activo=Activo::all();
+        $docente=Docente::all();
+        $usuario=User::all();
+        $pdf =PDF::loadview('modules.reportes.reportes_prestamos', compact('prestamos','activo','docente','usuario','ambiente'));
+        return $pdf->download('prestamos.pdf');
     }
 
     public function modulo(){
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadhtml(Proveedor::all());
-        return $pdf->download('Proveedor.pdf');
+        $prov=Proveedor::all();
+        $pdf= PDF::loadview('modules.reportes.reportes_proveedores',compact('prov'));
+        return $pdf->download('Proveedores.pdf');
     }
 
 

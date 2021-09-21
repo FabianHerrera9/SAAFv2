@@ -1,19 +1,45 @@
-@extends('layouts.admin.app')
-@section('title')
-    | REPORTE DE DOCENTES
-@endsection
-@section('content')
+<html>
+<head>
+    <style>
+        @page {
+            margin: 0cm 0cm;
+            font-family: Arial;
+        }
 
-    <div class="container">
-        <div class="row">
-            <div class="card col-12">
-                <div class="table-responsive">
-                    @if(session('message'))
-                        <div class="alert alert-{{session('type')}} mt-3" role="alert">
-                            {{session('message')}}
-                        </div>
-                    @endif
-                    <table class="table table-hover">
+        body {
+            margin: 3cm 2cm 2cm;
+        }
+
+        header {
+            position: fixed;
+            top: 0cm;
+            left: 0cm;
+            right: 0cm;
+            height: 2cm;
+            background-color: #2a0927;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0cm;
+            left: 0cm;
+            right: 0cm;
+            height: 2cm;
+            background-color: #2a0927;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>REPORTES DE DOCENTES</h1>
+</header>
+    <table class="table table-hover">
                         <thead>
                         <tr class="table">
                             <th>TipoId</th>
@@ -41,8 +67,9 @@
                         @endforeach
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
+</tbody>
+<footer>
+    <h1>2021 © CADSI</h1>
+</footer>
+</body>
+</html>
