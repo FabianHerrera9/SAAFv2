@@ -7,8 +7,8 @@ use App\Models\Ambiente;
 use App\Models\Mantenimiento;
 use App\Models\Prestamo;
 use App\Models\Proveedor;
-use App\Models\user;
 use App\models\Docente;
+use App\models\user;
 use Barryvdh\DomPDF\Facade as PDF;
 
 
@@ -24,7 +24,7 @@ class ReportesController extends Controller
         $activo = Activo::all();
         $prov=Proveedor::all();
         $usuarios=user::all();
-        $pdf = PDF::loadview('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
+        $pdf = PDF::loadView('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
         return $pdf->download('Activos.pdf');
     }
 
@@ -34,13 +34,12 @@ class ReportesController extends Controller
         $pdf= PDF::loadview('modules.reportes.reportes_ambientes',compact('Ambiente'));
         return $pdf->download('Ambientes.pdf');
     }
-
-
-        public function descar(){
-        $docentes = Docente::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_docentes',compact('docentes'));
-        return $pdf->download('Docentes.pdf');
-    }
+        public function descar()
+        {
+            $docentes = Docente::all();
+            $pdf = PDF::loadview('modules.reportes.reportes_docentes', compact('docentes'));
+            return $pdf->download('Docente.pdf');
+        }
 
     public function pdf(){
         $mttogrt = Mantenimiento::all();
@@ -59,9 +58,11 @@ class ReportesController extends Controller
     }
 
     public function modulo(){
+
         $prov=Proveedor::all();
         $pdf= PDF::loadview('modules.reportes.reportes_proveedores',compact('prov'));
-        return $pdf->download('Proveedores.pdf');
+        return $pdf->download('Proveedor.pdf');
+
     }
 
 

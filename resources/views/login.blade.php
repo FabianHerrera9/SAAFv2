@@ -30,12 +30,12 @@
 <body>
 
 <div class="limiter">
-    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+    <div class="container-login100" style="background-image: url('images/unnamed.jpg');">
         <div class="wrap-login100">
             <form action="{{ route('login')}}" method="post">
                 @csrf
-					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
+					<span class="login100-form-logo" >
+						<img src="/images/unnamed.png" width="100" height="100">
 					</span>
 
                 <span class="login100-form-title p-b-34 p-t-27">
@@ -52,24 +52,12 @@
                     <span class="focus-input100" data-placeholder="&#xf191;"></span>
                 </div>
 
-                <div class="contact100-form-checkbox">
-                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="Recuérdame">
-                    <label class="label-checkbox100" for="ckb1">
-                        Recuérdame
-                    </label>
-                </div>
-
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn" type="submit">
                         Acceso
                     </button>
                 </div>
 
-                <div class="text-center p-t-90">
-                    <a class="txt1" href="#">
-                        ¿Has olvidado tu contraseña?
-                    </a>
-                </div>
             </form>
         </div>
     </div>
