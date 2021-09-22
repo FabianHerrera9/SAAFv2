@@ -39,29 +39,28 @@
 <header>
     <h1>REPORTES DE AMBIENTES</h1>
 </header>
-                    <table class="table  table-hover">
-                        <thead>
-                        <tr>
-                            <th>Piso Ambiente</th>
-                            <th>Nombre Ambiente</th>
-                            <th>Responsable</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($Ambiente as $Ambientes)
-                            <tr>
-                                <td>{{ $Ambientes -> PisoAmbiente }}</td>
-                                <td>{{ $Ambientes -> NombreAMbiente }}</td>
-                                @if($Ambientes -> Responsable == '')
-                                    <td> Sin Responsable Asignado</td>
-                                @else
-                                    <td>{{ $Ambientes -> Responsable }}</td>
-                                @endif
-                            </tr>
-                            @endforeach
-
-                        </tbody>
-                    </table>
+<table class="table  table-hover">
+    <thead>
+    <tr>
+        <th>Piso Ambiente</th>
+        <th>Nombre Ambiente</th>
+        <th>Responsable</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($Ambiente as $Ambientes)
+        <tr>
+            <td>{{ $Ambientes -> PisoAmbiente }}</td>
+            <td>{{ $Ambientes -> NombreAMbiente }}</td>
+            @if($Ambientes -> Responsable == '')
+                <td> Sin Responsable Asignado</td>
+            @else
+                <td>{{ $Ambientes -> Responsable }}</td>
+            @endif
+        </tr>
+    @endforeach
+    </tbody>
+</table>
 </tbody>
 <footer>
     <h1>2021 © CADSI</h1>

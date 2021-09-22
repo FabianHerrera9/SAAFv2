@@ -14,79 +14,62 @@
     <title>REPORTES</title>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="card col-12">
+                <div class="table-responsive">
+                    <td>
+                        <tr>
+                            <h1>
+                                <a href={{route('reportes.reportes_activos')}}>
+                                    <i class="bx bx-buildings"> Activos </i>
+                                </a>
+                            </h1>
+                        </tr>
 
-<center><h1 style="color:blue"> ACA ENCONTRARAS TODOS LOS REPORTES </h1></center>
-<br>
+                        <tr>
+                            <h1>
+                                <a href={{route('reportes.reportes_prestamos')}}>
+                                    <i class="bx bx-laptop"> Asignaciones y Prestamos </i>
+                                </a>
+                            </h1>
+                        </tr>
+                        <tr>
+                            <h1>
+                                <a href={{route('reportes.reportes_mantenimiento')}}>
+                                    <i class="bx bx-wrench">Mantenimientos y Garantias</i>
+                                </a>
+                            </h1>
+                        </tr>
 
-<td>
-    <i>
-        <p>
-            1. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS ACTIVOS
-            <a href="/reportes/activos">
-                <i class="bx bxs-user"></i>
-            </a>
-        </p>
-    </i>
-</td>
+                        <tr>
+                            <h1>
+                                <a href={{route('reportes.reportes_proveedores')}}>
+                                    <i class="bx bx-store-alt"> Proveedores </i>
+                                </a>
+                            </h1>
+                        </tr>
 
-<td>
-    <i>
-        <p>
-            2. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS AMBIENTES
-        <a href="/reportes/ambientes">
-            <i class="bx bxs-file"></i>
-        </a>
-        </p>
-    </i>
-</td>
+                        <tr>
+                            <h1>
+                                <a href={{route('reporte.reportes_docentes')}}>
+                                    <i class="bx bx-group"> Docentes </i>
+                                </a>
+                            </h1>
+                        </tr>
 
-
-<td>
-    <i>
-        <p>
-           3. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS DOCENTES
-            <a href="/reportes/docentes">
-                <i class="bx bxs-map"></i>
-            </a>
-        </p>
-    </i>
-</td>
-
-
-<td>
-    <i>
-        <p>
-            4. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS MANTENIMIENTO
-            <a href="/reportes/mantenimiento">
-                <i class="bx bxs-building-house"></i>
-            </a>
-        </p>
-    </i>
-</td>
-
-
-<td>
-    <i>
-        <p>
-            5. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS PRESTAMOS
-            <a href="/reportes/prestamos">
-                <i class="bx bxs-megaphone"></i>
-            </a>
-        </p>
-    </i>
-</td>
-
-
-<td>
-    <i>
-        <p>
-            6. DALE CLIC PARA DESCARGAR EL REPORTE DE LOS PROVEEDORES
-            <a href="/reportes/proveedores">
-                <i class="bx bxs-x-circle"></i>
-            </a>
-        </p>
-    </i>
-</td>
+                        <tr>
+                            <h1>
+                                <a href={{route('reportes.reportes_ambientes')}}>
+                                    <i class="bx bx-paper-plane"> Ambientes </i>
+                                </a>
+                            </h1>
+                        </tr>
+                    </td>
+                 </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 

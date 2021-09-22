@@ -36,7 +36,7 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect ">
                                 <i class="bx bx-laptop"></i>
-                                <span key="t-layouts">Prestamos y Asignaciones</span>
+                                <span key="t-layouts">Asignaciones y Prestamos</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li><a href="{{route('prestamos.index')}}" key="t-horizontal" class="bx bx-list-ul">
@@ -49,7 +49,7 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="bx bx-wrench"></i>
-                                <span key="t-layouts">Mtto/Garantia</span>
+                                <span key="t-layouts">Mantenimientos y Garantias</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="{{route('Mttogarant.index')}}" key="t-horizontal" class="bx bx-list-ul">

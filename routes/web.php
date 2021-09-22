@@ -88,9 +88,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('reportes/activos', [ReportesController::class, 'download'])->name('reportes.reportes_activos');
     Route::get('reportes/prestamos', [ReportesController::class, 'acomodar'])->name('reportes.reportes_prestamos');
     Route::get('reportes/mantenimiento', [ReportesController::class, 'pdf'])->name('reportes.reportes_mantenimiento');
-
-
-
 });
 
 

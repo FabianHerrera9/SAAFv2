@@ -44,7 +44,7 @@
                         <tr class="table">
                             <th>TipoId</th>
                             <th>Identificacion</th>
-                            <th>Nombre del Docente</th>
+                            <th>Docente</th>
                             <th>Telefono</th>
                             <th>Email</th>
                             <th>Especialidad</th>

@@ -34,12 +34,13 @@ class ReportesController extends Controller
         $pdf= PDF::loadview('modules.reportes.reportes_ambientes',compact('Ambiente'));
         return $pdf->download('Ambientes.pdf');
     }
-        public function descar()
-        {
-            $docentes = Docente::all();
-            $pdf = PDF::loadview('modules.reportes.reportes_docentes', compact('docentes'));
-            return $pdf->download('Docente.pdf');
-        }
+
+    public function descar()
+    {
+        $docentes = Docente::all();
+        $pdf = PDF::loadview('modules.reportes.reportes_docentes', compact('docentes'));
+        return $pdf->download('Docente.pdf');
+    }
 
     public function pdf(){
         $mttogrt = Mantenimiento::all();
