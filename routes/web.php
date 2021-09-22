@@ -72,7 +72,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('prestamos/crear',[PrestamoController::class,'crear'])->name('prestamos.crear');
     Route::post('prestamos',[PrestamoController::class,'guardar'])->name('prestamos.guardar');
     Route::get('prestamos/editar/{id}',[PrestamoController::class,'editar'])->name('prestamos.editar');
-    Route::put('prestamos/{id}',[PrestamoController::class,'actualizar'])->name('prestamos.actualizar');
 
 //Mantenimiento
     Route::get('mantenimientos',[MantenimientoController::class,'index'])->name('Mttogarant.index');

@@ -83,8 +83,11 @@ class UsuariosController extends Controller
 
     }
     public function detalle(){
-
         $usuario = User::all();
         return view('modules.usuarios.show',compact('usuario'));
+    }
+    public function navBar(){
+        $usuario = User::all();
+        return view('layouts.admin.components.navbar',compact('usuario'));
     }
 }

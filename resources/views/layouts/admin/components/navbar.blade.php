@@ -24,16 +24,18 @@
 
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
-                    <a class="dropdown-item" href={{route('usuarios.mostrar')}}><i class="bx bx-user font-size-16 align-middle mr-1"></i> <span
-                            key="t-profile"> Perfil </span></a>
-                    <div class="dropdown-divider"></div>
-                    <form id="logout" action="login" method="post">
-                        @method('put')
-                        @csrf
-                    <a class="dropdown-item text-danger" href="#" onclick="this.closest('form').submit()">
-                        <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
-                        <span key="t-logout">Cerrar Sesión</span>
+                    <a class="dropdown-item" href={{route('usuarios.mostrar')}}>
+                        <i class="bx bx-user font-size-16 align-middle mr-1"></i>
+                        <span key="t-profile"> Perfil </span>
                     </a>
+
+                    <form id="logout" action="/login" method="post">
+                        @method('PUT')
+                        @csrf
+                        <a class="dropdown-item text-danger" href="#" onclick="this.closest('form').submit()">
+                            <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+                            <span key="t-logout">Cerrar Sesión</span>
+                        </a>
                     </form>
                 </div>
             </div>
