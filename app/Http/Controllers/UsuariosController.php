@@ -94,7 +94,6 @@ class UsuariosController extends Controller
 
     }
     public function detalle(){
-
         $usuario = User::all();
         return view('modules.usuarios.show',compact('usuario'));
     }
