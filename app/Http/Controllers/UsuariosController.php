@@ -69,7 +69,7 @@ class UsuariosController extends Controller
             'name'=>'required|max:30',
             'Cargo'=>'required|max:10',
             'Tel'=>'required|max:15',
-            'email'=>'required|max:30',
+            'email'=>'required|max:30|email|unique:User,email',
             'password'=>'required',
             'Estado'=>'required',
             'Tipoid'=>'required',

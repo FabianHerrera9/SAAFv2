@@ -55,12 +55,12 @@ class ActivoController extends Controller
     public function actualizar(Request $request,$id){
 
         $validar=$request->validate([
-            'NombreActivo'=>'required|max:15',
+            'NombreActivo'=>'required|max:50|string',
             'SN'=>'required|max:20',
             'Marca'=>'required|max:15',
-            'Modelo'=>'required|max:15',
+            'Modelo'=>'required|max:30',
             'Descripcion'=>'required|max:100',
-            'Garantia'=>'required',
+            'Garantia'=>'required|date|after:today',
             'TipoActivo'=>'required',
             'IdProveedor'=>'required',
             'IdUsuario'=>'required',

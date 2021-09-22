@@ -11,7 +11,7 @@
                     @csrf
                     <div class="form-floating mb-3">
                         <label for="Fecha">Fecha de Asignacion</label>
-                        <input type="date" class="form-control" id="Fecha" name="Fecha">
+                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Fecha" name="Fecha">
                         @if($errors->has('Fecha'))
                             <label for="" style="color:red;">{{ $errors->first('Fecha') }}</label>
                             <br>

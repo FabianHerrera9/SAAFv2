@@ -25,7 +25,7 @@
 
                     <div class="form-floating mb-3">
                         <label for="Identificacion">Identificacion</label>
-                        <input type="text   " class="form-control" id="Identificacion" name="Identificacion">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Identificacion" name="Identificacion">
                         @if($errors->has('Identificacion'))
                             <label for="" style="color:red;">{{ $errors->first('Identificacion') }}</label>
                             <br>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="NomDocente">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id="NomDocente" name="NomDocente">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="NomDocente" name="NomDocente">
                         @if($errors->has('NomDocente'))
                             <label for="" style="color:red;">{{ $errors->first('NomDocente') }}</label>
                             <br>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="IdEspecialidad">Especialidad</label>
-                        <input type="text" class="form-control" id="IdEspecialidad" name="IdEspecialidad"
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="IdEspecialidad" name="IdEspecialidad"
                                placeholder="Matematicas/Biologia/Informatica....">
                         @if($errors->has('IdEspecialidad'))
                             <label for="" style="color:red;">{{ $errors->first('IdEspecialidad') }}</label>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Telefono">Numero telefonico</label>
-                        <input type="text" class="form-control" id="Telefono" name="Telefono">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Telefono" name="Telefono">
                         @if($errors->has('Telefono'))
                             <label for="" style="color:red;">{{ $errors->first('Telefono') }}</label>
                             <br>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Email">Correo</label>
-                        <input type="text" class="form-control" id="Email" name="Email">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Email" name="Email">
                         @if($errors->has('Email'))
                             <label for="" style="color:red;">{{ $errors->first('Email') }}</label>
                             <br>

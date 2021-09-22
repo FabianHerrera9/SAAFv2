@@ -15,10 +15,10 @@ class CreateActivosTable extends Migration
     {
         Schema::create('activos', function (Blueprint $table) {
             $table->id();
-            $table->string('NombreActivo',15);
+            $table->string('NombreActivo',50);
             $table->string('SN',20);
             $table->string('Marca',15);
-            $table->string('Modelo',15);
+            $table->string('Modelo',30);
             $table->string('Descripcion',100);
             $table->date('Garantia');
             $table->enum('TipoActivo', ['Tangible','Intangible']);
