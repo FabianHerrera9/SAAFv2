@@ -43,7 +43,7 @@
 
                     <div class="form-floating my-3">
                         <label for="Fecha">Fecha </label>
-                        <input type="date" class="form-control" id="Fecha" name="Fecha">
+                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Fecha" name="Fecha">
                         @if($errors->has('Fecha'))
                             <label for="" style="color:red;">{{ $errors->first('Fecha') }}</label>
                             <br>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="ProveedorServ">Proveedor del Mantenimientio/Garantia</label>
-                        <input type="text" class="form-control" id="ProveedorServ" name="ProveedorServ">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="ProveedorServ" name="ProveedorServ">
                         @if($errors->has('ProveedorServ'))
                             <label for="" style="color:red;">{{ $errors->first('ProveedorServ') }}</label>
                             <br>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Reparador">Nombre de Tecnico / Realizador del Trabajo</label>
-                        <input type="text" class="form-control" id="Reparador" name="Reparador"
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Reparador" name="Reparador"
                                placeholder="Nombre de la persona que atiende el servicio">
                         @if($errors->has('Reparador'))
                             <label for="" style="color:red;">{{ $errors->first('Reparador') }}</label>
@@ -102,7 +102,7 @@
 
                     <div class="form-floating mb-3">
                         <label for="ActaServicio">Acta de Servicio</label>
-                        <input type="file" class="form-control" id="ActaServicio" name="ActaServicio">
+                        <input type="file" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="ActaServicio" name="ActaServicio">
                         @if($errors->has('ActaServicio'))
                             <label for="" style="color:red;">{{ $errors->first('ActaServicio') }}</label>
                             <br>

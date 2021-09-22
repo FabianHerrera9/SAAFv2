@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="FechaPrestamo">Fecha inicio de Prestamo</label>
-                        <input type="date" class="form-control" id="FechaPrestamo" name="FechaPrestamo">
+                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="FechaPrestamo" name="FechaPrestamo">
                         @if($errors->has('FechaPrestamo'))
                             <label for="" style="color:red;">{{ $errors->first('FechaPrestamo') }}</label>
                             <br>
@@ -105,7 +105,7 @@
 
                     <div class="form-floating my-3">
                         <label for="FechaDevolucion">Fecha Fin de Prestamo</label>
-                        <input type="date" class="form-control" id="FechaDevolucion" name="FechaDevolucion">
+                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="FechaDevolucion" name="FechaDevolucion">
                         @if($errors->has('FechaDevolucion'))
                             <label for="" style="color:red;">{{ $errors->first('FechaDevolucion') }}</label>
                             <br>
