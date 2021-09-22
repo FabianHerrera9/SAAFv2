@@ -14,7 +14,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 
 
 
-class ReportesController extends Controller
+class DescargarPDFController extends Controller
 {
     public function index(){
         return view('modules.reportes.index');
