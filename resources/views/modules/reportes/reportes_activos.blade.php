@@ -8,7 +8,6 @@
 
         body {
             margin: 3cm 2cm 2cm;
-            al
         }
 
         header {

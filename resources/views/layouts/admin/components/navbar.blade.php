@@ -18,21 +18,21 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <!--Espacio para imagen-->
-                    <span class="d-none d-xl-inline-block ml-1" key="t-henry">User</span>
+                    <span class="d-none d-xl-inline-block ml-1" key="t-henry">{{Auth::user()->name}}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
 
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
-                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i> <span
-                            key="t-profile">Profile</span></a>
+                    <a class="dropdown-item" href={{route('usuarios.mostrar')}}><i class="bx bx-user font-size-16 align-middle mr-1"></i> <span
+                            key="t-profile"> Perfil </span></a>
                     <div class="dropdown-divider"></div>
                     <form id="logout" action="login" method="post">
                         @method('put')
                         @csrf
                     <a class="dropdown-item text-danger" href="#" onclick="this.closest('form').submit()">
                         <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
-                        <span key="t-logout">cerrar sesion</span>
+                        <span key="t-logout">Cerrar Sesión</span>
                     </a>
                     </form>
                 </div>

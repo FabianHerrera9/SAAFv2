@@ -20,7 +20,8 @@ class Activo extends Model
         'Garantia',
         'TipoActivo',
         'IdProveedor',
-        'IdUsuario'
+        'IdUsuario',
+        'Img'
     ];
 
 }

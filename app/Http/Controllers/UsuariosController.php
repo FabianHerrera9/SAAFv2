@@ -4,12 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use function GuzzleHttp\Promise\all;
 use Spatie\Permission\Models\Role;
 
 class UsuariosController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
+
     public function index(){
         $usuarios=User::all();
         return view('modules.usuarios.listar',compact('usuarios'));
@@ -29,6 +36,7 @@ class UsuariosController extends Controller
             'Estado'=>'required',
             'Tipoid'=>'required',
             'Rol'=>'required',
+            'Img'=>'required'
             ]);
 
         $usuario=User::create(
@@ -73,5 +81,10 @@ class UsuariosController extends Controller
             'type'=>'warning'
         ]);
 
+    }
+    public function detalle(){
+
+        $usuario = User::all();
+        return view('modules.usuarios.show',compact('usuario'));
     }
 }

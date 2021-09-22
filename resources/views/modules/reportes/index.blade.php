@@ -3,6 +3,11 @@
     | REPORTES
 @endsection
 @section('content')
+<style>
+    a{
+        color: #2a3042;
+    }
+</style>
 
 <!doctype html>
 <html lang="en">
