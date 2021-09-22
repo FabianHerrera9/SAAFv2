@@ -75,7 +75,18 @@ class UsuariosController extends Controller
             'Tipoid'=>'required',
             'Rol'=>'required',
         ]);
-        $usuarios=User::find($id)->update($request->all());
+        $usuarios=User::find($id)->update(
+            [
+            'Identificacion'=> $request->Identificacion,
+            'name'=>$request->name,
+            'Cargo'=>$request->Cargo,
+            'Tel'=>$request->Tel,
+            'email'=>$request->email,
+            'password'=> Hash::make($request->password),
+            'Estado'=>$request->Estado,
+            'Tipoid'=>$request->Tipoid,
+            'Rol'=>$request->Rol
+            ]);
         return redirect()->route('usuarios.index')->with([
             'message'=>'La actualizacion se ha generado correctamente',
             'type'=>'warning'
