@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('title')
-    | REPORTES
+    | Reportes
 @endsection
 @section('content')
 <style>

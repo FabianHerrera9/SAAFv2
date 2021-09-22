@@ -61,13 +61,15 @@
     <h2 style="text-align: center"><strong>REPORTE DE ACTIVOS</strong></h2>
 <table class="table table-bordered colgroup col " >
     <thead>
-    <tr class="table-secondary" >
-        <th  scope="col">Registro</th>
-        <th  scope="col">Activo</th>
-        <th  scope="col">Marca</th>
-        <th  scope="col">Tipo de Activo</th>
-        <th  scope="col">Proveedor</th>
-        <th  scope="col">Registra</th>
+    <tr>
+        <th>Registro</th>
+        <th>Activo</th>
+        <th>Marca</th>
+        <th>Serial</th>
+        <th>Tipo de Activo</th>
+        <th>Proveedor</th>
+        <th>Garantia</th>
+        <th>Registra</th>
     </tr>
     </thead>
     <tbody>
@@ -76,6 +78,7 @@
             <td scope="row">{{ $activos -> id }}</td>
             <td>{{ $activos -> NombreActivo }}</td>
             <td>{{ $activos -> Marca }}</td>
+            <td>{{ $activos -> SN }}</td>
             <td>{{ $activos -> TipoActivo }}</td>
 
             @foreach($prov as $provs)
@@ -85,6 +88,8 @@
 
                 @endif
             @endforeach
+
+            <td>{{$activos->Garantia}}</td>
 
             @foreach($usuarios as $usu)
                 @if($usu->id == $activos->IdUsuario)
