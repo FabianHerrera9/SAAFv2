@@ -26,7 +26,7 @@
                     <td>
                         <tr>
                             <h1>
-                                <a href={{route('reportes.reportes_activos')}}>
+                                <a target="_blank" href={{route('reportes.reportes_activos')}}>
                                     <i class="bx bx-buildings"> Activos </i>
                                 </a>
                             </h1>

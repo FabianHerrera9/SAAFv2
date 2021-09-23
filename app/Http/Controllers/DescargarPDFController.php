@@ -25,7 +25,8 @@ class DescargarPDFController extends Controller
         $prov=Proveedor::all();
         $usuarios=user::all();
         $pdf = PDF::loadView('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
-        return $pdf->download('Activos.pdf');
+        return $pdf->stream('Activos.pdf');
+        //return view('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
     }
 
     public function Ambientes()
