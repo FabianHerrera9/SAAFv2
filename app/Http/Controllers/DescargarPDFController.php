@@ -24,7 +24,7 @@ class DescargarPDFController extends Controller
         $activo = Activo::all();
         $prov=Proveedor::all();
         $usuarios=user::all();
-        $pdf = PDF::loadView('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
+        $pdf = PDF::loadView('modules.reportes.activos',compact('activo','prov','usuarios'));
         return $pdf->stream('Activos.pdf');
         //return view('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
     }
@@ -32,20 +32,20 @@ class DescargarPDFController extends Controller
     public function Ambientes()
     {
         $Ambiente=Ambiente::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_ambientes',compact('Ambiente'));
+        $pdf= PDF::loadview('modules.reportes.ambientes',compact('Ambiente'));
         return $pdf->download('Ambientes.pdf');
     }
 
     public function Docentes()
     {
         $docentes = Docente::all();
-        $pdf = PDF::loadview('modules.reportes.reportes_docentes', compact('docentes'));
+        $pdf = PDF::loadview('modules.reportes.docentes', compact('docentes'));
         return $pdf->download('Docente.pdf');
     }
 
     public function Mantenimiento(){
         $mttogrt = Mantenimiento::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_mantenimiento',compact('mttogrt'));
+        $pdf= PDF::loadview('modules.reportes.mantenimiento',compact('mttogrt'));
         return $pdf->download('Mantenimiento.pdf');
     }
 
@@ -55,14 +55,14 @@ class DescargarPDFController extends Controller
         $activo=Activo::all();
         $docente=Docente::all();
         $usuario=User::all();
-        $pdf =PDF::loadview('modules.reportes.reportes_prestamos', compact('prestamos','activo','docente','usuario','ambiente'));
+        $pdf =PDF::loadview('modules.reportes.prestamos', compact('prestamos','activo','docente','usuario','ambiente'));
         return $pdf->download('prestamos.pdf');
     }
 
     public function Proveedores(){
 
         $prov=Proveedor::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_proveedores',compact('prov'));
+        $pdf= PDF::loadview('modules.reportes.proveedores',compact('prov'));
         return $pdf->download('Proveedor.pdf');
 
     }
