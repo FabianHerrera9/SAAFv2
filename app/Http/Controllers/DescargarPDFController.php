@@ -14,12 +14,12 @@ use Barryvdh\DomPDF\Facade as PDF;
 
 
 
-class ReportesController extends Controller
+class DescargarPDFController extends Controller
 {
     public function index(){
         return view('modules.reportes.index');
     }
-    public function download()
+    public function Activos()
     {
         $activo = Activo::all();
         $prov=Proveedor::all();
@@ -28,27 +28,27 @@ class ReportesController extends Controller
         return $pdf->download('Activos.pdf');
     }
 
-    public function descargar()
+    public function Ambientes()
     {
         $Ambiente=Ambiente::all();
         $pdf= PDF::loadview('modules.reportes.reportes_ambientes',compact('Ambiente'));
         return $pdf->download('Ambientes.pdf');
     }
 
-    public function descar()
+    public function Docentes()
     {
         $docentes = Docente::all();
         $pdf = PDF::loadview('modules.reportes.reportes_docentes', compact('docentes'));
         return $pdf->download('Docente.pdf');
     }
 
-    public function pdf(){
+    public function Mantenimiento(){
         $mttogrt = Mantenimiento::all();
         $pdf= PDF::loadview('modules.reportes.reportes_mantenimiento',compact('mttogrt'));
         return $pdf->download('Mantenimiento.pdf');
     }
 
-    public function acomodar(){
+    public function Prestamos(){
         $prestamos = Prestamo::all();
         $ambiente=Ambiente::all();
         $activo=Activo::all();
@@ -58,7 +58,7 @@ class ReportesController extends Controller
         return $pdf->download('prestamos.pdf');
     }
 
-    public function modulo(){
+    public function Proveedores(){
 
         $prov=Proveedor::all();
         $pdf= PDF::loadview('modules.reportes.reportes_proveedores',compact('prov'));

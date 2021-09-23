@@ -8,9 +8,8 @@ use App\Http\Controllers\ActivoController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\AmbienteController;
-use App\Http\Controllers\AsignacionController;
 use App\Http\Controllers\MantenimientoController;
-use App\Http\Controllers\ReportesController;
+use App\Http\Controllers\DescargarPDFController;
 
 
 /*
@@ -81,13 +80,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
 //REPORTES
-    Route::get('reportes',[ReportesController::class,'index'])->name('reportes.index');
-    Route::get('reportes/proveedores', [ReportesController::class, 'modulo'])->name('reportes.reportes_proveedores');
-    Route::get('reportes/docentes', [ReportesController::class, 'descar'])->name('reporte.reportes_docentes');
-    Route::get('reportes/ambientes', [ReportesController::class, 'descargar'])->name('reportes.reportes_ambientes');
-    Route::get('reportes/activos', [ReportesController::class, 'download'])->name('reportes.reportes_activos');
-    Route::get('reportes/prestamos', [ReportesController::class, 'acomodar'])->name('reportes.reportes_prestamos');
-    Route::get('reportes/mantenimiento', [ReportesController::class, 'pdf'])->name('reportes.reportes_mantenimiento');
+    Route::get('reportes',[DescargarPDFController::class,'index'])->name('reportes.index');
+    Route::get('reportes/proveedores', [DescargarPDFController::class, 'Proveedores'])->name('reportes.reportes_proveedores');
+    Route::get('reportes/docentes', [DescargarPDFController::class, 'Docentes'])->name('reporte.reportes_docentes');
+    Route::get('reportes/ambientes', [DescargarPDFController::class, 'Ambientes'])->name('reportes.reportes_ambientes');
+    Route::get('reportes/activos', [DescargarPDFController::class, 'Activos'])->name('reportes.reportes_activos');
+    Route::get('reportes/prestamos', [DescargarPDFController::class, 'Prestamos'])->name('reportes.reportes_prestamos');
+    Route::get('reportes/mantenimiento', [DescargarPDFController::class, 'Mantenimiento'])->name('reportes.reportes_mantenimiento');
 });
 
 
