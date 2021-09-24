@@ -22,8 +22,8 @@ class UsuariosController extends Controller
         return view('modules.usuarios.listar',compact('usuarios'));
     }
     public function crear(){
-        $roles = Role::all();
-        return view('modules.usuarios.crear', compact('roles'));
+
+        return view('modules.usuarios.crear');
     }
     public function guardar(Request $request){
         $validar=$request->validate([
@@ -58,9 +58,8 @@ class UsuariosController extends Controller
     }
     public function editar(User $user){
 
-        $roles = Role::all();
         $usuarios=User::find($user);
-        return view('modules.usuarios.editar',compact('usuarios', 'roles'));
+        return view('modules.usuarios.editar',compact('usuarios'));
     }
     public function actualizar(Request $request,$id){
         $validar=$request->validate([
