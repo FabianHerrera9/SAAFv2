@@ -56,7 +56,7 @@ class UsuariosController extends Controller
             'type'=>'success'
         ]);
     }
-    public function editar($id){
+    public function editar($user){
 
         $usuarios=User::find($user);
         return view('modules.usuarios.editar',compact('usuarios'));
