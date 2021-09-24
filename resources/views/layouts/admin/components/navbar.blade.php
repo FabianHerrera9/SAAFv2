@@ -1,10 +1,10 @@
-<header id="page-topbar">
+<header id="page-topbar" style="background:#eeeeec">
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-            <div class="navbar-brand-box">
+            <div class="navbar-brand-box" style="background:#eeeeec">
 
-                <a href={{route('usuarios.index')}} class="logo logo-light">
+                <a class="logo logo-light"  href={{route('usuarios.index')}} >
 
                     <span class="logo-lg">
                                     <img src="images/liceo.jpg" alt="" height="30">
