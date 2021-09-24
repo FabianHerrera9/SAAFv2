@@ -34,22 +34,22 @@
 
                         <tr>
                             <h1>
-                                <a href={{route('reportes.prestamos')}}>
+                                <a target="_blank" href={{route('reportes.prestamos')}}>
                                     <i class="bx bx-laptop"> Asignaciones y Prestamos </i>
                                 </a>
                             </h1>
                         </tr>
                         <tr>
                             <h1>
-                                <a href={{route('reportes.mantenimiento')}}>
-                                    <i class="bx bx-wrench">Mantenimientos y Garantias</i>
+                                <a target="_blank" href={{route('reportes.mantenimiento')}}>
+                                    <i class="bx bx-wrench"> Mantenimientos y Garantias</i>
                                 </a>
                             </h1>
                         </tr>
 
                         <tr>
                             <h1>
-                                <a href={{route('reportes.proveedores')}}>
+                                <a target="_blank" href={{route('reportes.proveedores')}}>
                                     <i class="bx bx-store-alt"> Proveedores </i>
                                 </a>
                             </h1>
@@ -57,7 +57,7 @@
 
                         <tr>
                             <h1>
-                                <a href={{route('reporte.docentes')}}>
+                                <a target="_blank" href={{route('reporte.docentes')}}>
                                     <i class="bx bx-group"> Docentes </i>
                                 </a>
                             </h1>
@@ -65,7 +65,7 @@
 
                         <tr>
                             <h1>
-                                <a href={{route('reportes.ambientes')}}>
+                                <a target="_blank" href={{route('reportes.ambientes')}}>
                                     <i class="bx bx-paper-plane"> Ambientes </i>
                                 </a>
                             </h1>
