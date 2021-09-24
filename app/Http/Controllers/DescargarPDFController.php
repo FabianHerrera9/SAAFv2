@@ -24,29 +24,30 @@ class DescargarPDFController extends Controller
         $activo = Activo::all();
         $prov=Proveedor::all();
         $usuarios=user::all();
-        $pdf = PDF::loadView('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
-        return $pdf->stream('Activos.pdf');
-        //return view('modules.reportes.reportes_activos',compact('activo','prov','usuarios'));
+        $pdf = PDF::loadView('modules.reportes.activos',compact('activo','prov','usuarios'));
+        //return $pdf->setpaper('a4','landscape')->stream('Activos.pdf');
+        return view('modules.reportes.activos', compact('activo','prov','usuarios'));
+
     }
 
     public function Ambientes()
     {
         $Ambiente=Ambiente::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_ambientes',compact('Ambiente'));
-        return $pdf->download('Ambientes.pdf');
+        $pdf= PDF::loadview('modules.reportes.ambientes',compact('Ambiente'));
+        return $pdf->setpaper('a4','landscape')->download('Ambientes.pdf');
     }
 
     public function Docentes()
     {
         $docentes = Docente::all();
-        $pdf = PDF::loadview('modules.reportes.reportes_docentes', compact('docentes'));
-        return $pdf->download('Docente.pdf');
+        $pdf = PDF::loadview('modules.reportes.docentes', compact('docentes'));
+        return $pdf->setpaper('a4','landscape')->download('Docentes.pdf');
     }
 
     public function Mantenimiento(){
         $mttogrt = Mantenimiento::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_mantenimiento',compact('mttogrt'));
-        return $pdf->download('Mantenimiento.pdf');
+        $pdf= PDF::loadview('modules.reportes.mantenimiento',compact('mttogrt'));
+        return $pdf->setpaper('a4','landscape')->download('Mantenimiento.pdf');
     }
 
     public function Prestamos(){
@@ -55,15 +56,15 @@ class DescargarPDFController extends Controller
         $activo=Activo::all();
         $docente=Docente::all();
         $usuario=User::all();
-        $pdf =PDF::loadview('modules.reportes.reportes_prestamos', compact('prestamos','activo','docente','usuario','ambiente'));
-        return $pdf->download('prestamos.pdf');
+        $pdf =PDF::loadview('modules.reportes.prestamos', compact('prestamos','activo','docente','usuario','ambiente'));
+        return $pdf->setpaper('a4','landscape')->download('Prestamos.pdf');
     }
 
     public function Proveedores(){
 
         $prov=Proveedor::all();
-        $pdf= PDF::loadview('modules.reportes.reportes_proveedores',compact('prov'));
-        return $pdf->download('Proveedor.pdf');
+        $pdf= PDF::loadview('modules.reportes.proveedores',compact('prov'));
+        return $pdf->setpaper('a4','landscape')->download('Proveedores.pdf');
 
     }
 
