@@ -40,7 +40,7 @@ class UsuariosController extends Controller
             ]);
 
         $usuario=User::create(
-        [    'Identificacion'=> $request->Identificacion,
+        [   'Identificacion'=> $request->Identificacion,
             'name'=>$request->name,
             'Cargo'=>$request->Cargo,
             'Tel'=>$request->Tel,
@@ -56,7 +56,7 @@ class UsuariosController extends Controller
             'type'=>'success'
         ]);
     }
-    public function editar(User $user){
+    public function editar($id){
 
         $usuarios=User::find($user);
         return view('modules.usuarios.editar',compact('usuarios'));
