@@ -4,7 +4,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box">
 
-                <a href="usuarios.index" class="logo logo-light">
+                <a href={{route('usuarios.index')}} class="logo logo-light">
 
                     <span class="logo-lg">
                                     <img src="images/liceo.jpg" alt="" height="30">

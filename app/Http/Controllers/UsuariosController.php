@@ -36,7 +36,6 @@ class UsuariosController extends Controller
             'Estado'=>'required',
             'Tipoid'=>'required',
             'Rol'=>'required',
-            'Img'=>'required'
             ]);
 
         $usuario=User::create(

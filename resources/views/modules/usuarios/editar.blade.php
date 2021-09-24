@@ -80,8 +80,8 @@
                         <label for="email">Correo</label>
                         <input type="email" class="form-control" id="email" name="email"
                                value="{{$usuarios->email}}">
-                        @if($errors->has('Email'))
-                            <label for="" style="color:red;">{{ $errors->first('Email') }}</label>
+                        @if($errors->has('email'))
+                            <label for="" style="color:red;">{{ $errors->first('email') }}</label>
                             <br>
                         @endif
                     </div>
