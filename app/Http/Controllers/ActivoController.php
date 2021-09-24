@@ -32,15 +32,16 @@ class ActivoController extends Controller
     public function guardar(Request $request){
 
         $validar=$request->validate([
-            'NombreActivo'=>'required|max:15',
+            'NombreActivo'=>'required|max:50|string',
             'SN'=>'required|max:20',
             'Marca'=>'required|max:15',
-            'Modelo'=>'required|max:15',
+            'Modelo'=>'required|max:30',
             'Descripcion'=>'required|max:100',
-            'Garantia'=>'required',
+            'Garantia'=>'required|date|after:today',
             'TipoActivo'=>'required',
             'IdProveedor'=>'required',
             'IdUsuario'=>'required',
+            'Img'=>'required|string'
         ]);
 
         $activo=Activo::create($request->all());
@@ -60,10 +61,11 @@ class ActivoController extends Controller
             'Marca'=>'required|max:15',
             'Modelo'=>'required|max:30',
             'Descripcion'=>'required|max:100',
-            'Garantia'=>'required|date|after:today',
+            'Garantia'=>'required|date',
             'TipoActivo'=>'required',
             'IdProveedor'=>'required',
             'IdUsuario'=>'required',
+            'Img'=>'required|string'
         ]);
 
         $activo=Activo::find($id)->update($request->all());
