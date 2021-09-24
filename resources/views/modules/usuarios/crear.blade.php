@@ -62,7 +62,7 @@
                             <label for="" style="color:red;">{{ $errors->first('Rol') }}</label>
                             <br>
                         @endif
-                    </div>  
+                    </div>
 
                     <div class="form-floating mb-3">
                         <label for="Tel">Telefono</label>
