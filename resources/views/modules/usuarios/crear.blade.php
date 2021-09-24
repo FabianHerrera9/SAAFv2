@@ -52,7 +52,7 @@
 
                     <div class="form-floating mb-3">
                         <label for="Rol">Rol</label>
-                        <select name="Rol" id="Rol" class="form-select form-control" aria-label="Seleccione Rol del Sistema">
+                      <select name="Rol" id="Rol" class="form-select form-control" aria-label="Seleccione Rol del Sistema">
                             <option value=" ">Seleccione Rol del Sistema</option>
                             <option value="Administrador">Administrador</option>
                             <option value="Tesorero">Tesorero</option>
@@ -62,7 +62,7 @@
                             <label for="" style="color:red;">{{ $errors->first('Rol') }}</label>
                             <br>
                         @endif
-                    </div>
+                    </div>  
 
                     <div class="form-floating mb-3">
                         <label for="Tel">Telefono</label>

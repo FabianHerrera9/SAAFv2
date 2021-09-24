@@ -22,7 +22,7 @@ class UsuariosController extends Controller
         return view('modules.usuarios.listar',compact('usuarios'));
     }
     public function crear(){
-        $roles = Role::all()->pluck('name','id');
+        $roles = Role::all();
         return view('modules.usuarios.crear', compact('roles'));
     }
     public function guardar(Request $request){
@@ -56,10 +56,10 @@ class UsuariosController extends Controller
             'type'=>'success'
         ]);
     }
-    public function editar($id){
+    public function editar(User $user){
 
         $roles = Role::all();
-        $usuarios=User::find($id);
+        $usuarios=User::find($user);
         return view('modules.usuarios.editar',compact('usuarios', 'roles'));
     }
     public function actualizar(Request $request,$id){
