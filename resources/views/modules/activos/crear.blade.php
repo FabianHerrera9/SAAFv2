@@ -25,7 +25,8 @@
 
                     <div class="form-floating mb-3">
                         <label for="NombreActivo">Nombre de Activo</label>
-                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="NombreActivo" name="NombreActivo">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="NombreActivo"
+                               name="NombreActivo">
                         @if($errors->has('NombreActivo'))
                             <label for="" style="color:red;">{{ $errors->first('NombreActivo') }}</label>
                             <br>
@@ -49,7 +50,8 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Modelo">Modelo / Version</label>
-                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Modelo" name="Modelo">
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Modelo"
+                               name="Modelo">
                         @if($errors->has('Modelo'))
                             <label for="" style="color:red;">{{ $errors->first('Modelo') }}</label>
                             <br>
@@ -57,7 +59,8 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Garantia">Garantia</label>
-                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Garantia" name="Garantia">
+                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Garantia"
+                               name="Garantia">
                         @if($errors->has('Garantia'))
                             <label for="" style="color:red;">{{ $errors->first('Garantia') }}</label>
                             <br>
@@ -84,19 +87,29 @@
                             <br>
                         @endif
                     </div>
-                        <div class="form-floating mb-3">
-                            <select name="IdUsuario" id="IdUsuario" class="form-select my-3 form-control"
-                                    aria-label="Seleccione el Usuario que registra">
-                                <option value="">Seleccione el Usuario que registra</option>
-                                @foreach($usuario as $usu)
-                                    <option value="{{$usu->id}}">{{$usu->name}} | {{$usu->Cargo}}</option>
-                                @endforeach
-                            </select>
-                            @if($errors->has('IdUsuario'))
-                                <label for="" style="color:red;">{{ $errors->first('IdUsuario') }}</label>
-                                <br>
-                            @endif
-                        </div>
+                    <div class="form-floating mb-3">
+                        <select name="IdUsuario" id="IdUsuario" class="form-select my-3 form-control"
+                                aria-label="Seleccione el Usuario que registra">
+                            <option value="">Seleccione el Usuario que registra</option>
+                            @foreach($usuario as $usu)
+                                <option value="{{$usu->id}}">{{$usu->name}} | {{$usu->Cargo}}</option>
+                            @endforeach
+                        </select>
+                        @if($errors->has('IdUsuario'))
+                            <label for="" style="color:red;">{{ $errors->first('IdUsuario') }}</label>
+                            <br>
+                        @endif
+                    </div>
+                    <div class="form-floating mb-3">
+
+                        <label for="Img"> Imagen </label>
+                        <input type="file" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Img"
+                               name="Img">
+                        @if($errors->has('Img'))
+                            <label for="" style="color:red;">{{ $errors->first('Img') }}</label>
+                            <br>
+                        @endif
+                    </div>
                     <hr>
                     <button type="submit" class="btn btn-success">Registrar Activo</button>
                     <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Cancelar</a>
