@@ -1,8 +1,15 @@
-<header id="page-topbar">
+<header id="page-topbar" style="background:#eeeeec">
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-            <div class="navbar-brand-box">
+            <div class="navbar-brand-box" style="background:#eeeeec">
+
+                <a class="logo logo-light"  href={{route('usuarios.index')}} >
+
+                    <span class="logo-lg">
+                                    <img src="images/liceo.jpg" alt="" height="30">
+                                </span>
+                </a>
 
             </div>
 
@@ -17,9 +24,11 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="/images/unnamed.png"
+                         alt="20">
                     <!--Espacio para imagen-->
                     <span class="d-none d-xl-inline-block ml-1" key="t-henry">{{Auth::user()->name}}</span>
-                    <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                    <i class="mdi mdi-chevron-down d-none d-xl-inline-block" ></i>
                 </button>
 
                 <div class="dropdown-menu dropdown-menu-right">
