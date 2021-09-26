@@ -24,4 +24,5 @@ class Activo extends Model
         'Img'
     ];
 
+
 }

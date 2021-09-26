@@ -106,7 +106,7 @@
                         <input type="file" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Img"
                                name="Img">
                         @if($errors->has('Img'))
-                            <label for="" style="color:red;">{{ $errors->first('Img') }}</label>
+                            <label for="Img" style="color:red;">{{ $errors->first('Img') }}</label>
                             <br>
                         @endif
                     </div>
