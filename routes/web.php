@@ -24,12 +24,11 @@ use App\Http\Controllers\DescargarPDFController;
 */
 Route::redirect('/', 'login');
 Route::post('/login', [logincontroller::class,'login']);
-Route::put('/login', [logincontroller::class,'logout']);
+Route::put('/login', [logincontroller::class,'logout'])->name('logout');
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    Route::get('/', function (){
-       return view('login');
-    })->name('logout');
+
 
 //Usuarios
     Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios.index');
