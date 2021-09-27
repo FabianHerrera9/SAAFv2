@@ -27,6 +27,10 @@ Route::post('/login', [logincontroller::class,'login']);
 Route::put('/login', [logincontroller::class,'logout']);
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
+    Route::get('/', function (){
+       return view('profile.login');
+    });
+
 //Usuarios
     Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios.index');
     Route::get('usuarios/crear', [UsuariosController::class, 'crear'])->name('usuarios.crear');
