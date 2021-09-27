@@ -75,6 +75,7 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
+                        <label for="IdProveedor">Proveedor</label>
                         <select name="IdProveedor" id="IdProveedor" class="form-select my-3 form-control"
                                 aria-label="Seleccione el proveedor">
                             <option value="">Seleccione Proveedor del Activo</option>
@@ -88,6 +89,7 @@
                         @endif
                     </div>
                     <div class="form-floating mb-3">
+                        <label for="IdUsuario">Registra</label>
                         <select name="IdUsuario" id="IdUsuario" class="form-select my-3 form-control"
                                 aria-label="Seleccione el Usuario que registra">
                             <option value="">Seleccione el Usuario que registra</option>
@@ -99,16 +101,6 @@
                             <label for="" style="color:red;">{{ $errors->first('IdUsuario') }}</label>
                             <br>
                         @endif
-
-                        <label for="IdUsuario">Registra</label>
-                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="IdUsuario" name="IdUsuario"
-                               value="{{Auth::user()->name}}" disabled="disabled">
-                        @if($errors->has('Modelo'))
-                            <label for="" style="color:red;">{{ $errors->first('Modelo') }}</label>
-                            <br>
-                        @endif
-
-
 
                     </div>
 
