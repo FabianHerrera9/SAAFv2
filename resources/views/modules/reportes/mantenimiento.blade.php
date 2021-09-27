@@ -80,7 +80,6 @@
                             <th>Encargado</th>
                             <th>Problema</th>
                             <th>Solucionado</th>
-                            <th>Acta de servicio</th>
                             <th>Activo</th>
                         </tr>
                         </thead>
@@ -95,8 +94,15 @@
                                 <td>{{ $mtto -> Reparador }}</td>
                                 <td>{{ $mtto -> ProblemaFallo }}</td>
                                 <td>{{ $mtto -> Solucion }}</td>
-                                <td>{{ $mtto -> ActaServicio }}</td>
-                                <td>{{ $mtto -> IdActivo }}</td>
+
+                                @foreach($activos as $activo)
+                                    @if($mtto -> IdActivo == $activo->id)
+                                        <td>{{ $activo -> NombreActivo }}</td>
+                                    @endif
+
+
+                                @endforeach
+
 
                             </tr>
                         @endforeach

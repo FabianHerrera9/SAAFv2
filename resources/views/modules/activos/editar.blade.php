@@ -116,7 +116,7 @@
                             <label for="" style="color:red;">{{ $errors->first('IdUsuario') }}</label>
                             <br>
                         @endif
-                        
+
 
                     </div>
                     <div class="form-group" id="div_file">

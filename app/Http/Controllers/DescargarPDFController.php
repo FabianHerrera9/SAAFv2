@@ -46,7 +46,8 @@ class DescargarPDFController extends Controller
 
     public function Mantenimiento(){
         $mttogrt = Mantenimiento::all();
-        $pdf= PDF::loadview('modules.reportes.mantenimiento',compact('mttogrt'));
+        $activos= Activo::all();
+        $pdf= PDF::loadview('modules.reportes.mantenimiento',compact('mttogrt','activos'));
         return $pdf->setpaper('a4','landscape')->stream('Mantenimiento.pdf');
     }
 
