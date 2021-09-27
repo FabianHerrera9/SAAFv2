@@ -11,10 +11,11 @@
                 <div class="col-lg-6">
                     <div class="row no-gutters align-items-center">
                         <div class="col-md-4">
-                            <img class="card-img img-fluid" src="#" alt="alt">
+                            <img src="{{$activo->Img}}" class="img-fluid" width="420" height="440">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
+
                                 <label for="TipoActivo">Tipo Activo</label>
                                     <input type="text" class="form-control" id="SN" name="SN"
                                            value={{$activo->TipoActivo}} disabled="disabled">

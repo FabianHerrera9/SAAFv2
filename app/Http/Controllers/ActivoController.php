@@ -34,31 +34,28 @@ class ActivoController extends Controller
     public function guardar(Request $request)
     {
 
-        $validar = $request->validate([
-            'NombreActivo' => 'required|max:50|string',
-            'SN' => 'required|max:20',
-            'Marca' => 'required|max:15',
-            'Modelo' => 'required|max:30',
-            'Descripcion' => 'required|max:100',
-            'Garantia' => 'required|date|after:today',
-            'TipoActivo' => 'required',
-            'IdProveedor' => 'required',
-            'IdUsuario' => 'required',
-            'Img'=>'required|string'
-        ]);
-        $activo = new Activo();
+        $activo= new Activo();
+        $activo-> NombreActivo = $request->NombreActivo;
+        $activo->SN = $request->SN;
+        $activo->Marca = $request->Marca;
+        $activo->Modelo = $request->Modelo;
+        $activo->Descripcion = $request->Descripcion;
+        $activo->Garantia = $request->Garantia;
+        $activo->TipoActivo = $request->TipoActivo;
+        $activo->IdProveedor = $request->IdProveedor;
+        $activo->IdUsuario = $request->IdUsuario;
+        $activo->save();
 
-        if (array_key_exists('file',$request->all())) {
-            $file = $request->file('file')->store('public/imgactivos');
+            $file = $request->file('Img')->store('public/imgactivos/');
 
             $name = Storage::url($file);
 
             $activo->Img = $name;
             $activo->save();
-        }
 
-        $activo = Activo::create($request->all());
-    //dd($request);
+
+
+
 return redirect()->route('activos.index');
 }
 

@@ -4,11 +4,16 @@
             <!-- LOGO -->
             <div class="navbar-brand-box" style="background:#eeeeec">
 
-                <a class="logo logo-light"  href={{route('usuarios.index')}} >
+                <a class="logo logo-dark"  href={{route('usuarios.crear')}} >
+                    <span class="logo-sm">
+                        <img src="{{url('/images/liceo.jpg')}}" alt="" height="30">
+                    </span>
+                </a>
 
+                <a class="logo logo-light"  href={{route('usuarios.index')}} >
                     <span class="logo-lg">
-                                    <img src="images/liceo.jpg" alt="" height="30">
-                                </span>
+                        <img src="{{url('/images/liceo.jpg')}}" alt="" height="30">
+                    </span>
                 </a>
 
             </div>
