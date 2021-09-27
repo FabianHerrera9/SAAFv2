@@ -23,7 +23,7 @@ class PrestamoController extends Controller
 
     public function crear()
     {
-        $activos = Activo::all();
+        $activos = Activo::where("TipoActivo","=","Tangible")->get();
         $usuarios = User::all();
         $docentes = Docente::all();
         $ambiente=Ambiente::all();

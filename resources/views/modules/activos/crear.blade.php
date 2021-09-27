@@ -99,12 +99,24 @@
                             <label for="" style="color:red;">{{ $errors->first('IdUsuario') }}</label>
                             <br>
                         @endif
+
+                        <label for="IdUsuario">Registra</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="IdUsuario" name="IdUsuario"
+                               value="{{Auth::user()->name}}" disabled="disabled">
+                        @if($errors->has('Modelo'))
+                            <label for="" style="color:red;">{{ $errors->first('Modelo') }}</label>
+                            <br>
+                        @endif
+
+
+
                     </div>
 
-                        <div class="form-group" id="div_file">
-                            <label class="form-control-label" id="titulo">imagen</label>
-                            <input type="file" id="btn" class="form-control form-control-alternative"  name="Img" accept="image/*, video/*">
-                        </div>
+                    <div class="form-group" id="div_file">
+                        <label class="form-control-label" id="titulo">imagen</label>
+                        <input type="file" id="btn" class="form-control form-control-alternative" name="Img"
+                               accept="image/*, video/*">
+                    </div>
                     <hr>
                     <button type="submit" class="btn btn-success">Registrar Activo</button>
                     <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Cancelar</a>

@@ -15,7 +15,7 @@
                         <select name="TipoActivo" id="TipoActivo" class="form-select my-3 form-control"
                                 aria-label="Seleccione el tipo Activo">
                             <option value="{{$activo->TipoActivo}}">{{$activo->TipoActivo}}</option>
-                            <option value=" " >Seleccione el tipo Activo</option>
+                            <option value=" ">Seleccione el tipo Activo</option>
                             <option value="Tangible">Tangible</option>
                             <option value="Intangible">Intangible</option>
                         </select>
@@ -27,7 +27,8 @@
 
                     <div class="form-floating mb-3">
                         <label for="NombreActivo">Nombre de Activo</label>
-                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="NombreActivo" name="NombreActivo"
+                        <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="NombreActivo"
+                               name="NombreActivo"
                                value="{{$activo->NombreActivo}}">
                         @if($errors->has('NombreActivo'))
                             <label for="" style="color:red;">{{ $errors->first('NombreActivo') }}</label>
@@ -63,7 +64,8 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Garantia">Garantia</label>
-                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Garantia" name="Garantia"
+                        <input type="date" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="Garantia"
+                               name="Garantia"
                                value="{{$activo->Garantia}}">
                         @if($errors->has('Garantia'))
                             <label for="" style="color:red;">{{ $errors->first('Garantia') }}</label>
@@ -72,7 +74,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <label for="Descripcion">Descripcion</label>
-                        <textarea type="text" class="form-control"  id="Descripcion" name="Descripcion"
+                        <textarea type="text" class="form-control" id="Descripcion" name="Descripcion"
                                   value="{{$activo->Descripcion}}">{{$activo->Descripcion}}</textarea>
                         @if($errors->has('Descripcion'))
                             <label for="" style="color:red;">{{ $errors->first('Descripcion') }}</label>
@@ -80,6 +82,7 @@
                         @endif
                     </div>
                     <div>
+                        <p class="form-control-label" id="IdUsuario">Proveedor</p>
                         <select name="IdProveedor" id="IdProveedor" class="form-select my-3 form-control"
                                 aria-label="Seleccione el proveedor">
                             @foreach($prov as $provs)
@@ -87,7 +90,7 @@
                                     <option value="{{$provs->id}}">{{$provs->ProvName}}</option>
                                 @endif
                             @endforeach
-                                <option value=" ">---------------------</option>
+                            <option value=" ">---------------------</option>
                             @foreach($prov as $provs)
                                 <option value="{{$provs->id}}">{{$provs->ProvName}}</option>
                             @endforeach
@@ -98,26 +101,32 @@
                         @endif
                     </div>
                     <div>
-                        <select name="IdUsuario" id="IdUsuario" class="form-select my-3 form-control"
-                                aria-label="Seleccione el Usuario que registra">
-                            @foreach($usu as $usus)
-                                @if($activo->IdUsuario == $usus->id)
-                                    <option value="{{$usus->id}}">{{$usus->name}} | {{$usus->Cargo}}</option>
-                                @endif
-                            @endforeach
-                                <option value=" ">---------------------</option>
-                            @foreach($usu as $usus)
-                                <option value="{{$usus->id}}">{{$usus->name}} | {{$usus->Cargo}}</option>
-                            @endforeach
-                        </select>
+                        <p class="form-control-label" id="IdUsuario">Registra</p>
+                        @foreach($usu as $usus)
+                            @if($activo->IdUsuario == $usus->id)
+                                <input type="text" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="IdUsuario"
+                                       name="IdUsuario"
+                                       value="{{$usus->name}} | {{$usus->Cargo}}" disabled="disabled">
+                            @endif
+                        @endforeach
                         @if($errors->has('IdUsuario'))
                             <label for="" style="color:red;">{{ $errors->first('IdUsuario') }}</label>
+                            <br>
+                        @endif
+
+                    </div>
+                    <div class="form-group" id="div_file">
+                        <label class="form-control-label" id="titulo">imagen</label>
+                        <input type="file" id="btn" class="form-control form-control-alternative" name="Img"
+                               accept="image/*, video/*" value="{{$activo->Img}}">
+                        @if($errors->has('file'))
+                            <label for="file" style="color:red;">{{ $errors->first('file') }}</label>
                             <br>
                         @endif
                     </div>
                     <hr>
                     <button type="submit" class="btn btn-success">Actualizar Activo</button>
-                    <a type="button" class="btn" id="color-font" href="{{route('usuarios.index')}}">Cancelar</a>
+                    <a type="button" class="btn" id="color-font" href="{{route('activos.index')}}">Cancelar</a>
                 </form>
 
             </div>

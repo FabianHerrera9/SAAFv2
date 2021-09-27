@@ -121,15 +121,6 @@
                             <br>
                         @endif
                     </div>
-                    <div class="form-floating mb-3">
-                        <label for="Observaciones">Observaciones</label>
-                        <textarea type="text" class="form-control" id="Observaciones" name="Observaciones"
-                                  placeholder="Detalles fisicos/funcionales "></textarea>
-                        @if($errors->has('Observaciones'))
-                            <label for="" style="color:red;">{{ $errors->first('Observaciones') }}</label>
-                            <br>
-                        @endif
-                    </div>
                     <hr>
                     <button type="submit" class="btn btn-success">Registrar Prestamo</button>
                     <a type="button" class="btn" id="color-font" href="{{route('prestamos.index')}}">Cancelar</a>

@@ -34,8 +34,8 @@ class ActivoController extends Controller
     public function guardar(Request $request)
     {
 
-        $activo= new Activo();
-        $activo-> NombreActivo = $request->NombreActivo;
+        $activo = new Activo();
+        $activo->NombreActivo = $request->NombreActivo;
         $activo->SN = $request->SN;
         $activo->Marca = $request->Marca;
         $activo->Modelo = $request->Modelo;
@@ -46,60 +46,58 @@ class ActivoController extends Controller
         $activo->IdUsuario = $request->IdUsuario;
         $activo->save();
 
-            $file = $request->file('Img')->store('public/imgactivos/');
+        $file = $request->file('Img')->store('public/imgactivos/');
 
-            $name = Storage::url($file);
+        $name = Storage::url($file);
 
-            $activo->Img = $name;
-            $activo->save();
-
-
+        $activo->Img = $name;
+        $activo->save();
 
 
-return redirect()->route('activos.index');
-}
+        return redirect()->route('activos.index');
+    }
 
-public
-function editar($id)
-{
-    $activo = Activo::find($id);
-    $prov = Proveedor::all();
-    $usu = user::all();
-    return view('modules.activos.editar', compact('activo', 'prov', 'usu'));
-}
+    public
+    function editar($id)
+    {
+        $activo = Activo::find($id);
+        $prov = Proveedor::all();
+        $usu = user::all();
+        return view('modules.activos.editar', compact('activo', 'prov', 'usu'));
+    }
 
-public
-function actualizar(Request $request, $id)
-{
+    public
+    function actualizar(Request $request, $id)
+    {
 
-    $validar = $request->validate([
-        'NombreActivo' => 'required|max:50|string',
-        'SN' => 'required|max:20',
-        'Marca' => 'required|max:15',
-        'Modelo' => 'required|max:30',
-        'Descripcion' => 'required|max:100',
-        'Garantia' => 'required|date',
-        'TipoActivo' => 'required',
-        'IdProveedor' => 'required',
-        'IdUsuario' => 'required',
-        'Img' => 'required|string'
-    ]);
+        $validar = $request->validate([
+            'NombreActivo' => 'required|max:50|string',
+            'SN' => 'required|max:20',
+            'Marca' => 'required|max:15',
+            'Modelo' => 'required|max:30',
+            'Descripcion' => 'required|max:100',
+            'Garantia' => 'required|date',
+            'TipoActivo' => 'required',
+            'IdProveedor' => 'required',
+            'IdUsuario' => 'required',
+            'Img' => 'required|string'
+        ]);
 
 
-    $activo = Activo::find($id)->update($request->all());
-    return redirect()->route('activos.index');
-}
+        $activo = Activo::find($id)->update($request->all());
+        return redirect()->route('activos.index');
+    }
 
-public
-function hojaDeVida($id)
-{
-    $activo = Activo::find($id);
-    $prov = Proveedor::all();
-    $usuario = User::all();
-    $mantenimiento = Mantenimiento::where("IdActivo", "=", $id)->get();
-    $prestamo = Prestamo::where("IdActivo", "=", $id)->get();
-    return view('modules.activos.hv', compact('activo', 'prov', 'usuario', 'mantenimiento', 'prestamo'));
-}
+    public
+    function hojaDeVida($id)
+    {
+        $activo = Activo::find($id);
+        $prov = Proveedor::all();
+        $usuario = User::all();
+        $mantenimiento = Mantenimiento::where("IdActivo", "=", $id)->get();
+        $prestamo = Prestamo::where("IdActivo", "=", $id)->get();
+        return view('modules.activos.hv', compact('activo', 'prov', 'usuario', 'mantenimiento', 'prestamo'));
+    }
 
 
 }
