@@ -29,7 +29,7 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="/images/unnamed.png"
+                    <img class="rounded-circle header-profile-user" src="{{url('/images/escudo.jpg')}}"
                          alt="20">
                     <!--Espacio para imagen-->
                     <span class="d-none d-xl-inline-block ml-1" key="t-henry">{{Auth::user()->name}}</span>
