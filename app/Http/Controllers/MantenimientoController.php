@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mantenimiento;
 use App\Models\Activo;
+use Illuminate\Support\Facades\Storage;
 
 class MantenimientoController extends Controller
 {
@@ -21,7 +22,13 @@ class MantenimientoController extends Controller
         //$validate->;
 
         $mtto=Mantenimiento::create($request->all());
-        //dd($request)->all();
+
+        $file = $request->file('ActaServicio')->store('public/acta/');
+
+        $name = Storage::url($file);
+
+        $mtto->ActaServicio = $name;
+        $mtto->save();
         return redirect()->route('Mttogarant.index');
     }
     public function mostrar($id){

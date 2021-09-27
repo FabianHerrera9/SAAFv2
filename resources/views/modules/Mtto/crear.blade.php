@@ -7,7 +7,7 @@
     <div class="container">
         <div class="col-p1 m-3 bck-tab">
             <div class="table-responsive">
-                <form action="{{route('Mttogarant.guardar')}}" method="post">
+                <form action="{{route('Mttogarant.guardar')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-floating mb-3">
                         <label for="Tipo">Tipo Registro</label>
@@ -102,7 +102,7 @@
 
                     <div class="form-floating mb-3">
                         <label for="ActaServicio">Acta de Servicio</label>
-                        <input type="file" class="form-control" pattern="[A-Za-z0-9_-@]{1,15}" id="ActaServicio" name="ActaServicio">
+                        <input type="file" class="form-control" id="ActaServicio" name="ActaServicio">
                         @if($errors->has('ActaServicio'))
                             <label for="" style="color:red;">{{ $errors->first('ActaServicio') }}</label>
                             <br>
