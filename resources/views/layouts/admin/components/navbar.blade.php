@@ -43,7 +43,7 @@
                         <span key="t-profile"> Perfil </span>
                     </a>
 
-                    <form id="logout" action="/login" method="post">
+                    <form id="logout" action="{{route('login')}}" method="post">
                         @method('PUT')
                         @csrf
                         <a class="dropdown-item text-danger" href="javascript:document.getElementById('logout').submit()">

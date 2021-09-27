@@ -23,7 +23,7 @@ use App\Http\Controllers\DescargarPDFController;
 |
 */
 Route::redirect('/', 'login');
-Route::post('/login', [logincontroller::class,'login']);
+Route::post('/login', [logincontroller::class,'login'])->name('login');
 Route::put('/login', [logincontroller::class,'logout'])->name('logout');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
