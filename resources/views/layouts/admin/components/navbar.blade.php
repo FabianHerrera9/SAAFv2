@@ -46,7 +46,7 @@
                     <form id="logout" action="/login" method="post">
                         @method('PUT')
                         @csrf
-                        <a class="dropdown-item text-danger" href="#" onclick="this.closest('form').submit()">
+                        <a class="dropdown-item text-danger" href="{{route('logout')}}" onclick="this.closest('form').submit()">
                             <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
                             <span key="t-logout">Cerrar Sesión</span>
                         </a>
